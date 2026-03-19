@@ -5,6 +5,9 @@ import { kassetaBntLConfig } from "./kasseta-bnt-l";
 import { zebraBntMConfig } from "./zebra-bnt-m";
 import { zebraBntLConfig } from "./zebra-bnt-l";
 import { zebraKassetaBntMConfig } from "./zebra-kasseta-bnt-m";
+import { plisseConfig } from "./plisse";
+import { plisseMaxiConfig } from "./plisse-maxi";
+import { plisseRusConfig } from "./plisse-rus";
 import type { CalculatorConfig } from "@/types/calculator";
 
 export const calculatorConfigs: Record<string, CalculatorConfig> = {
@@ -15,6 +18,9 @@ export const calculatorConfigs: Record<string, CalculatorConfig> = {
   "zebra-bnt-m": zebraBntMConfig,
   "zebra-bnt-l": zebraBntLConfig,
   "zebra-kasseta-bnt-m": zebraKassetaBntMConfig,
+  "plisse": plisseConfig,
+  "plisse-maxi": plisseMaxiConfig,
+  "plisse-rus": plisseRusConfig,
 };
 
 export const calculatorList = Object.values(calculatorConfigs).map((c) => ({

@@ -112,6 +112,66 @@ const zebraKassetaBntMSurcharge: SurchargeFn = (optId, val, w, h, _base) => {
   }
 };
 
+// === ПЛИССЕ ===
+const plisseModels: Record<string, number> = {
+  "Р1615":0,"Р1600":11.11,"Р1602":20.26,"Р1610":15.52,"Р1612":20.26,"Р1620":9.26,
+  "Р1622":11.68,"Р1626":11.68,"Р1634":37.02,"Р1635":68.77,"Р1636":29.27,"Р1637":55.71,
+  "Р1650":55.71,"Р1652":68.77,"Р1662":46.54,"Р1663":55.71,"Р4612":20.26,"Р4615":20.26,
+  "Р1700":20.26,"Р1702":11.11,"Р1705":16.75,"Р1710":36.3,"Р1712":28.74,"Р1715":28.74,
+  "Р1720":11.32,"Р1722":11.68,"Р1725":11.68,"Р1730":80.21,
+};
+const plisseColors: Record<string, number> = {"Белый":0,"Серебро":26.44,"Бронза":26.44,"Черный":26.44,"Коричневый":26.44,"Антрацит":26.44};
+const plisseBrackets: Record<string, number> = {
+  "Потолочный / подоконный":0,"Магнитный подоконный":5.51,"На штапик":0,
+  "Стеновой малый":0,"Стеновой стандартный":0,"Стеновой закрытый":0,
+  "Стеновой регулируемый":18.15,"На створку ПВХ":27.24,"Накидной металлический":0,
+  "Для монт.профиля 20мм":1.7,"Для монт.профиля 27мм":2.17,
+};
+
+const plisseSurcharge: SurchargeFn = (optId, val, w, _h, _base) => {
+  switch (optId) {
+    case "model": return plisseModels[val] ?? 0;
+    case "color": return (plisseColors[val] ?? 0) * w;
+    case "bracket": return plisseBrackets[val] ?? 0;
+    case "cordLoops": return val === "Да" ? 19.05 : 0;
+    case "reinforced": return val === "Да" ? 28.59 : 0;
+    case "mountProfile": return val === "Да" ? 33.72 * w : 0;
+    case "metalHandle": return (parseInt(val) || 0) * 9.52;
+    default: return 0;
+  }
+};
+
+const plisseMaxiModels: Record<string, number> = {
+  "Р8700":0,"Р8705":13.06,"Р8710":78.26,"Р8715":100.34,"Р8720":123.75,
+  "Р8725":146.66,"Р8800":71.58,"Р8805":92.75,"Р8900":58.53,"Р8905":78.58,
+  "Р8910":127.95,"Р8920":91.15,
+};
+const plisseMaxiBrackets: Record<string, number> = {
+  "Потолочный":0,"Стеновой малый":0,"Стеновой стандартный":0,
+  "Стеновой закрытый":0,"Стеновой регулируемый":18.15,
+};
+
+const plisseMaxiSurcharge: SurchargeFn = (optId, val, w, _h, _base) => {
+  switch (optId) {
+    case "model": return plisseMaxiModels[val] ?? 0;
+    case "color": return (plisseColors[val] ?? 0) * w;
+    case "bracket": return plisseMaxiBrackets[val] ?? 0;
+    default: return 0;
+  }
+};
+
+const plisseRusColors: Record<string, number> = {"Белый":0,"Коричневый":11.19,"Черный":11.19};
+const plisseRusBrackets: Record<string, number> = {"Потолочный":0,"Пластиковый":0,"Подоконный":0};
+
+const plisseRusSurcharge: SurchargeFn = (optId, val, _w, _h, _base) => {
+  switch (optId) {
+    case "model": return 0; // PR01 and PR02 both have 0 surcharge
+    case "color": return plisseRusColors[val] ?? 0;
+    case "bracket": return plisseRusBrackets[val] ?? 0;
+    default: return 0;
+  }
+};
+
 const surchargeMap: Record<string, SurchargeFn> = {
   "bnt-m": bntMSurcharge,
   "bnt-l": bntLSurcharge,
@@ -120,6 +180,9 @@ const surchargeMap: Record<string, SurchargeFn> = {
   "zebra-bnt-m": zebraBntMSurcharge,
   "zebra-bnt-l": zebraBntLSurcharge,
   "zebra-kasseta-bnt-m": zebraKassetaBntMSurcharge,
+  "plisse": plisseSurcharge,
+  "plisse-maxi": plisseMaxiSurcharge,
+  "plisse-rus": plisseRusSurcharge,
 };
 
 export function getSurchargeFunction(calcId: string): SurchargeFn {
