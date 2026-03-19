@@ -1,0 +1,674 @@
+{
+  "priceTable": [
+    {
+      "slat": "25",
+      "color": "0225",
+      "pricePerSqm": 14
+    },
+    {
+      "slat": "25",
+      "color": "0120",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "1606",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "1852",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "1853",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "1854",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "1881",
+      "pricePerSqm": 16.94
+    },
+    {
+      "slat": "25",
+      "color": "1884",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "1908",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "2259",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "2261",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "2403",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "2406",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "2746",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "2871",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "3144",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "3204",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "3209",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "3458",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "3499",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4059",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4063",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4077",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4082",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4096",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4158",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4201",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4261",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4301",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4858",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "4967",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "5150",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "5173",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "5259",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "5608",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "5713",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "5850",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "5853",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "5992",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7005",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7013",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7105",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "7120",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7122",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7125",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7128",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7218",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7255",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7256",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7257",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7258",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7259",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7260",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7261",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7282",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "7218",
+      "pricePerSqm": 16.93
+    },
+    {
+      "slat": "25",
+      "color": "2549",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "0225п",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "1908п",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "2259п",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "7005п",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "7128п",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "7419",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "7431",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "8011",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "8012",
+      "pricePerSqm": 21.56
+    },
+    {
+      "slat": "25",
+      "color": "6006",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6007",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6009",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6010",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6012",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6013",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6015",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6016",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6017",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6020",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "6021",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "7505",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "7525",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "7528",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "7536",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "8101",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "8103",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "9002",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "9013",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "9018",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "9035",
+      "pricePerSqm": 28.34
+    },
+    {
+      "slat": "25",
+      "color": "7718",
+      "pricePerSqm": 35.46
+    },
+    {
+      "slat": "25",
+      "color": "7722",
+      "pricePerSqm": 35.46
+    },
+    {
+      "slat": "25",
+      "color": "7734",
+      "pricePerSqm": 35.46
+    },
+    {
+      "slat": "25",
+      "color": "7754",
+      "pricePerSqm": 35.46
+    },
+    {
+      "slat": "16",
+      "color": "0225",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "1606",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "2259",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "2261",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "2406",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "2871",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "3144",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "4063",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "7005",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "7013",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "7122",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "7128",
+      "pricePerSqm": 21.15
+    },
+    {
+      "slat": "16",
+      "color": "6012",
+      "pricePerSqm": 34.82
+    },
+    {
+      "slat": "16",
+      "color": "6013",
+      "pricePerSqm": 34.82
+    },
+    {
+      "slat": "50",
+      "color": "0120",
+      "pricePerSqm": 42.35
+    },
+    {
+      "slat": "50",
+      "color": "7005",
+      "pricePerSqm": 42.35
+    },
+    {
+      "slat": "50",
+      "color": "1852",
+      "pricePerSqm": 42.35
+    },
+    {
+      "slat": "50",
+      "color": "1854",
+      "pricePerSqm": 42.35
+    },
+    {
+      "slat": "50",
+      "color": "1908",
+      "pricePerSqm": 42.35
+    }
+  ],
+  "slats": [
+    "16",
+    "25",
+    "50"
+  ],
+  "colors16": [
+    "0225",
+    "1606",
+    "2259",
+    "2261",
+    "2406",
+    "2871",
+    "3144",
+    "4063",
+    "7005",
+    "7013",
+    "7122",
+    "7128",
+    "6012",
+    "6013"
+  ],
+  "colors25": [
+    "0225",
+    "0120",
+    "1606",
+    "1852",
+    "1853",
+    "1854",
+    "1881",
+    "1884",
+    "1908",
+    "2259",
+    "2261",
+    "2403",
+    "2406",
+    "2746",
+    "2871",
+    "3144",
+    "3204",
+    "3209",
+    "3458",
+    "3499",
+    "4059",
+    "4063",
+    "4077",
+    "4082",
+    "4096",
+    "4158",
+    "4201",
+    "4261",
+    "4301",
+    "4858",
+    "4967",
+    "5150",
+    "5173",
+    "5259",
+    "5608",
+    "5713",
+    "5850",
+    "5853",
+    "5992",
+    "7005",
+    "7013",
+    "7105",
+    "7120",
+    "7122",
+    "7125",
+    "7128",
+    "7218",
+    "7255",
+    "7256",
+    "7257",
+    "7258",
+    "7259",
+    "7260",
+    "7261",
+    "7282",
+    "2549",
+    "0225п",
+    "1908п",
+    "2259п",
+    "7005п",
+    "7128п",
+    "7419",
+    "7431",
+    "8011",
+    "8012",
+    "6006",
+    "6007",
+    "6009",
+    "6010",
+    "6012",
+    "6013",
+    "6015",
+    "6016",
+    "6017",
+    "6020",
+    "6021",
+    "7505",
+    "7525",
+    "7528",
+    "7536",
+    "8101",
+    "8103",
+    "9002",
+    "9013",
+    "9018",
+    "9035",
+    "7718",
+    "7722",
+    "7734",
+    "7754"
+  ],
+  "colors50": [
+    "0120",
+    "7005",
+    "1852",
+    "1854",
+    "1908"
+  ]
+}

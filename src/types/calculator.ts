@@ -5,6 +5,8 @@ export interface CalculatorOption {
   defaultValue: string;
 }
 
+export type PricingMode = "matrix" | "custom";
+
 export interface CalculatorConfig {
   id: string;
   title: string;
@@ -12,6 +14,7 @@ export interface CalculatorConfig {
   categories: string[];
   options: CalculatorOption[];
   maxRows: number;
+  pricingMode?: PricingMode;
 }
 
 export type SurchargeFn = (

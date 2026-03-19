@@ -3,8 +3,12 @@
 import { useState, useCallback, useMemo } from "react";
 import type { CalcRowData, CalculatorConfig, PriceData } from "@/types/calculator";
 import { getSurchargeFunction } from "@/lib/surcharges";
+import { initCustomPricing } from "@/lib/custom-pricing";
 import CalcRow from "./CalcRow";
 import PriceSummary from "./PriceSummary";
+
+// Initialize custom pricing functions once
+initCustomPricing();
 
 interface CalculatorProps {
   config: CalculatorConfig;

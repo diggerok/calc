@@ -8,6 +8,11 @@ import { zebraKassetaBntMConfig } from "./zebra-kasseta-bnt-m";
 import { plisseConfig } from "./plisse";
 import { plisseMaxiConfig } from "./plisse-maxi";
 import { plisseRusConfig } from "./plisse-rus";
+import { dbBlindsConfig } from "./db-blinds";
+import { venus16Config } from "./venus16";
+import { venus25Config } from "./venus25";
+import { gzhBlindsConfig } from "./gzh-blinds";
+import { verticalBlindsConfig } from "./vertical-blinds";
 import type { CalculatorConfig } from "@/types/calculator";
 
 export const calculatorConfigs: Record<string, CalculatorConfig> = {
@@ -21,6 +26,11 @@ export const calculatorConfigs: Record<string, CalculatorConfig> = {
   "plisse": plisseConfig,
   "plisse-maxi": plisseMaxiConfig,
   "plisse-rus": plisseRusConfig,
+  "db-blinds": dbBlindsConfig,
+  "venus16": venus16Config,
+  "venus25": venus25Config,
+  "gzh-blinds": gzhBlindsConfig,
+  "vertical-blinds": verticalBlindsConfig,
 };
 
 export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
