@@ -3,6 +3,7 @@ import type { CalculatorConfig } from "@/types/calculator";
 export const zebraKassetaBntMConfig: CalculatorConfig = {
   id: "zebra-kasseta-bnt-m",
   title: "Зебра Кассета BNT M",
+  group: "BNT",
   categories: ["0", "E", "1", "2", "3", "4"],
   maxRows: 10,
   options: [

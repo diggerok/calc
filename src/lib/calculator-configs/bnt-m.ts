@@ -3,6 +3,7 @@ import type { CalculatorConfig } from "@/types/calculator";
 export const bntMConfig: CalculatorConfig = {
   id: "bnt-m",
   title: "Рулонные шторы BNT M",
+  group: "BNT",
   categories: ["E", "1", "2", "3", "4", "5"],
   maxRows: 10,
   options: [

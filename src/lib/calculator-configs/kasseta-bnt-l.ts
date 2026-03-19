@@ -3,6 +3,7 @@ import type { CalculatorConfig } from "@/types/calculator";
 export const kassetaBntLConfig: CalculatorConfig = {
   id: "kasseta-bnt-l",
   title: "Кассета BNT L",
+  group: "BNT",
   categories: ["E", "1", "2", "3", "4", "5"],
   maxRows: 10,
   options: [

@@ -20,4 +20,12 @@ export const calculatorConfigs: Record<string, CalculatorConfig> = {
 export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
   id: c.id,
   title: c.title,
+  group: c.group,
 }));
+
+export const calculatorGroups = calculatorList.reduce<
+  Record<string, { id: string; title: string }[]>
+>((acc, c) => {
+  (acc[c.group] ??= []).push(c);
+  return acc;
+}, {});

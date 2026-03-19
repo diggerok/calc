@@ -8,6 +8,7 @@ export interface CalculatorOption {
 export interface CalculatorConfig {
   id: string;
   title: string;
+  group: string;
   categories: string[];
   options: CalculatorOption[];
   maxRows: number;
