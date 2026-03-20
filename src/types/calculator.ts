@@ -3,7 +3,16 @@ export interface CalculatorOption {
   label: string;
   values: string[];
   defaultValue: string;
+  dynamic?: boolean; // values loaded from priceData based on other options
 }
+
+// Function to resolve dynamic option values from priceData + current options
+export type DynamicValuesFn = (
+  optionId: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  priceData: any,
+  options: Record<string, string>
+) => string[];
 
 export type PricingMode = "matrix" | "custom";
 

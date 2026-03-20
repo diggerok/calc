@@ -8,7 +8,7 @@ export const verticalBlindsConfig: CalculatorConfig = {
   pricingMode: "custom",
   maxRows: 10,
   options: [
-    { id: "category", label: "Категория ткани", values: ["—"], defaultValue: "—" },
+    { id: "category", label: "Категория ткани", values: ["—"], dynamic: true, defaultValue: "—" },
     { id: "metalFurn", label: "Металл. фурн.", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "transparentSet", label: "Прозр. компл.", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "decorCornice", label: "Декор. карниз", values: ["Нет", "Да"], defaultValue: "Нет" },

@@ -4,10 +4,10 @@ import { useState, useCallback, useMemo } from "react";
 import type { CalcRowData, CalculatorConfig, PriceData } from "@/types/calculator";
 import { getSurchargeFunction } from "@/lib/surcharges";
 import { initCustomPricing } from "@/lib/custom-pricing";
+import { getDynamicValuesFn } from "@/lib/dynamic-values";
 import CalcRow from "./CalcRow";
 import PriceSummary from "./PriceSummary";
 
-// Initialize custom pricing functions once
 initCustomPricing();
 
 interface CalculatorProps {
@@ -35,6 +35,7 @@ function createEmptyRow(id: number, config: CalculatorConfig): CalcRowData {
 
 export default function Calculator({ config, priceData }: CalculatorProps) {
   const surchargeFn = useMemo(() => getSurchargeFunction(config.id), [config.id]);
+  const dynamicValuesFn = useMemo(() => getDynamicValuesFn(config.id), [config.id]);
   const [rows, setRows] = useState<CalcRowData[]>(() =>
     Array.from({ length: config.maxRows }, (_, i) =>
       createEmptyRow(i + 1, config)
@@ -98,9 +99,11 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
               <th className="px-2 py-2 border border-slate-600 text-center w-8">
                 №
               </th>
-              <th className="px-2 py-2 border border-slate-600 text-center w-16">
-                Кат.
-              </th>
+              {config.categories.length > 0 && (
+                <th className="px-2 py-2 border border-slate-600 text-center w-16">
+                  Кат.
+                </th>
+              )}
               <th className="px-2 py-2 border border-slate-600 text-center w-20">
                 Ширина
                 <br />м
@@ -139,6 +142,7 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
                 config={config}
                 priceData={priceData}
                 surchargeFn={surchargeFn}
+                dynamicValuesFn={dynamicValuesFn}
                 exchangeRate={exchangeRate}
                 onChange={handleRowChange}
               />

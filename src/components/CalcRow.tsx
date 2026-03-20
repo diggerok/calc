@@ -1,14 +1,16 @@
 "use client";
 
-import type { CalcRowData, CalculatorConfig, PriceData, SurchargeFn } from "@/types/calculator";
+import type { CalcRowData, CalculatorConfig, SurchargeFn, DynamicValuesFn } from "@/types/calculator";
 import { calculateRowPrice } from "@/lib/pricing";
 import OptionSelect from "./OptionSelect";
 
 interface CalcRowProps {
   row: CalcRowData;
   config: CalculatorConfig;
-  priceData: PriceData;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  priceData: any;
   surchargeFn: SurchargeFn;
+  dynamicValuesFn?: DynamicValuesFn;
   exchangeRate: number;
   onChange: (updated: CalcRowData) => void;
 }
@@ -18,6 +20,7 @@ export default function CalcRow({
   config,
   priceData,
   surchargeFn,
+  dynamicValuesFn,
   exchangeRate,
   onChange,
 }: CalcRowProps) {
@@ -45,20 +48,22 @@ export default function CalcRow({
       <td className="px-2 py-1 border border-slate-200 text-center text-sm text-slate-500">
         {row.id}
       </td>
-      <td className="px-1 py-1 border border-slate-200">
-        <select
-          value={row.category}
-          onChange={(e) => updateField("category", e.target.value)}
-          className="w-full text-xs px-1 py-1 border border-slate-300 rounded bg-yellow-50 text-blue-700 font-medium"
-        >
-          <option value="">—</option>
-          {config.categories.map((c) => (
-            <option key={c} value={c}>
-              {c}
-            </option>
-          ))}
-        </select>
-      </td>
+      {config.categories.length > 0 && (
+        <td className="px-1 py-1 border border-slate-200">
+          <select
+            value={row.category}
+            onChange={(e) => updateField("category", e.target.value)}
+            className="w-full text-xs px-1 py-1 border border-slate-300 rounded bg-yellow-50 text-blue-700 font-medium"
+          >
+            <option value="">—</option>
+            {config.categories.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+        </td>
+      )}
       <td className="px-1 py-1 border border-slate-200">
         <input
           type="number"
@@ -82,15 +87,20 @@ export default function CalcRow({
         />
       </td>
 
-      {config.options.map((opt) => (
-        <OptionSelect
-          key={opt.id}
-          label={opt.label}
-          value={row.options[opt.id] ?? opt.defaultValue}
-          options={opt.values}
-          onChange={(val) => updateOption(opt.id, val)}
-        />
-      ))}
+      {config.options.map((opt) => {
+        const values = opt.dynamic && dynamicValuesFn
+          ? dynamicValuesFn(opt.id, priceData, row.options)
+          : opt.values;
+        return (
+          <OptionSelect
+            key={opt.id}
+            label={opt.label}
+            value={row.options[opt.id] ?? opt.defaultValue}
+            options={values.length > 0 ? values : ["—"]}
+            onChange={(val) => updateOption(opt.id, val)}
+          />
+        );
+      })}
 
       <td className="px-1 py-1 border border-slate-200">
         <input

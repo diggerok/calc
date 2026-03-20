@@ -9,7 +9,7 @@ export const gzhBlindsConfig: CalculatorConfig = {
   maxRows: 10,
   options: [
     { id: "slat", label: "Ширина ламели", values: ["16", "25", "50"], defaultValue: "25" },
-    { id: "color", label: "Цвет", values: ["—"], defaultValue: "—" },
+    { id: "color", label: "Цвет", values: ["—"], dynamic: true, defaultValue: "—" },
     { id: "sideFix", label: "Бок. фиксация", values: ["Нет", "Да"], defaultValue: "Нет" },
   ],
 };

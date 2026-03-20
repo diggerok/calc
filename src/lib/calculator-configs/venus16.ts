@@ -8,7 +8,7 @@ export const venus16Config: CalculatorConfig = {
   pricingMode: "custom",
   maxRows: 10,
   options: [
-    { id: "color", label: "Цвет", values: ["—"], defaultValue: "—" },
+    { id: "color", label: "Цвет", values: ["—"], dynamic: true, defaultValue: "—" },
     { id: "noStop", label: "Без стопора", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "reducer", label: "С редуктором", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "complColor", label: "Цвет компл.", values: ["Белый", "Серый", "Коричневый", "Золотой дуб"], defaultValue: "Белый" },
