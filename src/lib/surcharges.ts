@@ -241,6 +241,28 @@ const plisseRusSurcharge: SurchargeFn = (optId, val, _w, _h, _base) => {
   }
 };
 
+// === ZIP / LOCK ===
+const zipLockSurcharge: SurchargeFn = (optId, val, w, h, basePrice) => {
+  switch (optId) {
+    case "tube": return val === "78" ? 54.03 * w : 0;
+    case "box": return val === "120" ? 51.46 * w : 0;
+    case "control": return val === "Крэнк" ? 45.02 : val === "Пружина" ? 154.39 : val === "Цепь" ? 3.05 * (h + 1) : val === "Цепь нерж" ? 6.56 * (h + 1) : 0;
+    case "ral": return val === "Да" ? basePrice * 0.15 : 0;
+    case "weld": return (parseFloat(val) || 0) * 5.44;
+    case "corner": return (parseFloat(val) || 0) * 52.11;
+    default: return 0;
+  }
+};
+
+const zipRoofSurcharge: SurchargeFn = (optId, val, _w, _h, basePrice) => {
+  switch (optId) {
+    case "ral": return val === "Да" ? basePrice * 0.15 : 0;
+    case "weld": return (parseFloat(val) || 0) * 5.44;
+    case "corner": return (parseFloat(val) || 0) * 52.11;
+    default: return 0;
+  }
+};
+
 const surchargeMap: Record<string, SurchargeFn> = {
   "bnt-m": bntMSurcharge,
   "bnt-l": bntLSurcharge,
@@ -260,6 +282,9 @@ const surchargeMap: Record<string, SurchargeFn> = {
   "plisse": plisseSurcharge,
   "plisse-maxi": plisseMaxiSurcharge,
   "plisse-rus": plisseRusSurcharge,
+  "zip": zipLockSurcharge,
+  "lock": zipLockSurcharge,
+  "zip-roof": zipRoofSurcharge,
 };
 
 export function getSurchargeFunction(calcId: string): SurchargeFn {

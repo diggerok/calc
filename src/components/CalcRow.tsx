@@ -91,12 +91,28 @@ export default function CalcRow({
         const values = opt.dynamic && dynamicValuesFn
           ? dynamicValuesFn(opt.id, priceData, row.options)
           : opt.values;
+        if (values.length === 0) {
+          return (
+            <td key={opt.id} className="px-1 py-1 border border-slate-200">
+              <input
+                type="number"
+                step="0.01"
+                min="0"
+                value={row.options[opt.id] ?? opt.defaultValue}
+                onChange={(e) => updateOption(opt.id, e.target.value)}
+                title={opt.label}
+                className="w-16 text-xs px-1 py-1 border border-slate-300 rounded bg-amber-50 text-blue-700 font-medium text-center focus:ring-1 focus:ring-blue-400 focus:outline-none"
+                placeholder="0"
+              />
+            </td>
+          );
+        }
         return (
           <OptionSelect
             key={opt.id}
             label={opt.label}
             value={row.options[opt.id] ?? opt.defaultValue}
-            options={values.length > 0 ? values : ["—"]}
+            options={values}
             onChange={(val) => updateOption(opt.id, val)}
           />
         );

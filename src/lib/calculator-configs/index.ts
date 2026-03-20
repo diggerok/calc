@@ -14,6 +14,9 @@ import { venus16Config } from "./venus16";
 import { venus25Config } from "./venus25";
 import { gzhBlindsConfig } from "./gzh-blinds";
 import { verticalBlindsConfig } from "./vertical-blinds";
+import { zipConfig } from "./zip";
+import { lockConfig } from "./lock";
+import { zipRoofConfig } from "./zip-roof";
 import type { CalculatorConfig } from "@/types/calculator";
 
 export const calculatorConfigs: Record<string, CalculatorConfig> = {
@@ -40,6 +43,9 @@ export const calculatorConfigs: Record<string, CalculatorConfig> = {
   "venus25": venus25Config,
   "gzh-blinds": gzhBlindsConfig,
   "vertical-blinds": verticalBlindsConfig,
+  "zip": zipConfig,
+  "lock": lockConfig,
+  "zip-roof": zipRoofConfig,
 };
 
 export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
@@ -49,7 +55,7 @@ export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
 }));
 
 // Define group order explicitly
-const groupOrder = ["Рулонка", "BNT", "Шторы плиссе", "Жалюзи"];
+const groupOrder = ["Рулонка", "BNT", "ZIP", "Шторы плиссе", "Жалюзи"];
 
 export const calculatorGroups = calculatorList.reduce<
   Record<string, { id: string; title: string }[]>
