@@ -5,6 +5,7 @@ import { kassetaBntLConfig } from "./kasseta-bnt-l";
 import { zebraBntMConfig } from "./zebra-bnt-m";
 import { zebraBntLConfig } from "./zebra-bnt-l";
 import { zebraKassetaBntMConfig } from "./zebra-kasseta-bnt-m";
+import { miniConfig, miniZebraConfig, mgConfig, uni1Config, uni1ZebraConfig, uni2Config, uni2ZebraConfig, uni2SpringConfig } from "./mini";
 import { plisseConfig } from "./plisse";
 import { plisseMaxiConfig } from "./plisse-maxi";
 import { plisseRusConfig } from "./plisse-rus";
@@ -16,6 +17,14 @@ import { verticalBlindsConfig } from "./vertical-blinds";
 import type { CalculatorConfig } from "@/types/calculator";
 
 export const calculatorConfigs: Record<string, CalculatorConfig> = {
+  "mini": miniConfig,
+  "mini-zebra": miniZebraConfig,
+  "mg": mgConfig,
+  "uni1": uni1Config,
+  "uni1-zebra": uni1ZebraConfig,
+  "uni2": uni2Config,
+  "uni2-zebra": uni2ZebraConfig,
+  "uni2-spring": uni2SpringConfig,
   "bnt-m": bntMConfig,
   "bnt-l": bntLConfig,
   "kasseta-bnt-m": kassetaBntMConfig,
@@ -39,9 +48,16 @@ export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
   group: c.group,
 }));
 
+// Define group order explicitly
+const groupOrder = ["Рулонка", "BNT", "Шторы плиссе", "Жалюзи"];
+
 export const calculatorGroups = calculatorList.reduce<
   Record<string, { id: string; title: string }[]>
 >((acc, c) => {
   (acc[c.group] ??= []).push(c);
   return acc;
 }, {});
+
+export const orderedGroups = groupOrder
+  .filter((g) => calculatorGroups[g])
+  .map((g) => [g, calculatorGroups[g]] as const);

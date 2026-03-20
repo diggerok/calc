@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { calculatorGroups } from "@/lib/calculator-configs";
+import { orderedGroups } from "@/lib/calculator-configs";
 
 export default function CalcListPage() {
   return (
     <div>
       <h1 className="text-2xl font-bold text-slate-800 mb-6">Калькуляторы</h1>
-      {Object.entries(calculatorGroups).map(([group, calcs]) => (
+      {orderedGroups.map(([group, calcs]) => (
         <div key={group} className="mb-8">
           <h2 className="text-lg font-bold text-slate-600 mb-3 border-b border-slate-200 pb-2">
             {group}

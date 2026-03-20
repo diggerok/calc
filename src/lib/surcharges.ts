@@ -112,6 +112,75 @@ const zebraKassetaBntMSurcharge: SurchargeFn = (optId, val, w, h, _base) => {
   }
 };
 
+// === РУЛОНКА (Mini/MG/Uni) ===
+const miniSurcharge: SurchargeFn = (optId, val, _w, h, _base) => {
+  switch (optId) {
+    case "color": return val === "Дуб" || val === "Т.серый" || val === "Черный" ? 4.49 : 0;
+    case "weight": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    case "metalChain": return val === "Да" ? 3.05 * (h + 1) : 0;
+    case "chainTensioner": return val === "Да" ? 1.14 : 0;
+    default: return 0;
+  }
+};
+
+const miniZebraSurcharge: SurchargeFn = (optId, val, _w, h, _base) => {
+  switch (optId) {
+    case "weight": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    case "metalChain": return val === "Да" ? 3.05 * (h + 1) : 0;
+    default: return 0;
+  }
+};
+
+const mgSurcharge: SurchargeFn = (optId, val, w, h, _base) => {
+  switch (optId) {
+    case "color": return val === "Коричневый" ? 5.09 : val === "Черный" ? 10.17 : 0;
+    case "rail": return val === "AMG с тканью" ? 2.69 : 0;
+    case "weight": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    case "mountProfile": return val === "Да" ? 4.56 * w : 0;
+    case "box": return val === "Да" ? 9.69 * w : 0;
+    case "chain": return val === "Металлическая" ? 3.05 * (h + 1) : val === "Сплошная прозр" ? 2.18 : 0;
+    default: return 0;
+  }
+};
+
+const uni1Surcharge: SurchargeFn = (optId, val, _w, h, _base) => {
+  switch (optId) {
+    case "weight": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    case "metalChain": return val === "Да" ? 3.05 * (h + 1) : 0;
+    default: return 0;
+  }
+};
+
+const uni1ZebraSurcharge: SurchargeFn = (optId, val, _w, h, _base) => {
+  switch (optId) {
+    case "color": return val === "Коричневый" ? 5.09 : val === "Черный" ? 10.17 : 0;
+    case "weight": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    case "metalChain": return val === "Да" ? 3.05 * (h + 1) : 0;
+    case "chainTensioner": return val === "Да" ? 1.14 : 0;
+    default: return 0;
+  }
+};
+
+const uni2Surcharge: SurchargeFn = (optId, val, _w, h, _base) => {
+  switch (optId) {
+    case "color": return val === "Коричневый" ? 6 : val === "Зол.дуб" ? 24 : val === "Серебро" ? 29.99 : (val === "Т.серый" || val === "Черный" || val === "Бел.дуб") ? 8.40 : 0;
+    case "weight": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    case "metalChain": return val === "Да" ? 3.05 * (h + 1) : 0;
+    case "chainTensioner": return val === "Да" ? 1.14 : 0;
+    default: return 0;
+  }
+};
+
+const uni2ZebraSurcharge: SurchargeFn = (optId, val, _w, h, _base) => {
+  switch (optId) {
+    case "color": return val === "Коричневый" ? 6 : val === "Зол.дуб" ? 24 : val === "Серебро" ? 29.99 : (val === "Т.серый" || val === "Черный" || val === "Бел.дуб") ? 8.40 : 0;
+    case "weight": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    case "metalChain": return val === "Да" ? 3.05 * (h + 1) : 0;
+    case "chainTensioner": return val === "Да" ? 1.14 : 0;
+    default: return 0;
+  }
+};
+
 // === ПЛИССЕ ===
 const plisseModels: Record<string, number> = {
   "Р1615":0,"Р1600":11.11,"Р1602":20.26,"Р1610":15.52,"Р1612":20.26,"Р1620":9.26,
@@ -180,6 +249,14 @@ const surchargeMap: Record<string, SurchargeFn> = {
   "zebra-bnt-m": zebraBntMSurcharge,
   "zebra-bnt-l": zebraBntLSurcharge,
   "zebra-kasseta-bnt-m": zebraKassetaBntMSurcharge,
+  "mini": miniSurcharge,
+  "mini-zebra": miniZebraSurcharge,
+  "mg": mgSurcharge,
+  "uni1": uni1Surcharge,
+  "uni1-zebra": uni1ZebraSurcharge,
+  "uni2": uni2Surcharge,
+  "uni2-zebra": uni2ZebraSurcharge,
+  "uni2-spring": () => 0,
   "plisse": plisseSurcharge,
   "plisse-maxi": plisseMaxiSurcharge,
   "plisse-rus": plisseRusSurcharge,
