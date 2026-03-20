@@ -135,6 +135,91 @@ const verticalBlindsPriceFn: CustomPriceFn = (priceData, _cat, w, h, options) =>
   return price;
 };
 
+// === Плиссе ===
+// Base price from matrix by cat, + model/color/bracket surcharges, + extras
+const plissePriceFn: CustomPriceFn = (priceData, _cat, w, h, options) => {
+  const cat = options.cat ?? "Е";
+  const base = lookupBasePrice(priceData, cat, w, h);
+  if (base === 0) return 0;
+
+  let price = base;
+
+  // Model surcharge
+  const modelName = options.model ?? "";
+  const modelEntry = priceData.models?.find((m: { name: string }) => m.name === modelName);
+  if (modelEntry) price += modelEntry.surcharge;
+
+  // Color surcharge * width
+  const colorName = options.color ?? "";
+  const colorEntry = priceData.colors?.find((c: { name: string }) => c.name === colorName);
+  if (colorEntry) price += colorEntry.surcharge * w;
+
+  // Bracket surcharge
+  const bracketName = options.bracket ?? "";
+  const bracketEntry = priceData.brackets?.find((b: { name: string }) => b.name === bracketName);
+  if (bracketEntry) price += bracketEntry.surcharge;
+
+  // Cord with loops
+  if (options.cord === "Да") price += 19.05;
+  // Reinforced profile
+  if (options.reinforced === "Да") price += 28.59;
+  // Mounting profile
+  if (options.mountProfile === "Да") price += 33.72 * w;
+  // Metal handle
+  const handleCount = parseInt(options.handle ?? "0", 10) || 0;
+  price += handleCount * 9.52;
+
+  return price;
+};
+
+// === Плиссе Макси ===
+const plisseMaxiPriceFn: CustomPriceFn = (priceData, _cat, w, h, options) => {
+  const cat = options.cat ?? "1";
+  const base = lookupBasePrice(priceData, cat, w, h);
+  if (base === 0) return 0;
+
+  let price = base;
+
+  const modelName = options.model ?? "";
+  const modelEntry = priceData.models?.find((m: { name: string }) => m.name === modelName);
+  if (modelEntry) price += modelEntry.surcharge;
+
+  const colorName = options.color ?? "";
+  const colorEntry = priceData.colors?.find((c: { name: string }) => c.name === colorName);
+  if (colorEntry) price += colorEntry.surcharge * w;
+
+  const bracketName = options.bracket ?? "";
+  const bracketEntry = priceData.brackets?.find((b: { name: string }) => b.name === bracketName);
+  if (bracketEntry) price += bracketEntry.surcharge;
+
+  return price;
+};
+
+// === Плиссе RUS ===
+// Color surcharge is flat (no * width)
+const plisseRusPriceFn: CustomPriceFn = (priceData, _cat, w, h, options) => {
+  const cat = options.cat ?? "1";
+  const base = lookupBasePrice(priceData, cat, w, h);
+  if (base === 0) return 0;
+
+  let price = base;
+
+  const modelName = options.model ?? "";
+  const modelEntry = priceData.models?.find((m: { name: string }) => m.name === modelName);
+  if (modelEntry) price += modelEntry.surcharge;
+
+  // Color surcharge WITHOUT width multiplication for RUS
+  const colorName = options.color ?? "";
+  const colorEntry = priceData.colors?.find((c: { name: string }) => c.name === colorName);
+  if (colorEntry) price += colorEntry.surcharge;
+
+  const bracketName = options.bracket ?? "";
+  const bracketEntry = priceData.brackets?.find((b: { name: string }) => b.name === bracketName);
+  if (bracketEntry) price += bracketEntry.surcharge;
+
+  return price;
+};
+
 // Register all custom pricing functions
 export function initCustomPricing() {
   registerCustomPriceFn("db-blinds", dbBlindsPriceFn);
@@ -142,4 +227,7 @@ export function initCustomPricing() {
   registerCustomPriceFn("venus25", venus25PriceFn);
   registerCustomPriceFn("gzh-blinds", gzhBlindsPriceFn);
   registerCustomPriceFn("vertical-blinds", verticalBlindsPriceFn);
+  registerCustomPriceFn("plisse", plissePriceFn);
+  registerCustomPriceFn("plisse-maxi", plisseMaxiPriceFn);
+  registerCustomPriceFn("plisse-rus", plisseRusPriceFn);
 }

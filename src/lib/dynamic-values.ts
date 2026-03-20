@@ -54,12 +54,23 @@ const verticalDynamic: DynamicValuesFn = (optionId, priceData) => {
   return [];
 };
 
+// Plisse (shared for all 3 plisse calculators)
+const plisseDynamic: DynamicValuesFn = (optionId, priceData) => {
+  if (optionId === "model") return (priceData.models ?? []).map((m: {name: string}) => m.name);
+  if (optionId === "color") return (priceData.colors ?? []).map((c: {name: string}) => c.name);
+  if (optionId === "bracket") return (priceData.brackets ?? []).map((b: {name: string}) => b.name);
+  return [];
+};
+
 const dynamicMap: Record<string, DynamicValuesFn> = {
   "db-blinds": dbBlindsDynamic,
   "venus16": venus16Dynamic,
   "venus25": venus25Dynamic,
   "gzh-blinds": gzhDynamic,
   "vertical-blinds": verticalDynamic,
+  "plisse": plisseDynamic,
+  "plisse-maxi": plisseDynamic,
+  "plisse-rus": plisseDynamic,
 };
 
 export function getDynamicValuesFn(calcId: string): DynamicValuesFn | undefined {
