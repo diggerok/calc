@@ -263,6 +263,20 @@ const zipRoofSurcharge: SurchargeFn = (optId, val, _w, _h, basePrice) => {
   }
 };
 
+// === Римские шторы ===
+const romanBlindsSurcharge: SurchargeFn = (optId, val, w, h, basePrice) => {
+  switch (optId) {
+    case "weight": return val === "Алюминий" ? 1.72 * w : 0;
+    case "type": return val === "Мини" ? basePrice * 0.1 : val === "Макси" ? 71.19 * w : 0;
+    case "tilt": return val === "Да" ? 71.19 : 0;
+    case "fabricOnly": return val === "Да" ? -13 * w : 0;
+    case "chain": return val === "Металл" ? 3.05 * (h + 1) : val === "Нерж" ? 6.61 * (h + 1) : 0;
+    case "weightDecor": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    case "kant": return val === "30мм" ? 17.55 * w : val === "50мм" ? 21.06 * w : 0;
+    default: return 0;
+  }
+};
+
 const surchargeMap: Record<string, SurchargeFn> = {
   "bnt-m": bntMSurcharge,
   "bnt-l": bntLSurcharge,
@@ -285,6 +299,7 @@ const surchargeMap: Record<string, SurchargeFn> = {
   "zip": zipLockSurcharge,
   "lock": zipLockSurcharge,
   "zip-roof": zipRoofSurcharge,
+  "roman-blinds": romanBlindsSurcharge,
 };
 
 export function getSurchargeFunction(calcId: string): SurchargeFn {

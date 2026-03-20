@@ -220,6 +220,54 @@ const plisseRusPriceFn: CustomPriceFn = (priceData, _cat, w, h, options) => {
   return price;
 };
 
+// === Римские карнизы ===
+// Price based on length lookup (uses width as length, height is ignored)
+const romanRailsPriceFn: CustomPriceFn = (priceData, _cat, w, _h, options) => {
+  const lengths: number[] = priceData.lengths;
+  const prices: number[] = priceData.prices;
+  const rings: number[] = priceData.rings;
+  if (!lengths || !prices || !rings) return 0;
+
+  // Find ceiling match for width in lengths array
+  let idx = lengths.length - 1;
+  for (let i = 0; i < lengths.length; i++) {
+    if (lengths[i] >= w) { idx = i; break; }
+  }
+
+  let price = prices[idx] ?? 0;
+  const basePrice = price;
+  const numRings = rings[idx] ?? 0;
+
+  // Bracket surcharge * rings
+  const bracket = options.bracket ?? "Стандартный";
+  const bracketPrices: Record<string, number> = {
+    "Пружинный": 0.51,
+    "Стен. 5см": 1.99,
+    "Стен. 10см": 2.64,
+    "Стен. 14см": 3.06,
+    "Стен. 24см": 3.84,
+  };
+  price += (bracketPrices[bracket] ?? 0) * numRings;
+
+  // Type surcharge
+  const type = options.type ?? "Стандарт";
+  if (type === "Мини") price += basePrice * 0.1;
+  else if (type === "Макси") price += 71.19 * w;
+
+  // Tilt
+  if (options.tilt === "Да") price += 3.05;
+
+  // Chain
+  const chain = options.chain ?? "Нет";
+  if (chain === "Металл") price += 3.05 * (w + 1);
+  else if (chain === "Нерж") price += 6.61 * (w + 1);
+
+  // Day/Night doubles base price
+  if (options.dayNight === "Да") price += basePrice;
+
+  return price;
+};
+
 // Register all custom pricing functions
 export function initCustomPricing() {
   registerCustomPriceFn("db-blinds", dbBlindsPriceFn);
@@ -230,4 +278,5 @@ export function initCustomPricing() {
   registerCustomPriceFn("plisse", plissePriceFn);
   registerCustomPriceFn("plisse-maxi", plisseMaxiPriceFn);
   registerCustomPriceFn("plisse-rus", plisseRusPriceFn);
+  registerCustomPriceFn("roman-rails", romanRailsPriceFn);
 }

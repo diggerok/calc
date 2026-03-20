@@ -17,6 +17,8 @@ import { verticalBlindsConfig } from "./vertical-blinds";
 import { zipConfig } from "./zip";
 import { lockConfig } from "./lock";
 import { zipRoofConfig } from "./zip-roof";
+import { romanBlindsConfig } from "./roman-blinds";
+import { romanRailsConfig } from "./roman-rails";
 import type { CalculatorConfig } from "@/types/calculator";
 
 export const calculatorConfigs: Record<string, CalculatorConfig> = {
@@ -46,6 +48,8 @@ export const calculatorConfigs: Record<string, CalculatorConfig> = {
   "zip": zipConfig,
   "lock": lockConfig,
   "zip-roof": zipRoofConfig,
+  "roman-blinds": romanBlindsConfig,
+  "roman-rails": romanRailsConfig,
 };
 
 export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
@@ -55,7 +59,7 @@ export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
 }));
 
 // Define group order explicitly
-const groupOrder = ["Рулонка", "BNT", "ZIP", "Шторы плиссе", "Жалюзи"];
+const groupOrder = ["Рулонка", "BNT", "ZIP", "Шторы плиссе", "Римские шторы", "Жалюзи"];
 
 export const calculatorGroups = calculatorList.reduce<
   Record<string, { id: string; title: string }[]>
