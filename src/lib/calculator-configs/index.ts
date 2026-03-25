@@ -19,7 +19,30 @@ import { lockConfig } from "./lock";
 import { zipRoofConfig } from "./zip-roof";
 import { romanBlindsConfig } from "./roman-blinds";
 import { romanRailsConfig } from "./roman-rails";
-import type { CalculatorConfig } from "@/types/calculator";
+import type { CalculatorConfig, FabricItem } from "@/types/calculator";
+import fabricsRoller from "@/lib/price-data/fabrics-roller.json";
+import fabricsZebra from "@/lib/price-data/fabrics-zebra.json";
+import fabricsPlisse from "@/lib/price-data/fabrics-plisse.json";
+
+const rollerFabrics: FabricItem[] = fabricsRoller;
+const zebraFabrics: FabricItem[] = fabricsZebra;
+const plisseFabrics: FabricItem[] = fabricsPlisse;
+
+// Привязываем ткани к рулонным калькуляторам (не зебра, не плиссе)
+for (const cfg of [miniConfig, mgConfig, uni1Config, uni2Config, uni2SpringConfig, bntMConfig, bntLConfig, kassetaBntMConfig, kassetaBntLConfig]) {
+  cfg.fabrics = rollerFabrics.filter((f) => cfg.categories.includes(f.category));
+}
+
+// Привязываем ткани зебра
+for (const cfg of [miniZebraConfig, uni1ZebraConfig, uni2ZebraConfig, zebraBntMConfig, zebraBntLConfig, zebraKassetaBntMConfig]) {
+  cfg.fabrics = zebraFabrics.filter((f) => cfg.categories.includes(f.category));
+}
+
+// Привязываем ткани плиссе (категории в options.cat)
+const plisseCategories = ["0", "E", "1", "2", "3", "4", "5"];
+for (const cfg of [plisseConfig, plisseMaxiConfig, plisseRusConfig]) {
+  cfg.fabrics = plisseFabrics.filter((f) => plisseCategories.includes(f.category));
+}
 
 export const calculatorConfigs: Record<string, CalculatorConfig> = {
   "mini": miniConfig,

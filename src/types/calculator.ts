@@ -16,6 +16,19 @@ export type DynamicValuesFn = (
 
 export type PricingMode = "matrix" | "custom";
 
+export interface FabricItem {
+  name: string;
+  category: string;
+  rollWidth: number;
+}
+
+export interface SizeLimit {
+  minWidth: number;
+  maxWidth: number;
+  maxHeight?: number;
+  maxArea?: number;
+}
+
 export interface CalculatorConfig {
   id: string;
   title: string;
@@ -24,6 +37,8 @@ export interface CalculatorConfig {
   options: CalculatorOption[];
   maxRows: number;
   pricingMode?: PricingMode;
+  fabrics?: FabricItem[];
+  sizeLimits?: Record<string, SizeLimit>; // key = "slat-material" or similar
 }
 
 export type SurchargeFn = (
@@ -42,6 +57,8 @@ export interface PriceData {
 
 export interface CalcRowData {
   id: number;
+  fabric: string;
+  fabricColor: string;
   category: string;
   width: string;
   height: string;

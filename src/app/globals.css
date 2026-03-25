@@ -24,3 +24,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@media print {
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Скрыть навигацию при печати */
+  header, nav {
+    display: none !important;
+  }
+
+  /* Убрать отступы контейнера */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

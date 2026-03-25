@@ -2,7 +2,7 @@ import type { CalculatorConfig } from "@/types/calculator";
 
 export const lockConfig: CalculatorConfig = {
   id: "lock",
-  title: "LOCK Системы",
+  title: "Lock система",
   group: "ZIP",
   categories: ["3", "4"],
   pricingMode: "matrix",

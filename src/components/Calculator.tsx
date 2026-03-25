@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import type { CalcRowData, CalculatorConfig, PriceData } from "@/types/calculator";
 import { getSurchargeFunction } from "@/lib/surcharges";
 import { initCustomPricing } from "@/lib/custom-pricing";
@@ -22,6 +23,8 @@ function createEmptyRow(id: number, config: CalculatorConfig): CalcRowData {
   }
   return {
     id,
+    fabric: "",
+    fabricColor: "",
     category: "",
     width: "",
     height: "",
@@ -34,6 +37,7 @@ function createEmptyRow(id: number, config: CalculatorConfig): CalcRowData {
 }
 
 export default function Calculator({ config, priceData }: CalculatorProps) {
+  const router = useRouter();
   const surchargeFn = useMemo(() => getSurchargeFunction(config.id), [config.id]);
   const dynamicValuesFn = useMemo(() => getDynamicValuesFn(config.id), [config.id]);
   const [rows, setRows] = useState<CalcRowData[]>(() =>
@@ -45,9 +49,17 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
   const [markupType, setMarkupType] = useState<"markup" | "discount">("markup");
   const [markupPercent, setMarkupPercent] = useState(0);
 
-  const handleRowChange = useCallback((updated: CalcRowData) => {
-    setRows((prev) => prev.map((r) => (r.id === updated.id ? updated : r)));
-  }, []);
+  const handleRowChange = (updated: CalcRowData) => {
+    setRows((prev) => {
+      const newRows = prev.map((r) => (r.id === updated.id ? updated : r));
+      const allFilled = newRows.every((r) => r.priceUsd > 0);
+      if (allFilled) {
+        const nextId = Math.max(...newRows.map((r) => r.id)) + 1;
+        newRows.push(createEmptyRow(nextId, config));
+      }
+      return newRows;
+    });
+  };
 
   const handleExchangeRateChange = useCallback(
     (rate: number) => {
@@ -88,6 +100,23 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
     }
   };
 
+  const handleCreateKP = () => {
+    const activeRows = rows.filter((r) => r.priceUsd > 0);
+    if (activeRows.length === 0) {
+      alert("Нет позиций для КП. Заполните хотя бы одну строку.");
+      return;
+    }
+    const kpData = {
+      config,
+      rows,
+      exchangeRate,
+      markupType,
+      markupPercent,
+    };
+    sessionStorage.setItem("kp-data", JSON.stringify(kpData));
+    router.push("/kp");
+  };
+
   return (
     <div>
       <h1 className="text-2xl font-bold text-slate-800 mb-4">{config.title}</h1>
@@ -99,6 +128,16 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
               <th className="px-2 py-2 border border-slate-600 text-center w-8">
                 №
               </th>
+              {config.fabrics && config.fabrics.length > 0 && (
+                <th className="px-2 py-2 border border-slate-600 text-center">
+                  Ткань
+                </th>
+              )}
+              {config.fabrics && config.fabrics.length > 0 && (
+                <th className="px-2 py-2 border border-slate-600 text-center">
+                  Цвет ткани
+                </th>
+              )}
               {config.categories.length > 0 && (
                 <th className="px-2 py-2 border border-slate-600 text-center w-16">
                   Кат.
@@ -167,6 +206,12 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
           className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium"
         >
           Сохранить расчёт
+        </button>
+        <button
+          onClick={handleCreateKP}
+          className="px-6 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-900 font-medium"
+        >
+          Создать КП
         </button>
       </div>
     </div>

@@ -15,6 +15,7 @@ export const kassetaBntLConfig: CalculatorConfig = {
     { id: "weightDecor", label: "Грузик декор", values: ["Стандарт", "Декор", "Дизайн"], defaultValue: "Стандарт" },
     { id: "childSafety", label: "Детская без.", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "chain", label: "Цепь", values: ["Пластиковая", "Металлическая", "Нержавеющая", "Прозрачная"], defaultValue: "Пластиковая" },
+    { id: "bigMechanism", label: "Больш. мех.", values: ["Нет", "Прозр. цепь", "Петля 200см", "Петля 250см", "Петля 300см"], defaultValue: "Нет" },
     { id: "reducer", label: "Редуктор", values: ["Нет", "Редуктор 52", "Редуктор 65/75"], defaultValue: "Нет" },
     { id: "spring", label: "Пружина", values: ["Нет", "Левая", "Правая"], defaultValue: "Нет" },
     { id: "welding", label: "Сварка", values: ["Нет", "Да"], defaultValue: "Нет" },

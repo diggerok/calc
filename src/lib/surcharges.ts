@@ -28,7 +28,8 @@ const bntLSurcharge: SurchargeFn = (optId, val, w, h, _base) => {
     case "adjustablePlug": return val === "Да" ? 4.36 : 0;
     case "weightDecor": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
     case "childSafety": return val === "Да" ? 4.36 : 0;
-    case "chain": return val === "Прозрачная" ? 2.18 : val === "Металлическая" ? 3.051 * h * 1.5 : val === "Нержавеющая" ? 6.61 * h * 1.5 : val === "Больш.мех+100" ? 20.32 : val === "Больш.мех+200" ? 21.77 : val === "Больш.мех+250" ? 24.68 : val === "Больш.мех+300" ? 27.58 : 0;
+    case "chain": return val === "Прозрачная" ? 2.18 : val === "Металлическая" ? 3.051 * h * 1.5 : val === "Нержавеющая" ? 6.61 * h * 1.5 : 0;
+    case "bigMechanism": return val === "Прозр. цепь" ? 20.32 : val === "Петля 200см" ? 21.77 : val === "Петля 250см" ? 24.68 : val === "Петля 300см" ? 27.58 : 0;
     case "sideFix": return val === "Да" ? 93.97 : 0;
     case "reducer": return val === "Редуктор 52" ? 13.65 : val === "Редуктор 65/75" ? 19.31 : 0;
     case "spring": return val === "Левая" ? 11.06 : val === "Правая" ? 8.30 : 0;
@@ -65,6 +66,7 @@ const kassetaBntLSurcharge: SurchargeFn = (optId, val, w, h, _base) => {
     case "weightDecor": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
     case "childSafety": return val === "Да" ? 4.36 : 0;
     case "chain": return val === "Металлическая" ? 3.051 * h * 1.5 : val === "Нержавеющая" ? 6.61 * h * 1.5 : val === "Прозрачная" ? 2.18 : 0;
+    case "bigMechanism": return val === "Прозр. цепь" ? 20.32 : val === "Петля 200см" ? 21.77 : val === "Петля 250см" ? 24.68 : val === "Петля 300см" ? 27.58 : 0;
     case "reducer": return val === "Редуктор 52" ? 13.65 : val === "Редуктор 65/75" ? 19.31 : 0;
     case "spring": return val === "Левая" ? 11.06 : val === "Правая" ? 8.30 : 0;
     case "welding": return val === "Да" ? 5.44 * h : 0;

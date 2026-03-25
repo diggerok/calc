@@ -1,0 +1,682 @@
+[
+  {
+    "name": "АВЕНСИС",
+    "category": "2",
+    "rollWidth": 240
+  },
+  {
+    "name": "АЖУР",
+    "category": "1",
+    "rollWidth": 220
+  },
+  {
+    "name": "АЛЬФА 200 см",
+    "category": "E",
+    "rollWidth": 200
+  },
+  {
+    "name": "АЛЬФА 250 см",
+    "category": "E",
+    "rollWidth": 250
+  },
+  {
+    "name": "АЛЬФА ЛАЙТ",
+    "category": "E",
+    "rollWidth": 270
+  },
+  {
+    "name": "АЛЬФА ALU BLACK-OUT 200",
+    "category": "1",
+    "rollWidth": 200
+  },
+  {
+    "name": "АЛЬФА ALU BLACK-OUT 250",
+    "category": "1",
+    "rollWidth": 250
+  },
+  {
+    "name": "АЛЬФА BLACK-OUT 250",
+    "category": "1",
+    "rollWidth": 250
+  },
+  {
+    "name": "АЛЬФА BLACK-OUT 300",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "АЛЬФА II, 200 cm",
+    "category": "E",
+    "rollWidth": 200
+  },
+  {
+    "name": "АЛЬФА II, 250 см",
+    "category": "E",
+    "rollWidth": 250
+  },
+  {
+    "name": "АМЕЛИ",
+    "category": "1",
+    "rollWidth": 200
+  },
+  {
+    "name": "АНТАРЕС BLACK-OUT",
+    "category": "4",
+    "rollWidth": 300
+  },
+  {
+    "name": "АПОЛЛО BLACK-OUT",
+    "category": "5",
+    "rollWidth": 410
+  },
+  {
+    "name": "АРИАДНА",
+    "category": "3",
+    "rollWidth": 195
+  },
+  {
+    "name": "БАМБУК",
+    "category": "1",
+    "rollWidth": 240
+  },
+  {
+    "name": "БАТИСТ",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "БЛЮЗ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "БОСТОН 1%",
+    "category": "3",
+    "rollWidth": 250
+  },
+  {
+    "name": "БУКЛЕ DIM-OUT",
+    "category": "4",
+    "rollWidth": 310
+  },
+  {
+    "name": "ВЕНА",
+    "category": "3",
+    "rollWidth": 280
+  },
+  {
+    "name": "ВИНТАЖ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ВУАЛЬ",
+    "category": "2",
+    "rollWidth": 240
+  },
+  {
+    "name": "ГАЛА BLACK-OUT",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "ГЛИТТЕР",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "ГЛИТТЕР BLACK-OUT",
+    "category": "4",
+    "rollWidth": 240
+  },
+  {
+    "name": "ГУАНА",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ДУАН",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ИМПАЛА",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "ИНЕЙ BO",
+    "category": "1",
+    "rollWidth": 250
+  },
+  {
+    "name": "КАЛИПСО",
+    "category": "3",
+    "rollWidth": 200
+  },
+  {
+    "name": "КАМЕЛИЯ",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "КАРОЛИНА",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "КИМБЕРЛИ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "КОЛИБРИ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "КРИС",
+    "category": "E",
+    "rollWidth": 220
+  },
+  {
+    "name": "КРИС BLACK-OUT",
+    "category": "2",
+    "rollWidth": 220
+  },
+  {
+    "name": "КРОНА",
+    "category": "1",
+    "rollWidth": 220
+  },
+  {
+    "name": "ЛЁН",
+    "category": "1",
+    "rollWidth": 200
+  },
+  {
+    "name": "ЛЁН BLACK-OUT",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ЛИМА ПЕРЛА",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "ЛИНА",
+    "category": "E",
+    "rollWidth": 220
+  },
+  {
+    "name": "ЛИНА BLACK-OUT",
+    "category": "1",
+    "rollWidth": 220
+  },
+  {
+    "name": "ЛИНЕН",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ЛУВР",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "ЛЮМИЯ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "МАНИЛА",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "МАРМО",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "МЕМФИС",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "МИСТ",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "МОНАКО BO",
+    "category": "4",
+    "rollWidth": 300
+  },
+  {
+    "name": "МОНТЕ 3%",
+    "category": "3",
+    "rollWidth": 250
+  },
+  {
+    "name": "НЕВАДА",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "НИКА",
+    "category": "1",
+    "rollWidth": 240
+  },
+  {
+    "name": "НОВА",
+    "category": "3",
+    "rollWidth": 200
+  },
+  {
+    "name": "НУАЖ",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ОМЕГА 1908 300 см",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "ОМЕГА 200 см",
+    "category": "1",
+    "rollWidth": 200
+  },
+  {
+    "name": "ОМЕГА 250 см",
+    "category": "1",
+    "rollWidth": 250
+  },
+  {
+    "name": "ОМЕГА 300 см",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "ОМЕГА ЛАЙТ",
+    "category": "E",
+    "rollWidth": 260
+  },
+  {
+    "name": "ОМЕГА СОФТ",
+    "category": "1",
+    "rollWidth": 250
+  },
+  {
+    "name": "ОМЕГА BLACK-OUT 250 см",
+    "category": "2",
+    "rollWidth": 250
+  },
+  {
+    "name": "ОМЕГА BLACK-OUT 300 см",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ОМЕГА BLACK-OUT DBL, 280 см",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "ОМЕГА FR",
+    "category": "2",
+    "rollWidth": 250
+  },
+  {
+    "name": "ОМЕГА FR 1908 300 см",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ОМЕГА FR 300 см",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ОМЕГА FR BLACK-OUT",
+    "category": "3",
+    "rollWidth": 250
+  },
+  {
+    "name": "ОМЕГА FR BLACK-OUT 300 см",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "ОСВАЛЬД BO",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ОСЛО BLACK-OUT",
+    "category": "2",
+    "rollWidth": 220
+  },
+  {
+    "name": "ПЕРГАМ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ПЕРЛ",
+    "category": "2",
+    "rollWidth": 250
+  },
+  {
+    "name": "ПЕРЛ ЛАЙТ",
+    "category": "1",
+    "rollWidth": 260
+  },
+  {
+    "name": "Пленка ПРОТЕКТ прозрачная, 0.1мм",
+    "category": "1",
+    "rollWidth": 152
+  },
+  {
+    "name": "ПЛЭЙН",
+    "category": "E",
+    "rollWidth": 200
+  },
+  {
+    "name": "ПЛЭЙН BLACK-OUT",
+    "category": "1",
+    "rollWidth": 200
+  },
+  {
+    "name": "ПЛЭЙН BLACK-OUT DBL",
+    "category": "1",
+    "rollWidth": 200
+  },
+  {
+    "name": "ПРАДО",
+    "category": "3",
+    "rollWidth": 280
+  },
+  {
+    "name": "ПУЭБЛО BLACK-OUT",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "РАПСОДИЯ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "РУАН",
+    "category": "1",
+    "rollWidth": 220
+  },
+  {
+    "name": "САЛЬМА",
+    "category": "2",
+    "rollWidth": 210
+  },
+  {
+    "name": "САТАРА",
+    "category": "2",
+    "rollWidth": 240
+  },
+  {
+    "name": "САФАРИ",
+    "category": "2",
+    "rollWidth": 240
+  },
+  {
+    "name": "СИДЕ",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "СИДЕ BLACK-OUT",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "СИЛЬВИЯ",
+    "category": "2",
+    "rollWidth": 195
+  },
+  {
+    "name": "СИНТЕЗ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "СКАЗКА",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "СКАНДИ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "СКРИН 1%",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН 3%",
+    "category": "3",
+    "rollWidth": 200
+  },
+  {
+    "name": "СКРИН 3%",
+    "category": "3",
+    "rollWidth": 250
+  },
+  {
+    "name": "СКРИН 3%",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН 5% (0225 белый )",
+    "category": "3",
+    "rollWidth": 200
+  },
+  {
+    "name": "СКРИН 5% (0225 белый )",
+    "category": "3",
+    "rollWidth": 250
+  },
+  {
+    "name": "СКРИН 5% (0225 белый)",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН 5% (1604, 1882)",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН 5% (1608, 1881, 1908, 2261)",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН 5% (1608)",
+    "category": "3",
+    "rollWidth": 200
+  },
+  {
+    "name": "СКРИН 5% (1608)",
+    "category": "3",
+    "rollWidth": 250
+  },
+  {
+    "name": "СКРИН 5% (1852, 2259)",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН 5% (1852, 2406, 2259)",
+    "category": "3",
+    "rollWidth": 250
+  },
+  {
+    "name": "СКРИН 5% (1852)",
+    "category": "3",
+    "rollWidth": 200
+  },
+  {
+    "name": "СКРИН 5% (1908)",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН 5% ALU",
+    "category": "4",
+    "rollWidth": 250
+  },
+  {
+    "name": "СКРИН ЭКО 3%",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН OTD 0% (0225 белый, 2261 св.-бежевый, 1608 св.-серый)",
+    "category": "4",
+    "rollWidth": 350
+  },
+  {
+    "name": "СКРИН OTD 0% (1854 графит, 2870 коричневый, 1908 черный)",
+    "category": "4",
+    "rollWidth": 350
+  },
+  {
+    "name": "СКРИН OTD 3%",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН OTD 5%",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН OTD 5% (0225, 1908)",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СКРИН OTD ZIP 4%",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СОЛЕЙ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "СОУЛ",
+    "category": "1",
+    "rollWidth": 240
+  },
+  {
+    "name": "СОФИЯ",
+    "category": "1",
+    "rollWidth": 200
+  },
+  {
+    "name": "СФЕРА BLACK-OUT",
+    "category": "2",
+    "rollWidth": 220
+  },
+  {
+    "name": "ТАЛЬНИК",
+    "category": "2",
+    "rollWidth": 250
+  },
+  {
+    "name": "ТРЕВИ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ТУРИН",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "ТУРИН BO",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ФИДЖИ",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "ФИЕСТА",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ФЛАЙ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ФЛЁР",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ФОЙЛ",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ШАНХАЙ",
+    "category": "3",
+    "rollWidth": 180
+  },
+  {
+    "name": "ШЁЛК",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "ШЁЛК BLACK-OUT",
+    "category": "3",
+    "rollWidth": 200
+  },
+  {
+    "name": "ШЁЛК II",
+    "category": "E",
+    "rollWidth": 200
+  },
+  {
+    "name": "ШЁЛК II BLACK-OUT",
+    "category": "1",
+    "rollWidth": 200
+  },
+  {
+    "name": "ЭЛЬБА",
+    "category": "1",
+    "rollWidth": 220
+  },
+  {
+    "name": "ЮТА BLACK-OUT",
+    "category": "2",
+    "rollWidth": 290
+  },
+  {
+    "name": "ЯМАЙКА",
+    "category": "3",
+    "rollWidth": 230
+  }
+]

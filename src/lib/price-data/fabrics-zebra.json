@@ -1,0 +1,227 @@
+[
+  {
+    "name": "АВАНГАРД",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "АДАЖИО",
+    "category": "3",
+    "rollWidth": 280
+  },
+  {
+    "name": "АЙЛЕНД",
+    "category": "4",
+    "rollWidth": 280
+  },
+  {
+    "name": "АРАБЕСКА",
+    "category": "2",
+    "rollWidth": 270
+  },
+  {
+    "name": "АУРА",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "БАБОЧКИ",
+    "category": "2",
+    "rollWidth": 260
+  },
+  {
+    "name": "БЕЛЛА",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "БЕРГАМА",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ВАЛЕНСИЯ",
+    "category": "4",
+    "rollWidth": 240
+  },
+  {
+    "name": "ВЕГА",
+    "category": "E",
+    "rollWidth": 300
+  },
+  {
+    "name": "ГЛОРИЯ БИО ВО",
+    "category": "3",
+    "rollWidth": 280
+  },
+  {
+    "name": "ДАЙКИРИ",
+    "category": "3",
+    "rollWidth": 280
+  },
+  {
+    "name": "ДАЙМОНД",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ДАКОТА",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ДАМАСК",
+    "category": "2",
+    "rollWidth": 270
+  },
+  {
+    "name": "ДОРИ",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "КЛАУД",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "ЛЕН",
+    "category": "1",
+    "rollWidth": 240
+  },
+  {
+    "name": "ЛОРА",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "ЛОТОС",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "ЛОФТ ВО",
+    "category": "3",
+    "rollWidth": 280
+  },
+  {
+    "name": "ЛУКСОР ТРИО",
+    "category": "4",
+    "rollWidth": 280
+  },
+  {
+    "name": "ЛУКСОР УНО",
+    "category": "4",
+    "rollWidth": 280
+  },
+  {
+    "name": "МЕТАЛЛИК",
+    "category": "3",
+    "rollWidth": 280
+  },
+  {
+    "name": "МОНТАНА",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ОБЛАКА",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ПАЛАС",
+    "category": "3",
+    "rollWidth": 280
+  },
+  {
+    "name": "ПАРМА",
+    "category": "4",
+    "rollWidth": 280
+  },
+  {
+    "name": "ПЕРСИЯ",
+    "category": "2",
+    "rollWidth": 270
+  },
+  {
+    "name": "ПЛЭЙН BO",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ПЛЭЙН BO",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "РИНО",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "РОДОС BO",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "САХАРА",
+    "category": "E",
+    "rollWidth": 210
+  },
+  {
+    "name": "СКРИН",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "СОФТ",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "СТАНДАРТ",
+    "category": "E",
+    "rollWidth": 280
+  },
+  {
+    "name": "СТЕП",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "СТОУН БИО",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ТЕТРИС",
+    "category": "2",
+    "rollWidth": 280
+  },
+  {
+    "name": "ТОКИО",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ТОП",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "ШАДИ",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "ЭЛЛАДА",
+    "category": "2",
+    "rollWidth": 270
+  },
+  {
+    "name": "ЭТНИК",
+    "category": "2",
+    "rollWidth": 280
+  }
+]

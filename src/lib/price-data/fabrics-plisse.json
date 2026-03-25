@@ -1,0 +1,457 @@
+[
+  {
+    "name": "Акварель",
+    "category": "4",
+    "rollWidth": 225
+  },
+  {
+    "name": "Аллегро",
+    "category": "2",
+    "rollWidth": 238
+  },
+  {
+    "name": "Базилик",
+    "category": "2",
+    "rollWidth": 200
+  },
+  {
+    "name": "Батик",
+    "category": "3",
+    "rollWidth": 235
+  },
+  {
+    "name": "Бланш белый",
+    "category": "3",
+    "rollWidth": 235
+  },
+  {
+    "name": "Бланш св.бежевый",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "Валента",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "Венесуэлла",
+    "category": "4",
+    "rollWidth": 225
+  },
+  {
+    "name": "Веранда",
+    "category": "3",
+    "rollWidth": 238
+  },
+  {
+    "name": "Виндзор",
+    "category": "3",
+    "rollWidth": 200
+  },
+  {
+    "name": "Виола",
+    "category": "3",
+    "rollWidth": 235
+  },
+  {
+    "name": "Вита",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
+    "name": "Гофре Классик",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "Гофре Классик BO",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "Гофре Креп",
+    "category": "3",
+    "rollWidth": 220
+  },
+  {
+    "name": "Гофре Креп Перла",
+    "category": "4",
+    "rollWidth": 220
+  },
+  {
+    "name": "Гофре Папирус ВО",
+    "category": "5",
+    "rollWidth": 450
+  },
+  {
+    "name": "Гофре Перфект",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "Гофре Перфект ВО",
+    "category": "4",
+    "rollWidth": 300
+  },
+  {
+    "name": "Гофре Сатин",
+    "category": "3",
+    "rollWidth": 365
+  },
+  {
+    "name": "Гофре Сатин 45 мм",
+    "category": "3",
+    "rollWidth": 365
+  },
+  {
+    "name": "Гофре Сатин ВО",
+    "category": "5",
+    "rollWidth": 365
+  },
+  {
+    "name": "Гофре Сатин ВО 45 мм",
+    "category": "5",
+    "rollWidth": 365
+  },
+  {
+    "name": "Девон",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "Дино BO",
+    "category": "2",
+    "rollWidth": 270
+  },
+  {
+    "name": "Дрим BO",
+    "category": "2",
+    "rollWidth": 240
+  },
+  {
+    "name": "Дюна",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
+    "name": "Жемчуг",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "Импала",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "Исфахан",
+    "category": "4",
+    "rollWidth": 235
+  },
+  {
+    "name": "Йорк",
+    "category": "3",
+    "rollWidth": 235
+  },
+  {
+    "name": "Капри",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "Капри красный",
+    "category": "1",
+    "rollWidth": 240
+  },
+  {
+    "name": "Капри перла",
+    "category": "4",
+    "rollWidth": 240
+  },
+  {
+    "name": "Кварц",
+    "category": "2",
+    "rollWidth": 230
+  },
+  {
+    "name": "Кент",
+    "category": "4",
+    "rollWidth": 235
+  },
+  {
+    "name": "Классик Перла",
+    "category": "E",
+    "rollWidth": 200
+  },
+  {
+    "name": "Клео",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "Краш металл",
+    "category": "5",
+    "rollWidth": 225
+  },
+  {
+    "name": "Краш перла",
+    "category": "3",
+    "rollWidth": 225
+  },
+  {
+    "name": "Краш Перла 15 мм",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "Краш Перла 15 мм (магнолия, св-коричевый)",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "Креп",
+    "category": "1",
+    "rollWidth": 235
+  },
+  {
+    "name": "Креп 15 мм",
+    "category": "E",
+    "rollWidth": 230
+  },
+  {
+    "name": "Креп перла",
+    "category": "2",
+    "rollWidth": 235
+  },
+  {
+    "name": "Креп перла (песочный, св-желтый, оранжевый)",
+    "category": "E",
+    "rollWidth": 235
+  },
+  {
+    "name": "Креп Перла 32 мм",
+    "category": "1",
+    "rollWidth": 225
+  },
+  {
+    "name": "Лима",
+    "category": "2",
+    "rollWidth": 235
+  },
+  {
+    "name": "Лунд ВО 15 мм",
+    "category": "5",
+    "rollWidth": 230
+  },
+  {
+    "name": "Метис Перла",
+    "category": "E",
+    "rollWidth": 200
+  },
+  {
+    "name": "Микены",
+    "category": "4",
+    "rollWidth": 235
+  },
+  {
+    "name": "Мираж",
+    "category": "4",
+    "rollWidth": 225
+  },
+  {
+    "name": "Миссури",
+    "category": "1",
+    "rollWidth": 230
+  },
+  {
+    "name": "Непал",
+    "category": "4",
+    "rollWidth": 230
+  },
+  {
+    "name": "Непал 32 мм",
+    "category": "4",
+    "rollWidth": 225
+  },
+  {
+    "name": "Ниагара",
+    "category": "4",
+    "rollWidth": 235
+  },
+  {
+    "name": "Ноктюрн B/O",
+    "category": "5",
+    "rollWidth": 230
+  },
+  {
+    "name": "Оксфорд",
+    "category": "4",
+    "rollWidth": 205
+  },
+  {
+    "name": "Омбра",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "Опал",
+    "category": "E",
+    "rollWidth": 200
+  },
+  {
+    "name": "Опера",
+    "category": "2",
+    "rollWidth": 238
+  },
+  {
+    "name": "Прато",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "Прима",
+    "category": "2",
+    "rollWidth": 230
+  },
+  {
+    "name": "Прима Лайн",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "Примавера",
+    "category": "3",
+    "rollWidth": 235
+  },
+  {
+    "name": "Рефлекс Перла",
+    "category": "1",
+    "rollWidth": 230
+  },
+  {
+    "name": "Сантана 15 мм",
+    "category": "2",
+    "rollWidth": 230
+  },
+  {
+    "name": "Сантана 32 мм",
+    "category": "1",
+    "rollWidth": 225
+  },
+  {
+    "name": "Селена",
+    "category": "1",
+    "rollWidth": 235
+  },
+  {
+    "name": "Сето",
+    "category": "4",
+    "rollWidth": 215
+  },
+  {
+    "name": "Сето (серебро, золото)",
+    "category": "5",
+    "rollWidth": 215
+  },
+  {
+    "name": "Сето Ретро",
+    "category": "1",
+    "rollWidth": 215
+  },
+  {
+    "name": "Силкскрин",
+    "category": "5",
+    "rollWidth": 240
+  },
+  {
+    "name": "Силкскрин алю",
+    "category": "5",
+    "rollWidth": 240
+  },
+  {
+    "name": "Симфония",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "Синай",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "Скрин Ажур",
+    "category": "5",
+    "rollWidth": 235
+  },
+  {
+    "name": "Соло BO",
+    "category": "4",
+    "rollWidth": 230
+  },
+  {
+    "name": "Тенденс",
+    "category": "3",
+    "rollWidth": 225
+  },
+  {
+    "name": "Тигрис Перла",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "Тигрис Перла 15 мм",
+    "category": "3",
+    "rollWidth": 230
+  },
+  {
+    "name": "Тревира Силк",
+    "category": "4",
+    "rollWidth": 230
+  },
+  {
+    "name": "Тревира Силк (фисташкоый)",
+    "category": "4",
+    "rollWidth": 230
+  },
+  {
+    "name": "Челси",
+    "category": "2",
+    "rollWidth": 225
+  },
+  {
+    "name": "Челси 32 мм",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "Шарм",
+    "category": "E",
+    "rollWidth": 200
+  },
+  {
+    "name": "Шато",
+    "category": "3",
+    "rollWidth": 200
+  },
+  {
+    "name": "Ямайка",
+    "category": "3",
+    "rollWidth": 225
+  },
+  {
+    "name": "Ямайка (баклажан)",
+    "category": "3",
+    "rollWidth": 225
+  },
+  {
+    "name": "Ямайка 32 мм",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "Ясмин",
+    "category": "4",
+    "rollWidth": 230
+  }
+]

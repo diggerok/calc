@@ -2,7 +2,7 @@ import type { CalculatorConfig } from "@/types/calculator";
 
 export const zipConfig: CalculatorConfig = {
   id: "zip",
-  title: "ZIP Системы",
+  title: "Zip система",
   group: "ZIP",
   categories: ["3", "4"],
   pricingMode: "matrix",
