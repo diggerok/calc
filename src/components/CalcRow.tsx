@@ -45,10 +45,7 @@ export default function CalcRow({
       if (w < limit.minWidth || w > limit.maxWidth) {
         return { ...upd, options: opts, priceUsd: 0, priceRub: 0, totalRub: 0 };
       }
-      if (limit.maxHeight && h > limit.maxHeight) {
-        return { ...upd, options: opts, priceUsd: 0, priceRub: 0, totalRub: 0 };
-      }
-      // Площадь — цена считается, но подсвечивается красным в UI
+      // Высота и площадь — цена считается, но подсвечивается красным в UI
     }
     const priceUsd = calculateRowPrice(priceData, config, surchargeFn, upd.category, w, h, opts);
     const priceRub = Math.round(priceUsd * exchangeRate * 100) / 100;
@@ -86,6 +83,8 @@ export default function CalcRow({
   const wNum = parseFloat(row.width) || 0;
   const hNum = parseFloat(row.height) || 0;
   const areaExceeded = !!(currentLimit?.maxArea && wNum > 0 && hNum > 0 && wNum * hNum > currentLimit.maxArea);
+  const heightExceeded = !!(currentLimit?.maxHeight && hNum > 0 && hNum > currentLimit.maxHeight);
+  const sizeWarning = areaExceeded || heightExceeded;
 
   return (
     <tr className="hover:bg-slate-50">
@@ -232,13 +231,13 @@ export default function CalcRow({
           className="w-12 text-xs px-1 py-1 border border-slate-300 rounded bg-yellow-50 text-blue-700 font-medium text-center"
         />
       </td>
-      <td className={`px-2 py-1 border border-slate-200 text-right text-sm font-mono ${areaExceeded ? "bg-red-50 text-red-600" : "bg-green-50"}`}>
+      <td className={`px-2 py-1 border border-slate-200 text-right text-sm font-mono ${sizeWarning ? "bg-red-50 text-red-600" : "bg-green-50"}`}>
         {row.priceUsd > 0 ? row.priceUsd.toFixed(2) : ""}
       </td>
-      <td className={`px-2 py-1 border border-slate-200 text-right text-sm font-mono ${areaExceeded ? "bg-red-50 text-red-600" : "bg-green-50"}`}>
+      <td className={`px-2 py-1 border border-slate-200 text-right text-sm font-mono ${sizeWarning ? "bg-red-50 text-red-600" : "bg-green-50"}`}>
         {row.priceRub > 0 ? row.priceRub.toFixed(2) : ""}
       </td>
-      <td className={`px-2 py-1 border border-slate-200 text-right text-sm font-mono font-bold ${areaExceeded ? "bg-red-50 text-red-600" : "bg-green-50"}`}>
+      <td className={`px-2 py-1 border border-slate-200 text-right text-sm font-mono font-bold ${sizeWarning ? "bg-red-50 text-red-600" : "bg-green-50"}`}>
         {row.totalRub > 0 ? row.totalRub.toFixed(2) : ""}
       </td>
     </tr>

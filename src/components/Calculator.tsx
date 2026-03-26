@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import type { CalcRowData, CalculatorConfig, PriceData } from "@/types/calculator";
 import { getSurchargeFunction } from "@/lib/surcharges";
@@ -45,9 +45,44 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       createEmptyRow(i + 1, config)
     )
   );
+  const [clientName, setClientName] = useState("");
   const [exchangeRate, setExchangeRate] = useState(90);
   const [markupType, setMarkupType] = useState<"markup" | "discount">("markup");
   const [markupPercent, setMarkupPercent] = useState(0);
+
+  // Загрузка сохранённого расчёта из истории
+  useEffect(() => {
+    const saved = sessionStorage.getItem("load-calc");
+    if (!saved) return;
+    sessionStorage.removeItem("load-calc");
+    try {
+      const { name, data, markup } = JSON.parse(saved);
+      if (name) setClientName(name);
+      if (markup) {
+        if (markup < 0) {
+          setMarkupType("discount");
+          setMarkupPercent(Math.abs(markup));
+        } else {
+          setMarkupType("markup");
+          setMarkupPercent(markup);
+        }
+      }
+      if (Array.isArray(data) && data.length > 0) {
+        // Ensure all rows have proper structure
+        const loadedRows: CalcRowData[] = data.map((r: CalcRowData, i: number) => ({
+          ...createEmptyRow(i + 1, config),
+          ...r,
+          id: i + 1,
+        }));
+        // Add empty row at the end
+        const nextId = loadedRows.length + 1;
+        loadedRows.push(createEmptyRow(nextId, config));
+        setRows(loadedRows);
+      }
+    } catch {
+      // ignore parse errors
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleRowChange = (updated: CalcRowData) => {
     setRows((prev) => {
@@ -88,6 +123,7 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         type: config.id,
+        name: clientName,
         data: activeRows,
         totalUsd,
         totalRub,
@@ -112,6 +148,7 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       exchangeRate,
       markupType,
       markupPercent,
+      clientName,
     };
     sessionStorage.setItem("kp-data", JSON.stringify(kpData));
     router.push("/kp");
@@ -119,7 +156,19 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-slate-800 mb-4">{config.title}</h1>
+      <div className="flex items-center gap-4 mb-4">
+        <h1 className="text-2xl font-bold text-slate-800">{config.title}</h1>
+        <div className="flex items-center gap-2">
+          <label className="text-sm font-medium text-slate-600">Клиент:</label>
+          <input
+            type="text"
+            value={clientName}
+            onChange={(e) => setClientName(e.target.value)}
+            placeholder="ООО «Компания» или ФИО"
+            className="px-3 py-1.5 border border-slate-300 rounded-lg text-sm w-64 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+      </div>
 
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-sm">

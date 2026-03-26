@@ -10,6 +10,7 @@ interface KPData {
   exchangeRate: number;
   markupType: "markup" | "discount";
   markupPercent: number;
+  clientName?: string;
 }
 
 interface ManagerInfo {
@@ -27,7 +28,7 @@ export default function CommercialProposal({ data }: { data: KPData }) {
   const { config, rows, exchangeRate, markupType, markupPercent } = data;
   const printRef = useRef<HTMLDivElement>(null);
 
-  const [clientName, setClientName] = useState("");
+  const [clientName, setClientName] = useState(data.clientName || "");
   const [clientPhone, setClientPhone] = useState("");
   const [clientAddress, setClientAddress] = useState("");
   const [managerKey, setManagerKey] = useState("Екатерина");
@@ -70,7 +71,11 @@ export default function CommercialProposal({ data }: { data: KPData }) {
   });
 
   const handlePrint = () => {
+    const prevTitle = document.title;
+    const datePart = today.toLocaleDateString("ru-RU", { day: "2-digit", month: "2-digit", year: "numeric" });
+    document.title = `Коммерческое предложение для «${clientName || "клиента"}» ${datePart}`;
     window.print();
+    document.title = prevTitle;
   };
 
   const handleManagerChange = (key: string) => {

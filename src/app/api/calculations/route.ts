@@ -1,27 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { getSession } from "@/lib/session";
 
 export async function POST(req: NextRequest) {
-  const body = await req.json();
-  const { type, data, totalUsd, totalRub, markup } = body;
-
-  // For MVP, use a default user (no auth yet)
-  let user = await prisma.user.findFirst();
-  if (!user) {
-    user = await prisma.user.create({
-      data: {
-        name: "Admin",
-        email: "admin@blinds.local",
-        passwordHash: "",
-        role: "admin",
-      },
-    });
+  const session = await getSession();
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
+
+  const body = await req.json();
+  const { type, name, data, totalUsd, totalRub, markup } = body;
 
   const calculation = await prisma.calculation.create({
     data: {
-      userId: user.id,
+      userId: session.userId,
       type,
+      name: name || "",
       data: JSON.stringify(data),
       totalUsd,
       totalRub,
@@ -33,9 +27,21 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
+  const session = await getSession();
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  // Admin sees all, managers see only their own
+  const where = session.role === "admin" ? {} : { userId: session.userId };
+
   const calculations = await prisma.calculation.findMany({
+    where,
     orderBy: { createdAt: "desc" },
-    take: 50,
+    take: 100,
+    include: {
+      user: { select: { name: true, email: true } },
+    },
   });
 
   return NextResponse.json(calculations);
