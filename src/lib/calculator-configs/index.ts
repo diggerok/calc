@@ -133,7 +133,7 @@ export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
 }));
 
 // Define group order explicitly
-const groupOrder = ["Рулонка", "BNT", "ZIP", "Шторы плиссе", "Шторы", "Жалюзи"];
+const groupOrder = ["Рулонка", "BNT", "AMG", "ZIP", "Шторы плиссе", "Шторы", "Жалюзи"];
 
 export const calculatorGroups = calculatorList.reduce<
   Record<string, { id: string; title: string }[]>

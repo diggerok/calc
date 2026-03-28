@@ -3,7 +3,7 @@ import type { CalculatorConfig } from "@/types/calculator";
 export const mirageConfig: CalculatorConfig = {
   id: "mirage",
   title: "Мираж",
-  group: "Рулонка",
+  group: "AMG",
   categories: ["E", "3"],
   pricingMode: "matrix",
   maxRows: 10,

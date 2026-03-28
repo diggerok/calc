@@ -7,6 +7,7 @@ import { getSurchargeFunction } from "@/lib/surcharges";
 import { initCustomPricing } from "@/lib/custom-pricing";
 import { getDynamicValuesFn } from "@/lib/dynamic-values";
 import CalcRow from "./CalcRow";
+import { showToast } from "./Toast";
 import PriceSummary from "./PriceSummary";
 import AccessoriesPanel from "./AccessoriesPanel";
 import { accessories } from "@/lib/electrics";
@@ -148,14 +149,14 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
     });
 
     if (res.ok) {
-      alert("Расчёт сохранён!");
+      showToast("Расчёт сохранён!");
     }
   };
 
   const handleCreateKP = () => {
     const activeRows = rows.filter((r) => r.priceUsd > 0);
     if (activeRows.length === 0) {
-      alert("Нет позиций для КП. Заполните хотя бы одну строку.");
+      showToast("Нет позиций для КП", "error");
       return;
     }
     const selectedAccessories = accessories
@@ -186,7 +187,7 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
   return (
     <div>
       <div className="flex items-center gap-4 mb-4">
-        <h1 className="text-2xl font-bold text-slate-800">{config.title}</h1>
+        <h1 className="text-2xl font-bold" style={{ color: "#1B3054" }}>{config.title}</h1>
         <div className="flex items-center gap-2">
           <label className="text-sm font-medium text-slate-600">Клиент:</label>
           <input
@@ -202,7 +203,7 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-sm">
           <thead>
-            <tr className="bg-slate-700 text-white">
+            <tr style={{ backgroundColor: "#1B3054" }} className="text-white">
               <th className="px-2 py-2 border border-slate-600 text-center w-8">
                 №
               </th>
@@ -284,13 +285,15 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       <div className="mt-4 flex gap-3">
         <button
           onClick={handleSave}
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium"
+          className="px-6 py-2 text-white rounded-lg hover:opacity-90 font-medium transition-all"
+          style={{ backgroundColor: "#2a4a7f" }}
         >
           Сохранить расчёт
         </button>
         <button
           onClick={handleCreateKP}
-          className="px-6 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-900 font-medium"
+          className="px-6 py-2 text-white rounded-lg hover:opacity-90 font-medium transition-all"
+          style={{ backgroundColor: "#1B3054" }}
         >
           Создать КП
         </button>

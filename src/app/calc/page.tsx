@@ -4,30 +4,34 @@ import { orderedGroups } from "@/lib/calculator-configs";
 export default function CalcListPage() {
   return (
     <div>
-      <div className="flex items-center gap-4 mb-6">
-        <h1 className="text-2xl font-bold text-slate-800">Калькуляторы</h1>
+      <div className="flex items-center gap-4 mb-6 animate-fade-in">
+        <h1 className="text-2xl font-bold" style={{ color: "#1B3054" }}>Калькуляторы</h1>
         <Link
           href="/combined"
-          className="px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-900 font-medium text-sm"
+          className="px-5 py-2 text-white rounded-lg font-medium text-sm transition-all hover:opacity-90"
+          style={{ backgroundColor: "#1B3054" }}
         >
           Сборный расчёт
         </Link>
       </div>
       {orderedGroups.map(([group, calcs]) => (
         <div key={group} className="mb-8">
-          <h2 className="text-lg font-bold text-slate-600 mb-3 border-b border-slate-200 pb-2">
+          <h2 className="text-lg font-bold mb-3 pb-2 border-b-2 text-center" style={{ color: "#1B3054", borderColor: "#DAEBF5" }}>
             {group}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 animate-stagger">
             {calcs.map((calc) => (
               <Link
                 key={calc.id}
                 href={`/calc/${calc.id}`}
-                className="block p-4 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-blue-300 transition-all"
+                className="bg-white border rounded-xl shadow-sm card-hover group"
+                style={{ borderColor: "#DAEBF5", display: "block", textDecoration: "none" }}
               >
-                <h3 className="text-sm font-semibold text-slate-800">
-                  {calc.title}
-                </h3>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "60px", padding: "16px" }}>
+                  <span className="text-sm font-semibold group-hover:text-blue-700 transition-colors" style={{ color: "#1B3054", textAlign: "center" }}>
+                    {calc.title}
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

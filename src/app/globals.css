@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #F5F8FB;
   --foreground: #171717;
+  --amigo-primary: #1B3054;
+  --amigo-accent: #DAEBF5;
+  --amigo-hover: #2a4a7f;
 }
 
 @theme inline {
@@ -12,11 +15,103 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* === Анимации === */
+
+/* Fade in при появлении */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; max-height: 0; }
+  to { opacity: 1; max-height: 1000px; }
+}
+
+@keyframes priceFlash {
+  0% { background-color: transparent; }
+  30% { background-color: #dcfce7; }
+  100% { background-color: transparent; }
+}
+
+@keyframes toastIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes toastOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+/* Применение анимаций */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out both;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.25s ease-out both;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out both;
+  overflow: hidden;
+}
+
+.animate-price-flash {
+  animation: priceFlash 0.8s ease-out;
+}
+
+.animate-toast-in {
+  animation: toastIn 0.3s ease-out both;
+}
+
+.animate-toast-out {
+  animation: toastOut 0.3s ease-in both;
+}
+
+/* Staggered animations for lists */
+.animate-stagger > * {
+  animation: fadeIn 0.3s ease-out both;
+}
+.animate-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.animate-stagger > *:nth-child(2) { animation-delay: 30ms; }
+.animate-stagger > *:nth-child(3) { animation-delay: 60ms; }
+.animate-stagger > *:nth-child(4) { animation-delay: 90ms; }
+.animate-stagger > *:nth-child(5) { animation-delay: 120ms; }
+.animate-stagger > *:nth-child(6) { animation-delay: 150ms; }
+.animate-stagger > *:nth-child(7) { animation-delay: 180ms; }
+.animate-stagger > *:nth-child(8) { animation-delay: 210ms; }
+
+/* Hover transitions */
+.card-hover {
+  transition: all 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(27, 48, 84, 0.15);
+  border-color: var(--amigo-primary) !important;
+}
+
+/* Smooth transitions for inputs */
+input, select {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Table row hover */
+tr {
+  transition: background-color 0.15s ease;
 }
 
 @media print {
@@ -26,14 +121,18 @@ body {
     print-color-adjust: exact;
   }
 
-  /* Скрыть навигацию при печати */
   header, nav {
     display: none !important;
   }
 
-  /* Убрать отступы контейнера */
   main {
     padding: 0 !important;
     margin: 0 !important;
+  }
+
+  /* Disable animations for print */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }

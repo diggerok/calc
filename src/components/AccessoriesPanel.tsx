@@ -32,8 +32,8 @@ export default function AccessoriesPanel({ selections, exchangeRate, onChange }:
   const totalRub = Math.round(totalUsd * exchangeRate * 100) / 100;
 
   return (
-    <div className="mt-6 border border-slate-200 rounded-lg p-4 bg-slate-50">
-      <h3 className="text-sm font-bold text-slate-700 mb-3">Аксессуары электрики</h3>
+    <div className="mt-6 border rounded-lg p-4" style={{ borderColor: "#DAEBF5", backgroundColor: "#F8FAFC" }}>
+      <h3 className="text-sm font-bold mb-3" style={{ color: "#1B3054" }}>Аксессуары электрики</h3>
       {categories.map((cat) => (
         <div key={cat} className="mb-3">
           <h4 className="text-xs font-semibold text-slate-500 mb-1">{cat}</h4>

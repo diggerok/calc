@@ -3,7 +3,7 @@ import type { CalculatorConfig } from "@/types/calculator";
 export const amgConfig: CalculatorConfig = {
   id: "amg",
   title: "AMG",
-  group: "Рулонка",
+  group: "AMG",
   categories: ["E", "1", "2", "3", "4", "5"],
   pricingMode: "matrix",
   maxRows: 10,
@@ -32,7 +32,7 @@ export const amgConfig: CalculatorConfig = {
 export const amgLConfig: CalculatorConfig = {
   id: "amg-l",
   title: "AMG L",
-  group: "Рулонка",
+  group: "AMG",
   categories: ["E", "1", "2", "3", "4", "5"],
   pricingMode: "matrix",
   maxRows: 10,
@@ -54,7 +54,7 @@ export const amgLConfig: CalculatorConfig = {
 export const amgXlConfig: CalculatorConfig = {
   id: "amg-xl",
   title: "AMG XL",
-  group: "Рулонка",
+  group: "AMG",
   categories: ["E", "1", "2", "3", "4", "5"],
   pricingMode: "matrix",
   maxRows: 10,

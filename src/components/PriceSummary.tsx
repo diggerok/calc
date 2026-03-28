@@ -72,7 +72,7 @@ export default function PriceSummary({
       </div>
 
       {/* Totals */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+      <div className="rounded-lg p-4" style={{ backgroundColor: "#EDF3F8", borderLeft: "4px solid #1B3054" }}>
         <div className="grid grid-cols-3 gap-4 text-sm">
           <div>
             <div className="text-slate-500">ИТОГО{accessoriesTotalUsd > 0 ? " (изделия + аксессуары)" : ""}</div>
@@ -96,7 +96,7 @@ export default function PriceSummary({
           </div>
           <div>
             <div className="text-slate-500">ИТОГО К ОПЛАТЕ</div>
-            <div className="text-2xl font-bold text-blue-800">
+            <div className="text-2xl font-bold" style={{ color: "#1B3054" }}>
               {finalUsd.toFixed(2)} $ / {finalRub.toFixed(2)} ₽
             </div>
           </div>

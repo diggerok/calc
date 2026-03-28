@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import ToastContainer from "@/components/Toast";
 import { getSession } from "@/lib/session";
 
 export const metadata: Metadata = {
@@ -17,13 +18,14 @@ export default async function RootLayout({
 
   return (
     <html lang="ru" className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-slate-50 font-sans">
+      <body className="min-h-full flex flex-col font-sans" style={{ backgroundColor: "#F5F8FB" }}>
         {session && (
           <Header userName={session.name} userRole={session.role} />
         )}
-        <main className="flex-1 max-w-[1600px] mx-auto w-full px-4 py-6">
+        <main className="flex-1 max-w-[1600px] mx-auto w-full px-4 py-6" style={{ backgroundColor: "#F5F8FB" }}>
           {children}
         </main>
+        <ToastContainer />
       </body>
     </html>
   );

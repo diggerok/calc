@@ -8,6 +8,7 @@ import { getSurchargeFunction } from "@/lib/surcharges";
 import { getDynamicValuesFn } from "@/lib/dynamic-values";
 import { getElectricKitPrice, getAvailableElectricTypes, accessories } from "@/lib/electrics";
 import type { CalculatorConfig, CalcRowData } from "@/types/calculator";
+import { showToast } from "./Toast";
 import OptionSelect from "./OptionSelect";
 import AccessoriesPanel from "./AccessoriesPanel";
 import PriceSummary from "./PriceSummary";
@@ -165,11 +166,11 @@ export default function CombinedCalculator({ allPriceData }: Props) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ type: "combined", name: clientName, data: activeRows, totalUsd, totalRub, markup: markupPercent * (markupType === "discount" ? -1 : 1) }),
     });
-    alert("Расчёт сохранён!");
+    showToast("Расчёт сохранён!");
   };
 
   const handleCreateKP = () => {
-    if (allCalcRows.length === 0) { alert("Нет позиций для КП."); return; }
+    if (allCalcRows.length === 0) { showToast("Нет позиций для КП", "error"); return; }
     const selectedAccessories = accessories.filter(a => (accessorySelections[a.id] || 0) > 0).map(a => ({ id: a.id, name: a.name, price: a.price, quantity: accessorySelections[a.id] }));
     // Build combined config for KP
     const kpData = {
@@ -202,7 +203,7 @@ export default function CombinedCalculator({ allPriceData }: Props) {
           const priceData = allPriceData[cr.calcId];
 
           return (
-            <div key={cr.id} className="bg-white border border-slate-200 rounded-lg p-3 shadow-sm">
+            <div key={cr.id} className="bg-white border border-slate-200 rounded-lg p-3 shadow-sm animate-fade-in-scale">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-sm font-bold text-slate-500 w-6">{cr.id}</span>
                 <select
