@@ -4,6 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 @AGENTS.md
 
+## Workflow
+
+Перед началом выполнения задачи — сначала скинь пользователю план действий и дождись подтверждения.
+
 ## Commands
 
 ```bash

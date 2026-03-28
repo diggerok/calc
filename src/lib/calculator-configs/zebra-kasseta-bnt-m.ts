@@ -6,6 +6,8 @@ export const zebraKassetaBntMConfig: CalculatorConfig = {
   group: "BNT",
   categories: ["0", "E", "1", "2", "3", "4"],
   maxRows: 10,
+  maxHeightKeys: ["cassette"],
+  electricKitKey: "cassette",
   options: [
     { id: "cassette", label: "Кассета", values: ["КАССЕТА 29мм", "КАССЕТА 43мм", "КАССЕТА 44мм"], defaultValue: "КАССЕТА 29мм" },
     { id: "color", label: "Цвет компл.", values: ["Белый", "Серый металлик", "Черный муар"], defaultValue: "Белый" },
@@ -14,5 +16,6 @@ export const zebraKassetaBntMConfig: CalculatorConfig = {
     { id: "metalChain", label: "Метал. цепь", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "spring", label: "Пружина", values: ["Нет", "Левая", "Правая"], defaultValue: "Нет" },
     { id: "childSafety", label: "Детская без.", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };

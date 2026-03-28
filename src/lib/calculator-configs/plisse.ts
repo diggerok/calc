@@ -7,6 +7,7 @@ export const plisseConfig: CalculatorConfig = {
   categories: [],
   pricingMode: "custom",
   maxRows: 10,
+  electricKitKey: "model",
   options: [
     { id: "model", label: "Модель", values: ["—"], dynamic: true, defaultValue: "—" },
     { id: "cat", label: "Кат. ткани", values: ["0", "Е", "1", "2", "3", "4", "5"], defaultValue: "Е" },
@@ -16,5 +17,6 @@ export const plisseConfig: CalculatorConfig = {
     { id: "reinforced", label: "Усил. профиль", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "mountProfile", label: "Монт. профиль", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "handle", label: "Ручка мет.", values: [], defaultValue: "0" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };

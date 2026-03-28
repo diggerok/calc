@@ -12,6 +12,7 @@ export const miniConfig: CalculatorConfig = {
     { id: "weight", label: "Грузик цепи", values: ["Стандарт", "Декор", "Дизайн"], defaultValue: "Стандарт" },
     { id: "metalChain", label: "Метал. цепь", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "chainTensioner", label: "Натяж. цепи", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };
 
@@ -23,8 +24,11 @@ export const miniZebraConfig: CalculatorConfig = {
   pricingMode: "matrix",
   maxRows: 10,
   options: [
+    { id: "color", label: "Цвет компл.", values: ["Белый", "Коричневый"], defaultValue: "Белый" },
+    { id: "chainTensioner", label: "Натяж. цепи", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "weight", label: "Грузик цепи", values: ["Стандарт", "Декор", "Дизайн"], defaultValue: "Стандарт" },
     { id: "metalChain", label: "Метал. цепь", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };
 
@@ -53,8 +57,11 @@ export const uni1Config: CalculatorConfig = {
   pricingMode: "matrix",
   maxRows: 10,
   options: [
+    { id: "color", label: "Цвет компл.", values: ["Белый", "Коричневый", "Зол.дуб, св.дуб, махагон", "Серебро", "Темно-серый", "Бел.дуб, Зол.дуб субл.Рус", "Черный"], defaultValue: "Белый" },
+    { id: "chainTensioner", label: "Натяж. цепи", values: ["Нет", "Белый", "Дуб, кор., т.серый, черный"], defaultValue: "Нет" },
     { id: "weight", label: "Грузик цепи", values: ["Стандарт", "Декор", "Дизайн"], defaultValue: "Стандарт" },
     { id: "metalChain", label: "Метал. цепь", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };
 
@@ -70,6 +77,7 @@ export const uni1ZebraConfig: CalculatorConfig = {
     { id: "weight", label: "Грузик цепи", values: ["Стандарт", "Декор", "Дизайн"], defaultValue: "Стандарт" },
     { id: "metalChain", label: "Метал. цепь", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "chainTensioner", label: "Натяж. цепи", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };
 
@@ -85,6 +93,7 @@ export const uni2Config: CalculatorConfig = {
     { id: "weight", label: "Грузик цепи", values: ["Стандарт", "Декор", "Дизайн"], defaultValue: "Стандарт" },
     { id: "metalChain", label: "Метал. цепь", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "chainTensioner", label: "Натяж. цепи", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };
 
@@ -100,6 +109,7 @@ export const uni2ZebraConfig: CalculatorConfig = {
     { id: "weight", label: "Грузик цепи", values: ["Стандарт", "Декор", "Дизайн"], defaultValue: "Стандарт" },
     { id: "metalChain", label: "Метал. цепь", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "chainTensioner", label: "Натяж. цепи", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };
 

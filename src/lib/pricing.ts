@@ -37,9 +37,7 @@ export function calculateRowPrice(
   height: number,
   options: Record<string, string>
 ): number {
-  if (!width) return 0;
-
-  // Custom pricing mode (may not need height, e.g. roman-rails)
+  // Custom pricing mode (may not need all params)
   const customFn = customPriceFns[config.id];
   if (config.pricingMode === "custom" && customFn) {
     const price = customFn(priceData, category, width, height, options);
@@ -47,14 +45,14 @@ export function calculateRowPrice(
   }
 
   // Standard matrix mode
-  if (!category || !height) return 0;
+  if (!width || !category || !height) return 0;
   const basePrice = lookupBasePrice(priceData, category, width, height);
   if (basePrice === 0) return 0;
 
   let surchargeTotal = 0;
   for (const opt of config.options) {
     const val = options[opt.id] ?? opt.defaultValue;
-    surchargeTotal += surchargeFn(opt.id, val, width, height, basePrice);
+    surchargeTotal += surchargeFn(opt.id, val, width, height, basePrice, options);
   }
   return Math.round((basePrice + surchargeTotal) * 100) / 100;
 }

@@ -2,7 +2,15 @@
 
 import { useState, useRef } from "react";
 import type { CalcRowData, CalculatorConfig } from "@/types/calculator";
+import { calculatorConfigs } from "@/lib/calculator-configs";
 import Image from "next/image";
+
+interface AccessoryData {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+}
 
 interface KPData {
   config: CalculatorConfig;
@@ -11,6 +19,7 @@ interface KPData {
   markupType: "markup" | "discount";
   markupPercent: number;
   clientName?: string;
+  accessories?: AccessoryData[];
 }
 
 interface ManagerInfo {
@@ -41,6 +50,8 @@ export default function CommercialProposal({ data }: { data: KPData }) {
   const [installAmount, setInstallAmount] = useState(0);
   const [kpDiscountEnabled, setKpDiscountEnabled] = useState(false);
   const [kpDiscountPercent, setKpDiscountPercent] = useState(0);
+  const [ralEnabled, setRalEnabled] = useState(false);
+  const [ralAmount, setRalAmount] = useState(0);
 
   const activeRows = rows.filter((r) => r.priceUsd > 0);
 
@@ -49,14 +60,21 @@ export default function CommercialProposal({ data }: { data: KPData }) {
   const hasMaterial = config.options.some((o) => o.id === "material");
   const hasColor = config.options.some((o) => o.id === "color");
 
-  const totalUsd = activeRows.reduce((s, r) => s + r.priceUsd * r.quantity, 0);
-  const totalRub = activeRows.reduce((s, r) => s + r.totalRub, 0);
+  const acc = data.accessories?.filter((a) => a.quantity > 0) || [];
+  const accTotalUsd = acc.reduce((s, a) => s + a.price * a.quantity, 0);
+  const rowsUsd = activeRows.reduce((s, r) => s + r.priceUsd * r.quantity, 0);
+  const rowsRub = activeRows.reduce((s, r) => s + r.totalRub, 0);
+  const totalUsd = rowsUsd + accTotalUsd;
+  const totalRub = rowsRub + Math.round(accTotalUsd * exchangeRate * 100) / 100;
   const markupMultiplier =
     markupType === "markup"
       ? 1 + markupPercent / 100
       : 1 - markupPercent / 100;
-  const finalUsd = Math.round(totalUsd * markupMultiplier * 100) / 100;
-  const finalRub = Math.round(totalRub * markupMultiplier * 100) / 100;
+  const ralRub = ralEnabled ? ralAmount : 0;
+  const afterRalRub = totalRub + ralRub;
+  const afterRalUsd = totalUsd + (ralRub / exchangeRate);
+  const finalUsd = Math.round(afterRalUsd * markupMultiplier * 100) / 100;
+  const finalRub = Math.round(afterRalRub * markupMultiplier * 100) / 100;
   const kpDiscountMultiplier = kpDiscountEnabled ? 1 - kpDiscountPercent / 100 : 1;
   const discountedUsd = Math.round(finalUsd * kpDiscountMultiplier * 100) / 100;
   const discountedRub = Math.round(finalRub * kpDiscountMultiplier * 100) / 100;
@@ -212,6 +230,27 @@ export default function CommercialProposal({ data }: { data: KPData }) {
           <div className="flex items-center gap-3">
             <input
               type="checkbox"
+              id="ral"
+              checked={ralEnabled}
+              onChange={(e) => setRalEnabled(e.target.checked)}
+              className="w-4 h-4 rounded border-slate-300"
+            />
+            <label htmlFor="ral" className="text-sm font-medium text-slate-600">
+              Покраска RAL
+            </label>
+            <input
+              type="number"
+              value={ralAmount || ""}
+              onChange={(e) => setRalAmount(parseFloat(e.target.value) || 0)}
+              disabled={!ralEnabled}
+              placeholder="Сумма ₽"
+              className="w-32 px-3 py-2 border border-slate-300 rounded-lg disabled:opacity-40 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+            <span className="text-sm text-slate-500">₽</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <input
+              type="checkbox"
               id="kpDiscount"
               checked={kpDiscountEnabled}
               onChange={(e) => setKpDiscountEnabled(e.target.checked)}
@@ -299,8 +338,8 @@ export default function CommercialProposal({ data }: { data: KPData }) {
               <Image
                 src="/logo-amigo.svg"
                 alt="AMIGO Design Boutique"
-                width={280}
-                height={95}
+                width={560}
+                height={190}
               />
             </div>
             {/* Реквизиты — справа */}
@@ -398,7 +437,9 @@ export default function CommercialProposal({ data }: { data: KPData }) {
                         {idx + 1}
                       </td>
                       <td className="px-2 py-1.5 border border-slate-300">
-                        {hasMaterial && row.options["material"] && row.options["material"] !== "—"
+                        {row.options?._calcTitle
+                          ? <>{row.options._calcTitle}{row.fabric ? ` ${row.fabric}` : ""}{row.fabricColor ? ` ${row.fabricColor}` : ""}{row.category ? ` (кат. ${row.category})` : ""}</>
+                          : hasMaterial && row.options["material"] && row.options["material"] !== "—"
                           ? `${["Бамбук", "Дерево", "Павловния"].includes(row.options["material"]) ? "Деревянные жалюзи" : "Горизонтальные жалюзи"} ${row.options["material"]} ${row.options["color"] && row.options["color"] !== "—" ? row.options["color"] : ""} ${row.options["slat"] ? row.options["slat"] + "мм" : ""}`.trim()
                           : <>
                               {row.fabric
@@ -418,6 +459,9 @@ export default function CommercialProposal({ data }: { data: KPData }) {
                               }
                             </>
                         }
+                        {row.options?.electric && row.options.electric !== "Нет" && (
+                          <>{" "}+ моторизация ({row.options.electric})</>
+                        )}
                       </td>
                       <td className="px-2 py-1.5 border border-slate-300 text-center">
                         {row.width ? Math.round(parseFloat(row.width) * 1000) : ""}
@@ -441,6 +485,36 @@ export default function CommercialProposal({ data }: { data: KPData }) {
                     </tr>
                   );
                 })}
+                {acc.length > 0 && (
+                  <tr className="bg-slate-100">
+                    <td colSpan={7} className="px-2 py-1 border border-slate-300 text-xs font-semibold text-slate-600">
+                      Аксессуары электрики
+                    </td>
+                  </tr>
+                )}
+                {acc.map((a, idx) => {
+                  const aPriceUsd = Math.round(a.price * markupMultiplier * 100) / 100;
+                  const aTotalUsd = Math.round(a.price * a.quantity * markupMultiplier * 100) / 100;
+                  return (
+                    <tr key={a.id} className={idx % 2 === 1 ? "bg-[#F0F5FA]" : "bg-white"}>
+                      <td className="px-2 py-1.5 border border-slate-300 text-center">
+                        {activeRows.length + idx + 1}
+                      </td>
+                      <td className="px-2 py-1.5 border border-slate-300" colSpan={3}>
+                        {a.name}
+                      </td>
+                      <td className="px-2 py-1.5 border border-slate-300 text-center">
+                        {a.quantity}
+                      </td>
+                      <td className="px-2 py-1.5 border border-slate-300 text-right">
+                        {aPriceUsd.toLocaleString("ru-RU", { minimumFractionDigits: 2 })}
+                      </td>
+                      <td className="px-2 py-1.5 border border-slate-300 text-right font-medium">
+                        {aTotalUsd.toLocaleString("ru-RU", { minimumFractionDigits: 2 })}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
 
@@ -450,6 +524,11 @@ export default function CommercialProposal({ data }: { data: KPData }) {
                 <div className="text-sm text-slate-500">
                   Позиций: {activeRows.reduce((s, r) => s + r.quantity, 0)} шт.
                 </div>
+                {ralEnabled && ralAmount > 0 && (
+                  <div className="text-lg font-bold" style={{ color: "#1B3054" }}>
+                    Покраска RAL: {ralAmount.toLocaleString("ru-RU", { minimumFractionDigits: 2 })} ₽
+                  </div>
+                )}
                 <div className="text-lg font-bold" style={{ color: "#1B3054" }}>
                   Итого: {finalUsd.toLocaleString("ru-RU", { minimumFractionDigits: 2 })} $
                 </div>
@@ -505,6 +584,80 @@ export default function CommercialProposal({ data }: { data: KPData }) {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      {/* === Спецификация === */}
+      <div
+        className="bg-white print:shadow-none shadow-lg rounded-xl print:rounded-none overflow-hidden max-w-[210mm] mx-auto mt-8 print:mt-0 print:break-before-page"
+        style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+      >
+        <div className="px-12 py-8">
+          <div className="border-b-2 border-slate-800 pb-2 mb-6">
+            <h2 className="text-xl font-bold text-slate-800 tracking-wide">СПЕЦИФИКАЦИЯ</h2>
+            <div className="text-sm text-slate-500 mt-1">
+              к коммерческому предложению от {dateStr}
+              {clientName && <> для «{clientName}»</>}
+            </div>
+          </div>
+
+          {activeRows.map((row, idx) => {
+            const calcTitle = row.options?._calcTitle || config.title;
+            // Determine which config to use for option labels
+            const rowConfig = row.options?._calcTitle
+              ? Object.values(calculatorConfigs).find(c => c.title === row.options._calcTitle) || config
+              : config;
+
+            return (
+              <div key={row.id} className="mb-5 pb-4 border-b border-slate-200 last:border-0">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-sm font-bold" style={{ color: "#1B3054" }}>
+                    Позиция {idx + 1}
+                  </span>
+                  <span className="text-sm font-semibold text-slate-700">
+                    {calcTitle}
+                    {row.fabric ? ` — ${row.fabric}` : ""}
+                    {row.fabricColor ? ` ${row.fabricColor}` : ""}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-x-8 gap-y-0.5 text-xs ml-4">
+                  {row.width && (
+                    <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                      <span className="text-slate-500">Ширина</span>
+                      <span className="font-medium">{Math.round(parseFloat(row.width) * 1000)} мм</span>
+                    </div>
+                  )}
+                  {row.height && (
+                    <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                      <span className="text-slate-500">Высота</span>
+                      <span className="font-medium">{Math.round(parseFloat(row.height) * 1000)} мм</span>
+                    </div>
+                  )}
+                  {row.category && (
+                    <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                      <span className="text-slate-500">Категория</span>
+                      <span className="font-medium">{row.category}</span>
+                    </div>
+                  )}
+                  <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                    <span className="text-slate-500">Количество</span>
+                    <span className="font-medium">{row.quantity} шт.</span>
+                  </div>
+
+                  {rowConfig.options.filter(opt => {
+                    const val = row.options[opt.id];
+                    if (!val || val === opt.defaultValue || val === "Нет" || val === "—" || val === "0" || opt.id === "_calcTitle") return false;
+                    return true;
+                  }).map(opt => (
+                    <div key={opt.id} className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                      <span className="text-slate-500">{opt.label}</span>
+                      <span className="font-medium">{row.options[opt.id]}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

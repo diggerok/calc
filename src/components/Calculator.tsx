@@ -8,6 +8,8 @@ import { initCustomPricing } from "@/lib/custom-pricing";
 import { getDynamicValuesFn } from "@/lib/dynamic-values";
 import CalcRow from "./CalcRow";
 import PriceSummary from "./PriceSummary";
+import AccessoriesPanel from "./AccessoriesPanel";
+import { accessories } from "@/lib/electrics";
 
 initCustomPricing();
 
@@ -49,17 +51,32 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
   const [exchangeRate, setExchangeRate] = useState(90);
   const [markupType, setMarkupType] = useState<"markup" | "discount">("markup");
   const [markupPercent, setMarkupPercent] = useState(0);
+  const [accessorySelections, setAccessorySelections] = useState<Record<string, number>>({});
+  const hasElectric = config.options.some((o) => o.id === "electric");
 
-  // Загрузка сохранённого расчёта из истории
+  const accessoriesTotalUsd = useMemo(() => {
+    return accessories.reduce((sum, a) => sum + a.price * (accessorySelections[a.id] || 0), 0);
+  }, [accessorySelections]);
+
+  // Загрузка сохранённого расчёта (из истории или при возврате с КП)
   useEffect(() => {
-    const saved = sessionStorage.getItem("load-calc");
+    const stateKey = `calc-state-${config.id}`;
+    const fromKP = sessionStorage.getItem(stateKey);
+    const fromHistory = sessionStorage.getItem("load-calc");
+    const saved = fromKP || fromHistory;
+    if (fromKP) sessionStorage.removeItem(stateKey);
+    if (fromHistory) sessionStorage.removeItem("load-calc");
     if (!saved) return;
-    sessionStorage.removeItem("load-calc");
     try {
-      const { name, data, markup } = JSON.parse(saved);
+      const { name, data, markup, rate, mType, accessories: acc } = JSON.parse(saved);
       if (name) setClientName(name);
-      if (markup) {
-        if (markup < 0) {
+      if (rate) setExchangeRate(rate);
+      if (acc) setAccessorySelections(acc);
+      if (markup !== undefined) {
+        if (mType) {
+          setMarkupType(mType);
+          setMarkupPercent(Math.abs(markup));
+        } else if (markup < 0) {
           setMarkupType("discount");
           setMarkupPercent(Math.abs(markup));
         } else {
@@ -68,13 +85,11 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
         }
       }
       if (Array.isArray(data) && data.length > 0) {
-        // Ensure all rows have proper structure
         const loadedRows: CalcRowData[] = data.map((r: CalcRowData, i: number) => ({
           ...createEmptyRow(i + 1, config),
           ...r,
           id: i + 1,
         }));
-        // Add empty row at the end
         const nextId = loadedRows.length + 1;
         loadedRows.push(createEmptyRow(nextId, config));
         setRows(loadedRows);
@@ -115,8 +130,9 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
     const activeRows = rows.filter((r) => r.priceUsd > 0);
     if (activeRows.length === 0) return;
 
-    const totalUsd = activeRows.reduce((s, r) => s + r.priceUsd * r.quantity, 0);
-    const totalRub = activeRows.reduce((s, r) => s + r.totalRub, 0);
+    const totalUsd = activeRows.reduce((s, r) => s + r.priceUsd * r.quantity, 0) + (hasElectric ? accessoriesTotalUsd : 0);
+    const accRub = Math.round((hasElectric ? accessoriesTotalUsd : 0) * exchangeRate * 100) / 100;
+    const totalRub = activeRows.reduce((s, r) => s + r.totalRub, 0) + accRub;
 
     const res = await fetch("/api/calculations", {
       method: "POST",
@@ -142,6 +158,9 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       alert("Нет позиций для КП. Заполните хотя бы одну строку.");
       return;
     }
+    const selectedAccessories = accessories
+      .filter((a) => (accessorySelections[a.id] || 0) > 0)
+      .map((a) => ({ id: a.id, name: a.name, price: a.price, quantity: accessorySelections[a.id] }));
     const kpData = {
       config,
       rows,
@@ -149,8 +168,18 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       markupType,
       markupPercent,
       clientName,
+      accessories: selectedAccessories,
     };
     sessionStorage.setItem("kp-data", JSON.stringify(kpData));
+    // Сохраняем состояние калькулятора для возврата
+    sessionStorage.setItem(`calc-state-${config.id}`, JSON.stringify({
+      name: clientName,
+      data: rows.filter((r) => r.priceUsd > 0),
+      markup: markupPercent,
+      mType: markupType,
+      rate: exchangeRate,
+      accessories: accessorySelections,
+    }));
     router.push("/kp");
   };
 
@@ -196,10 +225,12 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
                 Ширина
                 <br />м
               </th>
+              {!config.hideHeight && (
               <th className="px-2 py-2 border border-slate-600 text-center w-20">
                 Высота
                 <br />м
               </th>
+              )}
               {config.options.map((opt) => (
                 <th
                   key={opt.id}
@@ -244,6 +275,7 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
         exchangeRate={exchangeRate}
         markupType={markupType}
         markupPercent={markupPercent}
+        accessoriesTotalUsd={hasElectric ? accessoriesTotalUsd : 0}
         onMarkupTypeChange={setMarkupType}
         onMarkupPercentChange={setMarkupPercent}
         onExchangeRateChange={handleExchangeRateChange}
@@ -263,6 +295,14 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
           Создать КП
         </button>
       </div>
+
+      {hasElectric && (
+        <AccessoriesPanel
+          selections={accessorySelections}
+          exchangeRate={exchangeRate}
+          onChange={setAccessorySelections}
+        />
+      )}
     </div>
   );
 }

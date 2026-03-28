@@ -25,6 +25,7 @@ export interface FabricItem {
 export interface SizeLimit {
   minWidth: number;
   maxWidth: number;
+  minHeight?: number;
   maxHeight?: number;
   maxArea?: number;
 }
@@ -39,6 +40,22 @@ export interface CalculatorConfig {
   pricingMode?: PricingMode;
   fabrics?: FabricItem[];
   sizeLimits?: Record<string, SizeLimit>; // key = "slat-material" or similar
+  maxHeights?: Record<string, number>; // fabric name -> max height in meters (0 = unavailable)
+  maxHeightKeys?: string[]; // option IDs that form the maxHeights lookup key (e.g. ["tube", "bracket"])
+  electricKitKey?: string; // option ID whose value maps to electric kit lookup (e.g. "tube")
+  hideHeight?: boolean; // hide height column (e.g. for LIFT)
+}
+
+export interface ElectricKit {
+  name: string;
+  price: number;
+}
+
+export interface AccessoryItem {
+  id: string;
+  category: string;
+  name: string;
+  price: number;
 }
 
 export type SurchargeFn = (
@@ -46,7 +63,8 @@ export type SurchargeFn = (
   value: string,
   width: number,
   height: number,
-  basePrice: number
+  basePrice: number,
+  options?: Record<string, string>
 ) => number;
 
 export interface PriceData {

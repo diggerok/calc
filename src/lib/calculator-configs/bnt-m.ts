@@ -6,8 +6,11 @@ export const bntMConfig: CalculatorConfig = {
   group: "BNT",
   categories: ["E", "1", "2", "3", "4", "5"],
   maxRows: 10,
+  maxHeightKeys: ["tube", "bracket"],
+  electricKitKey: "tube",
   options: [
     { id: "tube", label: "Труба", values: ["29мм", "43мм", "44мм"], defaultValue: "29мм" },
+    { id: "bracket", label: "Кронштейн", values: ["36мм", "41мм", "60мм"], defaultValue: "36мм" },
     { id: "specialModel", label: "Спец. модели", values: ["Нет", "MONO BNT M", "День/Ночь 29мм", "День/Ночь 43мм", "День/Ночь 44мм"], defaultValue: "Нет" },
     { id: "mountProfile", label: "Монт. проф", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "color", label: "Цвет компл.", values: ["Белый Пластик", "Серый", "Черный", "Матовый", "Хром", "Шампань"], defaultValue: "Белый Пластик" },
@@ -19,5 +22,6 @@ export const bntMConfig: CalculatorConfig = {
     { id: "sideFix", label: "Бок. фикс.", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "spring", label: "Пружина", values: ["Нет", "Левая", "Правая"], defaultValue: "Нет" },
     { id: "welding", label: "Сварка", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет", "Провод", "Радио", "Радио+АКБ", "Радио+RS485"], defaultValue: "Нет" },
   ],
 };

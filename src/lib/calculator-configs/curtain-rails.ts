@@ -1,0 +1,32 @@
+import type { CalculatorConfig } from "@/types/calculator";
+
+export const curtainRailsConfig: CalculatorConfig = {
+  id: "curtain-rails",
+  title: "Шторные карнизы",
+  group: "Шторы",
+  categories: [],
+  pricingMode: "custom",
+  maxRows: 10,
+  hideHeight: true,
+  options: [
+    { id: "model", label: "Модель", values: ["Телескопический", "LITE", "AMIGO Радио/Провод", "AMIGO Радио+АКБ"], defaultValue: "LITE" },
+    { id: "opening", label: "Открытие", values: ["От управления", "К управлению", "От центра", "От центра со смещ.", "От двух центров"], defaultValue: "От управления" },
+    { id: "bracket", label: "Кронштейн", values: ["Потолочный станд.", "Потолочный пружин.", "Стеновой однорядн.", "Стеновой двухрядн.", "Стен. 5см", "Стен. 10см", "Стен. 14см", "Стен. 24см"], defaultValue: "Потолочный станд." },
+    { id: "bracketQty", label: "Кол-во кронш.", values: [], defaultValue: "0" },
+    { id: "extraRunners", label: "Доп. бегунки", values: [], defaultValue: "0" },
+    { id: "hooks", label: "Крючки шт.", values: [], defaultValue: "0" },
+    { id: "shortCap", label: "Заглушка укорочен.", values: [], defaultValue: "0" },
+    { id: "connector", label: "Соединитель", values: ["Нет", "Прямой", "90 градусов", "135 градусов"], defaultValue: "Нет" },
+    { id: "connectorQty", label: "Кол-во соедин.", values: [], defaultValue: "0" },
+    { id: "bending", label: "Гибка м", values: [], defaultValue: "0" },
+    { id: "radiusTransition", label: "Переход радиуса", values: [], defaultValue: "0" },
+    { id: "amigoWifi", label: "Привод AMIGO Wi-Fi+о/с", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "bTrack", label: "B-track скрыт. кронш.", values: [], defaultValue: "0" },
+    { id: "tiltRail", label: "Наклонный карниз", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "tiltExtra", label: "Длина добора накл.", values: [], defaultValue: "0" },
+    { id: "silentKit", label: "Бесшумн. B-track", values: ["Нет", "От центра", "От/к управлению"], defaultValue: "Нет" },
+    { id: "silentRunner", label: "Доп. бесшумн. бег.", values: [], defaultValue: "0" },
+    { id: "color", label: "Цвет компл.", values: ["Белый", "Черный"], defaultValue: "Белый" },
+    { id: "electric", label: "Электрика", values: ["Встроена"], defaultValue: "Встроена" },
+  ],
+};

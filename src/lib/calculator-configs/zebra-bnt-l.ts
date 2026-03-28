@@ -6,8 +6,11 @@ export const zebraBntLConfig: CalculatorConfig = {
   group: "BNT",
   categories: ["0", "E", "1", "2", "3", "4"],
   maxRows: 10,
+  maxHeightKeys: ["tube", "bracket"],
+  electricKitKey: "tube",
   options: [
     { id: "tube", label: "Труба", values: ["КЛАССИКА 43мм", "КЛАССИКА 52мм", "КЛАССИКА 65мм"], defaultValue: "КЛАССИКА 43мм" },
+    { id: "bracket", label: "Кронштейн", values: ["51мм", "59мм"], defaultValue: "51мм" },
     { id: "specialModel", label: "Спец. модели", values: ["Нет", "MONO BNT M/L", "DOUBLE L"], defaultValue: "Нет" },
     { id: "chain", label: "Цепь", values: ["Пластиковая", "Металлическая"], defaultValue: "Пластиковая" },
     { id: "weightDecor", label: "Грузик декор", values: ["Стандарт", "Декор", "Дизайн"], defaultValue: "Стандарт" },
@@ -15,5 +18,6 @@ export const zebraBntLConfig: CalculatorConfig = {
     { id: "reducer", label: "Редуктор", values: ["Нет", "Редуктор 52", "Редуктор 65"], defaultValue: "Нет" },
     { id: "spring", label: "Пружина", values: ["Нет", "Левая", "Правая"], defaultValue: "Нет" },
     { id: "bigMech", label: "Большой мех.", values: ["Нет", "Больш.мех+100", "Больш.мех+200", "Больш.мех+300"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };

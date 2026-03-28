@@ -6,6 +6,8 @@ export const kassetaBntMConfig: CalculatorConfig = {
   group: "BNT",
   categories: ["E", "1", "2", "3", "4", "5"],
   maxRows: 10,
+  maxHeightKeys: ["cassette"],
+  electricKitKey: "cassette",
   options: [
     { id: "cassette", label: "Кассета", values: ["КАССЕТА 29мм", "КАССЕТА 43мм", "КАССЕТА 44мм"], defaultValue: "КАССЕТА 29мм" },
     { id: "guides", label: "Направл.", values: ["Нет", "Боковые", "Нижняя"], defaultValue: "Нет" },
@@ -19,5 +21,6 @@ export const kassetaBntMConfig: CalculatorConfig = {
     { id: "sideFix", label: "Бок. фикс.", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "spring", label: "Пружина", values: ["Нет", "Левая", "Правая"], defaultValue: "Нет" },
     { id: "welding", label: "Сварка", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };

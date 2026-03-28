@@ -10,6 +10,7 @@ interface KPData {
   exchangeRate: number;
   markupType: "markup" | "discount";
   markupPercent: number;
+  accessories?: { id: string; name: string; price: number; quantity: number }[];
 }
 
 export default function KPPage() {

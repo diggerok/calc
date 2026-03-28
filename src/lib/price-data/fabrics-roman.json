@@ -1,0 +1,187 @@
+[
+  {
+    "name": "АЛЬБА",
+    "category": "4",
+    "rollWidth": 300
+  },
+  {
+    "name": "АРИМ",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "АСТЕРИКС",
+    "category": "E",
+    "rollWidth": 300
+  },
+  {
+    "name": "АСТИ",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "АЮМИ",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "БЕРКЛИ",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "ВЕНЕТО",
+    "category": "4",
+    "rollWidth": 300
+  },
+  {
+    "name": "ВЕСТА",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ГРАНД",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ГРАЦИЯ",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "ДЕРБИ",
+    "category": "E",
+    "rollWidth": 280
+  },
+  {
+    "name": "ДИАМАНТ",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ДУБЛИН DO",
+    "category": "E",
+    "rollWidth": 280
+  },
+  {
+    "name": "ИНДИАНА",
+    "category": "1",
+    "rollWidth": 290
+  },
+  {
+    "name": "ЛАОС",
+    "category": "3",
+    "rollWidth": 300
+  },
+  {
+    "name": "ЛИРИ DO",
+    "category": "4",
+    "rollWidth": 320
+  },
+  {
+    "name": "МАЛЕ",
+    "category": "E",
+    "rollWidth": 280
+  },
+  {
+    "name": "МАРСЕЛЬ",
+    "category": "E",
+    "rollWidth": 300
+  },
+  {
+    "name": "МОНИКА",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "МОРИС",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "НЕАПОЛЬ",
+    "category": "E",
+    "rollWidth": 280
+  },
+  {
+    "name": "ОРЛАНДО",
+    "category": "E",
+    "rollWidth": 305
+  },
+  {
+    "name": "ПЕГАС",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ПИРУЭТ",
+    "category": "E",
+    "rollWidth": 310
+  },
+  {
+    "name": "ПРАДО",
+    "category": "3",
+    "rollWidth": 280
+  },
+  {
+    "name": "ПУАТЬЕ",
+    "category": "2",
+    "rollWidth": 305
+  },
+  {
+    "name": "РЕГАЛ",
+    "category": "4",
+    "rollWidth": 300
+  },
+  {
+    "name": "РИМИНИ",
+    "category": "1",
+    "rollWidth": 285
+  },
+  {
+    "name": "РИЧМОНД",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "РУБИ",
+    "category": "3",
+    "rollWidth": 310
+  },
+  {
+    "name": "СЕЛЕСТА",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "ТВИДЕЛЬ DO",
+    "category": "1",
+    "rollWidth": 280
+  },
+  {
+    "name": "ТРИО BO",
+    "category": "1",
+    "rollWidth": 300
+  },
+  {
+    "name": "ТРОЯ",
+    "category": "2",
+    "rollWidth": 298
+  },
+  {
+    "name": "ФАБИ",
+    "category": "1",
+    "rollWidth": 340
+  },
+  {
+    "name": "ЭВИ",
+    "category": "2",
+    "rollWidth": 300
+  },
+  {
+    "name": "ЮКИ DO",
+    "category": "1",
+    "rollWidth": 280
+  }
+]

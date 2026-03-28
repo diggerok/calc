@@ -19,7 +19,7 @@ export default function OptionSelect({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         title={label}
-        className="w-full text-xs px-1 py-1 border border-slate-300 rounded bg-amber-50 text-blue-700 font-medium focus:ring-1 focus:ring-blue-400 focus:outline-none"
+        className="w-full min-w-[4rem] text-xs px-1 py-1 border border-slate-300 rounded bg-amber-50 text-blue-700 font-medium focus:ring-1 focus:ring-blue-400 focus:outline-none"
       >
         {options.map((opt) => (
           <option key={opt} value={opt}>

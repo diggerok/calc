@@ -46,10 +46,14 @@ const gzhDynamic: DynamicValuesFn = (optionId, priceData, options) => {
   return [];
 };
 
-// Vertical: category list from priceData
-const verticalDynamic: DynamicValuesFn = (optionId, priceData) => {
-  if (optionId === "category") {
-    return (priceData.categories ?? []).map((c: { name: string }) => c.name);
+// Vertical: model depends on material
+const verticalDynamic: DynamicValuesFn = (optionId, priceData, options) => {
+  if (optionId === "model") {
+    const material = options.material ?? "Ткань";
+    if (material === "Ткань") return Object.keys(priceData.fabricNames ?? {});
+    if (material === "Нитяные") return Object.keys(priceData.thread ?? {});
+    if (material === "Пластик") return Object.keys(priceData.plastic ?? {});
+    if (material === "Алюминий") return Object.keys(priceData.aluminium ?? {});
   }
   return [];
 };
@@ -62,6 +66,26 @@ const plisseDynamic: DynamicValuesFn = (optionId, priceData) => {
   return [];
 };
 
+// Roman rails: bracket depends on type
+const romanRailsDynamic: DynamicValuesFn = (optionId, _priceData, options) => {
+  if (optionId === "bracket") {
+    const type = options.type ?? "Стандарт";
+    if (type === "Мини") return ["На штапик Мини", "Стеновой Мини"];
+    return ["Стандартный", "Пружинный", "Стен. 5см", "Стен. 10см", "Стен. 14см", "Стен. 24см"];
+  }
+  return [];
+};
+
+// Roman blinds: bracket depends on type (same as roman-rails)
+const romanBlindsDynamic: DynamicValuesFn = (optionId, _priceData, options) => {
+  if (optionId === "bracket") {
+    const type = options.type ?? "Стандарт";
+    if (type === "Мини") return ["На штапик Мини", "Стеновой Мини"];
+    return ["Стандартный", "Пружинный", "Стен. 5см", "Стен. 10см", "Стен. 14см", "Стен. 24см"];
+  }
+  return [];
+};
+
 const dynamicMap: Record<string, DynamicValuesFn> = {
   "db-blinds": dbBlindsDynamic,
   "venus16": venus16Dynamic,
@@ -71,6 +95,8 @@ const dynamicMap: Record<string, DynamicValuesFn> = {
   "plisse": plisseDynamic,
   "plisse-maxi": plisseDynamic,
   "plisse-rus": plisseDynamic,
+  "roman-rails": romanRailsDynamic,
+  "roman-blinds": romanBlindsDynamic,
 };
 
 export function getDynamicValuesFn(calcId: string): DynamicValuesFn | undefined {

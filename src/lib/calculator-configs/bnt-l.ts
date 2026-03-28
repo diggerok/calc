@@ -6,8 +6,11 @@ export const bntLConfig: CalculatorConfig = {
   group: "BNT",
   categories: ["E", "1", "2", "3", "4", "5"],
   maxRows: 10,
+  maxHeightKeys: ["tube", "bracket"],
+  electricKitKey: "tube",
   options: [
     { id: "tube", label: "Труба", values: ["43мм", "52мм", "65мм", "75мм"], defaultValue: "43мм" },
+    { id: "bracket", label: "Кронштейн", values: ["51мм", "59мм"], defaultValue: "51мм" },
     { id: "specialModel", label: "Спец. модели", values: ["Нет", "MONO M/L", "DOUBLE L"], defaultValue: "Нет" },
     { id: "mountProfile", label: "Монт. проф", values: ["Нет", "Да"], defaultValue: "Нет" },
     { id: "color", label: "Цвет компл.", values: ["Белый", "Серый", "Черный"], defaultValue: "Белый" },
@@ -21,5 +24,6 @@ export const bntLConfig: CalculatorConfig = {
     { id: "reducer", label: "Редуктор", values: ["Нет", "Редуктор 52", "Редуктор 65/75"], defaultValue: "Нет" },
     { id: "spring", label: "Пружина", values: ["Нет", "Левая", "Правая"], defaultValue: "Нет" },
     { id: "welding", label: "Сварка", values: ["Нет", "Да"], defaultValue: "Нет" },
+    { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
   ],
 };

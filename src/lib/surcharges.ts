@@ -127,6 +127,7 @@ const miniSurcharge: SurchargeFn = (optId, val, _w, h, _base) => {
 
 const miniZebraSurcharge: SurchargeFn = (optId, val, _w, h, _base) => {
   switch (optId) {
+    case "chainTensioner": return val === "Да" ? 1.14 : 0;
     case "weight": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
     case "metalChain": return val === "Да" ? 3.05 * (h + 1) : 0;
     default: return 0;
@@ -147,6 +148,19 @@ const mgSurcharge: SurchargeFn = (optId, val, w, h, _base) => {
 
 const uni1Surcharge: SurchargeFn = (optId, val, _w, h, _base) => {
   switch (optId) {
+    case "color":
+      if (val === "Белый") return 0;
+      if (val === "Коричневый") return 6;
+      if (val === "Зол.дуб, св.дуб, махагон") return 24;
+      if (val === "Серебро") return 29.99;
+      if (val === "Темно-серый") return 8.4;
+      if (val === "Бел.дуб, Зол.дуб субл.Рус") return 8.4;
+      if (val === "Черный") return 8.4;
+      return 0;
+    case "chainTensioner":
+      if (val === "Белый") return 1.14;
+      if (val === "Дуб, кор., т.серый, черный") return 1.14;
+      return 0;
     case "weight": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
     case "metalChain": return val === "Да" ? 3.05 * (h + 1) : 0;
     default: return 0;
@@ -249,6 +263,7 @@ const zipLockSurcharge: SurchargeFn = (optId, val, w, h, basePrice) => {
     case "tube": return val === "78" ? 54.03 * w : 0;
     case "box": return val === "120" ? 51.46 * w : 0;
     case "control": return val === "Крэнк" ? 45.02 : val === "Пружина" ? 154.39 : val === "Цепь" ? 3.05 * (h + 1) : val === "Цепь нерж" ? 6.56 * (h + 1) : 0;
+    case "crankZip": return val !== "Нет" ? 13.52 : 0;
     case "ral": return val === "Да" ? basePrice * 0.15 : 0;
     case "weld": return (parseFloat(val) || 0) * 5.44;
     case "corner": return (parseFloat(val) || 0) * 52.11;
@@ -268,15 +283,92 @@ const zipRoofSurcharge: SurchargeFn = (optId, val, _w, _h, basePrice) => {
 // === Римские шторы ===
 const romanBlindsSurcharge: SurchargeFn = (optId, val, w, h, basePrice) => {
   switch (optId) {
+    case "bracket":
+      if (val === "Пружинный") return 0.51;
+      if (val === "Стен. 5см") return 1.99;
+      if (val === "Стен. 10см") return 2.64;
+      if (val === "Стен. 14см") return 3.06;
+      if (val === "Стен. 24см") return 3.84;
+      if (val === "Стеновой Мини") return 6.10;
+      return 0;
+    case "type":
+      if (val === "Макси") return 71.19 * w;
+      if (val === "Мини") return 0; // Мини расчёт по матрице
+      return 0;
     case "weight": return val === "Алюминий" ? 1.72 * w : 0;
-    case "type": return val === "Мини" ? basePrice * 0.1 : val === "Макси" ? 71.19 * w : 0;
-    case "tilt": return val === "Да" ? 71.19 : 0;
-    case "fabricOnly": return val === "Да" ? -13 * w : 0;
-    case "chain": return val === "Металл" ? 3.05 * (h + 1) : val === "Нерж" ? 6.61 * (h + 1) : 0;
+    case "chain": {
+      if (val === "Пластик" || val === "Нет" || h <= 0) return 0;
+      // Металл/Нерж: длина = 2/3 высоты изделия
+      const chainLen = h * 2 / 3;
+      return val === "Металл" ? 3.05 * chainLen : val === "Нерж" ? 6.61 * chainLen : 0;
+    }
     case "weightDecor": return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    case "fabricOnly": return val === "Да" ? -13 * w : 0;
+    case "tilt": return val === "Да" ? 71.19 : 0;
+    case "dayNight": return val === "Да" ? basePrice : 0;
+    case "sideFix": return 0; // бесплатно для Мини
     case "kant": return val === "30мм" ? 17.55 * w : val === "50мм" ? 21.06 * w : 0;
     default: return 0;
   }
+};
+
+const amgSurcharge: SurchargeFn = (optId, val, w, h, _base, opts) => {
+  const tube = opts?.tube || "32";
+  const model = opts?.model || "Классика";
+  // Наценка модель+труба считается через "model", "tube" не добавляет отдельно
+  if (optId === "model") {
+    switch (val) {
+      case "Классика": return tube === "45" ? 22.57 : 0;
+      case "Кассета": return tube === "45" ? 37.25 * w : 30.44 * w;
+      case "Пружина": return 13.80;
+      case "День/Ночь": return tube === "45" ? 26.33 : 15.05;
+      case "MONO": return (tube === "45" ? 22.57 : 0) + 13.80;
+      case "DOUBLE": return (tube === "45" ? 22.57 : 0) + 13.80;
+      default: return 0;
+    }
+  }
+  // tube обрабатывается через model, не считаем дважды
+  if (optId === "tube") return 0;
+  if (optId === "mountProfile") return val === "Да" ? 10.04 * w : 0;
+  if (optId === "bottomRail") return val === "AMG с тканью" ? 2.69 : 0;
+  if (optId === "fabricInsert") return val === "Да" ? 8.78 : 0;
+  if (optId === "welding") return val === "Да" ? 5.44 * h : 0;
+  if (optId === "chain") return val === "Металлическая" ? 3.05 * h * 1.5 : val === "Нержавеющая" ? 6.61 * h * 1.5 : 0;
+  if (optId === "weight") return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+  if (optId === "color") {
+    if (val === "Белый") return 0;
+    return (tube === "45" || model === "Кассета" && tube === "45") ? 10.17 : 7.63;
+  }
+  if (optId === "extBracket45") return val === "Да" ? 6.27 : 0;
+  if (optId === "guides") return val === "Боковые" ? 37.63 * h : val === "Нижняя" ? 12.54 * w : 0;
+  if (optId === "pocket") return val === "Да" ? 5.44 : 0;
+  return 0;
+};
+
+const amgLSurcharge: SurchargeFn = (optId, val, w, h, _base) => {
+  if (optId === "model") {
+    switch (val) {
+      case "Классика 65": return 7.32 * w;
+      case "Кассета": return 42.71 * w;
+      case "MONO": return 14.81;
+      case "DOUBLE": return 8.64;
+      default: return 0; // Классика 51 = база
+    }
+  }
+  if (optId === "mountProfile") return val === "Да" ? 9.77 * w : 0;
+  if (optId === "bottomRail") return val === "AMG с тканью" ? 2.69 : 0;
+  if (optId === "weight") return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+  if (optId === "chain") return val === "Металлическая (4.5×6мм)" ? 3.05 * h * 1.5 : val === "Нержавеющая" ? 6.61 * h * 1.5 : 0;
+  if (optId === "welding") return val === "Да" ? 5.44 * h : 0;
+  if (optId === "pocket") return val === "Да" ? 5.44 * w : 0;
+  return 0;
+};
+
+const amgXlSurcharge: SurchargeFn = (optId, val, _w, _h, _base) => {
+  if (optId === "bottomRail") return val === "AMG с тканью" ? 2.69 : 0;
+  if (optId === "weight") return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+  if (optId === "chain") return val === "Металлическая" ? 3.05 : val === "Прозрачная" ? 2.18 : 0;
+  return 0;
 };
 
 const surchargeMap: Record<string, SurchargeFn> = {
@@ -302,6 +394,21 @@ const surchargeMap: Record<string, SurchargeFn> = {
   "lock": zipLockSurcharge,
   "zip-roof": zipRoofSurcharge,
   "roman-blinds": romanBlindsSurcharge,
+  "amg": amgSurcharge,
+  "amg-l": amgLSurcharge,
+  "amg-xl": amgXlSurcharge,
+  "mgs-zebra": (optId, val, w, h, basePrice) => {
+    if (optId === "color") return val === "Коричневый" ? basePrice * 0.15 : 0;
+    if (optId === "box") return val === "Да" ? 7.18 * w : 0;
+    if (optId === "chain") return val === "Металлическая" ? 3.05 * h * 1.5 : 0;
+    if (optId === "weight") return val === "Декор" ? 1.32 : val === "Дизайн" ? 3.56 : 0;
+    return 0;
+  },
+  "mirage": (optId, val, _w, h) => {
+    if (optId === "fabricInsert") return val === "Да" ? 7.61 : 0;
+    if (optId === "chain") return val === "Металлическая с замком" ? 3.05 * h * 1.5 : 0;
+    return 0;
+  },
 };
 
 export function getSurchargeFunction(calcId: string): SurchargeFn {
