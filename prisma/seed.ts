@@ -9,13 +9,13 @@ const prisma = new PrismaClient({ adapter });
 
 async function main() {
   // Create admin user
-  const adminEmail = "admin@amigo.ru";
+  const adminEmail = "dvkrivonos@gmail.com";
   const existing = await prisma.user.findUnique({
     where: { email: adminEmail },
   });
 
   if (!existing) {
-    const hash = await bcrypt.hash("admin123", 10);
+    const hash = await bcrypt.hash("Digdog771", 10);
     await prisma.user.create({
       data: {
         name: "Дмитрий",
@@ -24,7 +24,7 @@ async function main() {
         role: "admin",
       },
     });
-    console.log("Admin created: admin@amigo.ru / admin123");
+    console.log("Admin created: dvkrivonos@gmail.com");
   } else {
     console.log("Admin already exists");
   }

@@ -11,8 +11,8 @@ export const zipConfig: CalculatorConfig = {
   sizeLimits: {
     "100-63": { minWidth: 0.38, maxWidth: 4.00, maxHeight: 5.00 },
     "120-63": { minWidth: 0.78, maxWidth: 4.00, maxHeight: 5.00 },
-    "120-78": { minWidth: 0.80, maxWidth: 5.00, maxHeight: 5.00 },
-    "_": { minWidth: 0.38, maxWidth: 5.00, maxHeight: 5.00 },
+    "120-78": { minWidth: 0.80, maxWidth: 5.50, maxHeight: 5.00 },
+    "_": { minWidth: 0.38, maxWidth: 5.50, maxHeight: 5.00 },
   },
   options: [
     { id: "tube", label: "Труба", values: ["63", "78"], defaultValue: "63" },

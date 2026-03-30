@@ -23,7 +23,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
-  const { name, email, password, role } = await req.json();
+  const { name, email: rawEmail, password, role } = await req.json();
+  const email = rawEmail?.trim().toLowerCase();
 
   if (!name || !email || !password) {
     return NextResponse.json({ error: "Заполните все поля" }, { status: 400 });

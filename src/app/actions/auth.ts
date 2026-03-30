@@ -9,7 +9,7 @@ export async function login(
   _prevState: { error?: string } | undefined,
   formData: FormData
 ) {
-  const email = (formData.get("email") as string)?.trim();
+  const email = (formData.get("email") as string)?.trim().toLowerCase();
   const password = formData.get("password") as string;
 
   if (!email || !password) {

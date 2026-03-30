@@ -197,7 +197,10 @@ export default function CalcRow({
       {(() => {
         const selectedFabric = config.fabrics?.find((f) => f.name === row.fabric);
         const limit = getSizeLimit(row.options);
-        const maxWidthM = selectedFabric ? selectedFabric.rollWidth / 100 : limit?.maxWidth;
+        const fabricMaxWidth = selectedFabric ? selectedFabric.rollWidth / 100 : undefined;
+        const maxWidthM = limit?.maxWidth
+          ? (fabricMaxWidth ? Math.min(fabricMaxWidth, limit.maxWidth) : limit.maxWidth)
+          : fabricMaxWidth;
         const minWidthM = limit?.minWidth;
         const widthNum = parseFloat(row.width) || 0;
         const heightNum = parseFloat(row.height) || 0;
@@ -207,7 +210,7 @@ export default function CalcRow({
         const fabricHExceeded = fabricMaxHeight !== undefined && fabricMaxHeight > 0 && heightNum > 0 && heightNum > fabricMaxHeight;
         const heightError = heightNum > 0 && ((limit?.maxHeight && heightNum > limit.maxHeight) || (limit?.minHeight && heightNum < limit.minHeight) || (limit?.maxArea && widthNum > 0 && widthNum * heightNum > limit.maxArea)) || fabricHExceeded || fabricHUnavail;
         const widthTitle = limit
-          ? `Мин: ${limit.minWidth}м, Макс: ${limit.maxWidth}м${limit.maxArea ? `, Площадь до ${limit.maxArea}м²` : ""}`
+          ? `Мин: ${limit.minWidth}м, Макс: ${maxWidthM || limit.maxWidth}м${limit.maxArea ? `, Площадь до ${limit.maxArea}м²` : ""}`
           : maxWidthM ? `Макс. ${maxWidthM}м (ширина рулона ${selectedFabric!.rollWidth}см)` : "";
         const heightTitle = fabricHUnavail
           ? "Ткань недоступна для этого изделия"
