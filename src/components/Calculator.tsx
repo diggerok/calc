@@ -14,6 +14,11 @@ import { accessories } from "@/lib/electrics";
 
 initCustomPricing();
 
+interface Room {
+  id: string;
+  name: string;
+}
+
 interface CalculatorProps {
   config: CalculatorConfig;
   priceData: PriceData;
@@ -43,17 +48,60 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
   const router = useRouter();
   const surchargeFn = useMemo(() => getSurchargeFunction(config.id), [config.id]);
   const dynamicValuesFn = useMemo(() => getDynamicValuesFn(config.id), [config.id]);
-  const [rows, setRows] = useState<CalcRowData[]>(() =>
-    Array.from({ length: config.maxRows }, (_, i) =>
-      createEmptyRow(i + 1, config)
-    )
-  );
+  const [rooms, setRooms] = useState<Room[]>([{ id: "room-1", name: "" }]);
+  const [rowRoomMap, setRowRoomMap] = useState<Record<number, string>>({});
+  const [rows, setRows] = useState<CalcRowData[]>(() => {
+    const initial = Array.from({ length: config.maxRows }, (_, i) => createEmptyRow(i + 1, config));
+    return initial;
+  });
   const [clientName, setClientName] = useState("");
   const [exchangeRate, setExchangeRate] = useState(90);
   const [markupType, setMarkupType] = useState<"markup" | "discount">("markup");
   const [markupPercent, setMarkupPercent] = useState(0);
   const [accessorySelections, setAccessorySelections] = useState<Record<string, number>>({});
   const hasElectric = config.options.some((o) => o.id === "electric");
+
+  // Initialize rowRoomMap for initial rows
+  useEffect(() => {
+    setRowRoomMap(prev => {
+      const next = { ...prev };
+      for (const r of rows) {
+        if (!next[r.id]) next[r.id] = rooms[0]?.id || "room-1";
+      }
+      return next;
+    });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const getRowRoom = (rowId: number) => rowRoomMap[rowId] || rooms[0]?.id || "room-1";
+
+  const addRoom = () => {
+    const newRoom: Room = { id: `room-${Date.now()}`, name: "" };
+    setRooms(prev => [...prev, newRoom]);
+    // Add one empty row for the new room
+    setRows(prev => {
+      const nextId = Math.max(...prev.map(r => r.id)) + 1;
+      const newRow = createEmptyRow(nextId, config);
+      setRowRoomMap(m => ({ ...m, [nextId]: newRoom.id }));
+      return [...prev, newRow];
+    });
+  };
+
+  const removeRoom = (roomId: string) => {
+    if (rooms.length <= 1) return;
+    setRooms(prev => prev.filter(r => r.id !== roomId));
+    setRows(prev => prev.filter(r => getRowRoom(r.id) !== roomId));
+    setRowRoomMap(prev => {
+      const next = { ...prev };
+      for (const key of Object.keys(next)) {
+        if (next[Number(key)] === roomId) delete next[Number(key)];
+      }
+      return next;
+    });
+  };
+
+  const renameRoom = (roomId: string, name: string) => {
+    setRooms(prev => prev.map(r => r.id === roomId ? { ...r, name } : r));
+  };
 
   const accessoriesTotalUsd = useMemo(() => {
     return accessories.reduce((sum, a) => sum + a.price * (accessorySelections[a.id] || 0), 0);
@@ -69,10 +117,12 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
     if (fromHistory) sessionStorage.removeItem("load-calc");
     if (!saved) return;
     try {
-      const { name, data, markup, rate, mType, accessories: acc } = JSON.parse(saved);
+      const { name, data, markup, rate, mType, accessories: acc, rooms: savedRooms, rowRoomMap: savedMap } = JSON.parse(saved);
       if (name) setClientName(name);
       if (rate) setExchangeRate(rate);
       if (acc) setAccessorySelections(acc);
+      if (savedRooms) setRooms(savedRooms);
+      if (savedMap) setRowRoomMap(savedMap);
       if (markup !== undefined) {
         if (mType) {
           setMarkupType(mType);
@@ -103,10 +153,15 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
   const handleRowChange = (updated: CalcRowData) => {
     setRows((prev) => {
       const newRows = prev.map((r) => (r.id === updated.id ? updated : r));
-      const allFilled = newRows.every((r) => r.priceUsd > 0);
+      // Auto-add row in same room if all rows in that room are filled
+      const roomId = getRowRoom(updated.id);
+      const roomRows = newRows.filter(r => getRowRoom(r.id) === roomId);
+      const allFilled = roomRows.every((r) => r.priceUsd > 0);
       if (allFilled) {
         const nextId = Math.max(...newRows.map((r) => r.id)) + 1;
-        newRows.push(createEmptyRow(nextId, config));
+        const newRow = createEmptyRow(nextId, config);
+        setRowRoomMap(m => ({ ...m, [nextId]: roomId }));
+        newRows.push(newRow);
       }
       return newRows;
     });
@@ -162,9 +217,15 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
     const selectedAccessories = accessories
       .filter((a) => (accessorySelections[a.id] || 0) > 0)
       .map((a) => ({ id: a.id, name: a.name, price: a.price, quantity: accessorySelections[a.id] }));
+    const activeRooms = rooms.filter(room => rows.some(r => getRowRoom(r.id) === room.id && r.priceUsd > 0));
+    const kpRows = rows.map(r => ({
+      ...r,
+      options: { ...r.options, _roomId: getRowRoom(r.id) },
+    }));
     const kpData = {
       config,
-      rows,
+      rows: kpRows,
+      rooms: activeRooms,
       exchangeRate,
       markupType,
       markupPercent,
@@ -180,6 +241,8 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       mType: markupType,
       rate: exchangeRate,
       accessories: accessorySelections,
+      rooms,
+      rowRoomMap,
     }));
     router.push("/kp");
   };
@@ -200,76 +263,87 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
         </div>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr style={{ backgroundColor: "#1B3054" }} className="text-white">
-              <th className="px-2 py-2 border border-slate-600 text-center w-8">
-                №
-              </th>
-              {config.fabrics && config.fabrics.length > 0 && (
-                <th className="px-2 py-2 border border-slate-600 text-center">
-                  Ткань
-                </th>
-              )}
-              {config.fabrics && config.fabrics.length > 0 && (
-                <th className="px-2 py-2 border border-slate-600 text-center">
-                  Цвет ткани
-                </th>
-              )}
-              {config.categories.length > 0 && (
-                <th className="px-2 py-2 border border-slate-600 text-center w-16">
-                  Кат.
-                </th>
-              )}
-              <th className="px-2 py-2 border border-slate-600 text-center w-20">
-                Ширина
-                <br />м
-              </th>
-              {!config.hideHeight && (
-              <th className="px-2 py-2 border border-slate-600 text-center w-20">
-                Высота
-                <br />м
-              </th>
-              )}
-              {config.options.map((opt) => (
-                <th
-                  key={opt.id}
-                  className="px-1 py-2 border border-slate-600 text-center text-xs whitespace-nowrap"
-                >
-                  {opt.label}
-                </th>
-              ))}
-              <th className="px-2 py-2 border border-slate-600 text-center w-14">
-                Кол-во
-              </th>
-              <th className="px-2 py-2 border border-slate-600 text-center w-24">
-                Цена $
-              </th>
-              <th className="px-2 py-2 border border-slate-600 text-center w-24">
-                Цена ₽
-              </th>
-              <th className="px-2 py-2 border border-slate-600 text-center w-28">
-                Итого ₽
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row) => (
-              <CalcRow
-                key={row.id}
-                row={row}
-                config={config}
-                priceData={priceData}
-                surchargeFn={surchargeFn}
-                dynamicValuesFn={dynamicValuesFn}
-                exchangeRate={exchangeRate}
-                onChange={handleRowChange}
+      {rooms.map((room, roomIdx) => {
+        const roomRows = rows.filter(r => getRowRoom(r.id) === room.id);
+        const roomSubtotal = roomRows.filter(r => r.priceUsd > 0).reduce((s, r) => s + r.totalRub, 0);
+        // Column count for subtotal colspan
+        const colCount = 1 + (config.fabrics?.length ? 2 : 0) + (config.categories.length > 0 ? 1 : 0) + 1 + (config.hideHeight ? 0 : 1) + config.options.length + 4;
+
+        return (
+          <div key={room.id} className="mb-6">
+            <div className="flex items-center gap-2 mb-2">
+              <input
+                type="text"
+                value={room.name}
+                onChange={e => renameRoom(room.id, e.target.value)}
+                placeholder={`Помещение ${roomIdx + 1}`}
+                className="px-3 py-1.5 border border-blue-300 rounded-lg text-sm font-semibold text-slate-800 bg-blue-50 focus:ring-2 focus:ring-blue-500 w-64"
               />
-            ))}
-          </tbody>
-        </table>
-      </div>
+              {rooms.length > 1 && (
+                <button onClick={() => removeRoom(room.id)} className="text-red-400 hover:text-red-600 text-sm" title="Удалить помещение">✕</button>
+              )}
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr style={{ backgroundColor: "#1B3054" }} className="text-white">
+                    <th className="px-2 py-2 border border-slate-600 text-center w-8">№</th>
+                    {config.fabrics && config.fabrics.length > 0 && (
+                      <th className="px-2 py-2 border border-slate-600 text-center">Ткань</th>
+                    )}
+                    {config.fabrics && config.fabrics.length > 0 && (
+                      <th className="px-2 py-2 border border-slate-600 text-center">Цвет ткани</th>
+                    )}
+                    {config.categories.length > 0 && (
+                      <th className="px-2 py-2 border border-slate-600 text-center w-16">Кат.</th>
+                    )}
+                    <th className="px-2 py-2 border border-slate-600 text-center w-20">Ширина<br />м</th>
+                    {!config.hideHeight && (
+                      <th className="px-2 py-2 border border-slate-600 text-center w-20">Высота<br />м</th>
+                    )}
+                    {config.options.map((opt) => (
+                      <th key={opt.id} className="px-1 py-2 border border-slate-600 text-center text-xs whitespace-nowrap">{opt.label}</th>
+                    ))}
+                    <th className="px-2 py-2 border border-slate-600 text-center w-14">Кол-во</th>
+                    <th className="px-2 py-2 border border-slate-600 text-center w-24">Цена $</th>
+                    <th className="px-2 py-2 border border-slate-600 text-center w-24">Цена ₽</th>
+                    <th className="px-2 py-2 border border-slate-600 text-center w-28">Итого ₽</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {roomRows.map((row) => (
+                    <CalcRow
+                      key={row.id}
+                      row={row}
+                      config={config}
+                      priceData={priceData}
+                      surchargeFn={surchargeFn}
+                      dynamicValuesFn={dynamicValuesFn}
+                      exchangeRate={exchangeRate}
+                      onChange={handleRowChange}
+                    />
+                  ))}
+                  {rooms.length > 1 && roomSubtotal > 0 && (
+                    <tr className="bg-blue-50">
+                      <td colSpan={colCount - 1} className="px-2 py-2 border border-slate-300 text-right text-sm font-bold text-[#1B3054]">
+                        Итого {room.name || `Помещение ${roomIdx + 1}`}:
+                      </td>
+                      <td className="px-2 py-2 border border-slate-300 text-right text-sm font-bold text-[#1B3054]">
+                        {roomSubtotal.toFixed(2)} ₽
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        );
+      })}
+
+      <button onClick={addRoom} className="mb-4 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 font-medium text-sm">
+        + Добавить помещение
+      </button>
 
       <PriceSummary
         rows={rows}
