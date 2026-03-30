@@ -12,9 +12,15 @@ interface AccessoryData {
   quantity: number;
 }
 
+interface RoomData {
+  id: string;
+  name: string;
+}
+
 interface KPData {
   config: CalculatorConfig;
   rows: CalcRowData[];
+  rooms?: RoomData[];
   exchangeRate: number;
   markupType: "markup" | "discount";
   markupPercent: number;
@@ -423,68 +429,90 @@ export default function CommercialProposal({ data }: { data: KPData }) {
                 </tr>
               </thead>
               <tbody>
-                {activeRows.map((row, idx) => {
-                  const rowPriceUsd =
-                    Math.round(row.priceUsd * markupMultiplier * 100) / 100;
-                  const rowTotalUsd =
-                    Math.round(row.priceUsd * row.quantity * markupMultiplier * 100) / 100;
-                  return (
-                    <tr
-                      key={row.id}
-                      className={idx % 2 === 1 ? "bg-[#F0F5FA]" : "bg-white"}
-                    >
-                      <td className="px-2 py-1.5 border border-slate-300 text-center">
-                        {idx + 1}
-                      </td>
-                      <td className="px-2 py-1.5 border border-slate-300">
-                        {row.options?._calcTitle
-                          ? <>{row.options._calcTitle}{row.fabric ? ` ${row.fabric}` : ""}{row.fabricColor ? ` ${row.fabricColor}` : ""}{row.category ? ` (кат. ${row.category})` : ""}</>
-                          : hasMaterial && row.options["material"] && row.options["material"] !== "—"
-                          ? `${["Бамбук", "Дерево", "Павловния"].includes(row.options["material"]) ? "Деревянные жалюзи" : "Горизонтальные жалюзи"} ${row.options["material"]} ${row.options["color"] && row.options["color"] !== "—" ? row.options["color"] : ""} ${row.options["slat"] ? row.options["slat"] + "мм" : ""}`.trim()
-                          : <>
-                              {row.fabric
-                                ? `${config.group === "Шторы плиссе" ? "Шторы плиссе" : (config.id.startsWith("uni") || config.id.startsWith("kasseta")) ? "Кассетные рулонные шторы " + config.title : "Рулонные шторы " + config.title} ${row.fabric}${row.fabricColor ? " " + row.fabricColor : ""} ${row.category || row.options?.cat ? (row.category || row.options?.cat) + " кат" : ""}`
-                                : <>
-                                    {config.id.startsWith("venus")
-                                      ? `Кассетные горизонтальные жалюзи ${config.title}`
-                                      : config.id === "gzh-blinds"
-                                      ? "Горизонтальные жалюзи"
-                                      : config.id === "vertical-blinds"
-                                      ? "Вертикальные жалюзи"
-                                      : config.title}
-                                    {row.category ? ` (кат. ${row.category})` : ""}
-                                    {hasColor && row.options["color"] && row.options["color"] !== "—" ? ` ${row.options["color"]}` : ""}
-                                    {hasSlat && row.options["slat"] && row.options["slat"] !== "—" ? ` ${row.options["slat"]}мм` : ""}
-                                  </>
-                              }
-                            </>
-                        }
-                        {row.options?.electric && row.options.electric !== "Нет" && (
-                          <>{" "}+ моторизация ({row.options.electric})</>
-                        )}
-                      </td>
-                      <td className="px-2 py-1.5 border border-slate-300 text-center">
-                        {row.width ? Math.round(parseFloat(row.width) * 1000) : ""}
-                      </td>
-                      <td className="px-2 py-1.5 border border-slate-300 text-center">
-                        {row.height ? Math.round(parseFloat(row.height) * 1000) : ""}
-                      </td>
-                      <td className="px-2 py-1.5 border border-slate-300 text-center">
-                        {row.quantity}
-                      </td>
-                      <td className="px-2 py-1.5 border border-slate-300 text-right">
-                        {rowPriceUsd.toLocaleString("ru-RU", {
-                          minimumFractionDigits: 2,
-                        })}
-                      </td>
-                      <td className="px-2 py-1.5 border border-slate-300 text-right font-medium">
-                        {rowTotalUsd.toLocaleString("ru-RU", {
-                          minimumFractionDigits: 2,
-                        })}
-                      </td>
-                    </tr>
-                  );
-                })}
+                {(() => {
+                  const hasRooms = data.rooms && data.rooms.length > 1;
+                  const roomGroups = hasRooms
+                    ? data.rooms!.map(room => ({
+                        room,
+                        rows: activeRows.filter(r => r.options?._roomId === room.id),
+                      })).filter(g => g.rows.length > 0)
+                    : [{ room: null, rows: activeRows }];
+
+                  let globalIdx = 0;
+
+                  return roomGroups.flatMap((group) => {
+                    const elements: React.ReactNode[] = [];
+
+                    if (group.room && hasRooms) {
+                      elements.push(
+                        <tr key={`room-${group.room.id}`} className="bg-[#E8F0F8]">
+                          <td colSpan={7} className="px-2 py-2 border border-slate-300 text-xs font-bold text-[#1B3054]">
+                            {group.room.name || "Помещение"}
+                          </td>
+                        </tr>
+                      );
+                    }
+
+                    group.rows.forEach((row) => {
+                      const idx = globalIdx++;
+                      const rowPriceUsd = Math.round(row.priceUsd * markupMultiplier * 100) / 100;
+                      const rowTotalUsd = Math.round(row.priceUsd * row.quantity * markupMultiplier * 100) / 100;
+                      elements.push(
+                        <tr key={row.id} className={idx % 2 === 1 ? "bg-[#F0F5FA]" : "bg-white"}>
+                          <td className="px-2 py-1.5 border border-slate-300 text-center">{idx + 1}</td>
+                          <td className="px-2 py-1.5 border border-slate-300">
+                            {row.options?._calcTitle
+                              ? <>{row.options._calcTitle}{row.fabric ? ` ${row.fabric}` : ""}{row.fabricColor ? ` ${row.fabricColor}` : ""}{row.category ? ` (кат. ${row.category})` : ""}</>
+                              : hasMaterial && row.options["material"] && row.options["material"] !== "—"
+                              ? `${["Бамбук", "Дерево", "Павловния"].includes(row.options["material"]) ? "Деревянные жалюзи" : "Горизонтальные жалюзи"} ${row.options["material"]} ${row.options["color"] && row.options["color"] !== "—" ? row.options["color"] : ""} ${row.options["slat"] ? row.options["slat"] + "мм" : ""}`.trim()
+                              : <>
+                                  {row.fabric
+                                    ? `${config.group === "Шторы плиссе" ? "Шторы плиссе" : (config.id.startsWith("uni") || config.id.startsWith("kasseta")) ? "Кассетные рулонные шторы " + config.title : "Рулонные шторы " + config.title} ${row.fabric}${row.fabricColor ? " " + row.fabricColor : ""} ${row.category || row.options?.cat ? (row.category || row.options?.cat) + " кат" : ""}`
+                                    : <>
+                                        {config.id.startsWith("venus")
+                                          ? `Кассетные горизонтальные жалюзи ${config.title}`
+                                          : config.id === "gzh-blinds"
+                                          ? "Горизонтальные жалюзи"
+                                          : config.id === "vertical-blinds"
+                                          ? "Вертикальные жалюзи"
+                                          : config.title}
+                                        {row.category ? ` (кат. ${row.category})` : ""}
+                                        {hasColor && row.options["color"] && row.options["color"] !== "—" ? ` ${row.options["color"]}` : ""}
+                                        {hasSlat && row.options["slat"] && row.options["slat"] !== "—" ? ` ${row.options["slat"]}мм` : ""}
+                                      </>
+                                  }
+                                </>
+                            }
+                            {row.options?.electric && row.options.electric !== "Нет" && (
+                              <>{" "}+ моторизация ({row.options.electric})</>
+                            )}
+                          </td>
+                          <td className="px-2 py-1.5 border border-slate-300 text-center">{row.width ? Math.round(parseFloat(row.width) * 1000) : ""}</td>
+                          <td className="px-2 py-1.5 border border-slate-300 text-center">{row.height ? Math.round(parseFloat(row.height) * 1000) : ""}</td>
+                          <td className="px-2 py-1.5 border border-slate-300 text-center">{row.quantity}</td>
+                          <td className="px-2 py-1.5 border border-slate-300 text-right">{rowPriceUsd.toLocaleString("ru-RU", { minimumFractionDigits: 2 })}</td>
+                          <td className="px-2 py-1.5 border border-slate-300 text-right font-medium">{rowTotalUsd.toLocaleString("ru-RU", { minimumFractionDigits: 2 })}</td>
+                        </tr>
+                      );
+                    });
+
+                    if (group.room && hasRooms) {
+                      const roomSubtotalUsd = Math.round(group.rows.reduce((s, r) => s + r.priceUsd * r.quantity, 0) * markupMultiplier * 100) / 100;
+                      elements.push(
+                        <tr key={`subtotal-${group.room.id}`} className="bg-[#E8F0F8]">
+                          <td colSpan={6} className="px-2 py-1.5 border border-slate-300 text-right text-xs font-bold text-[#1B3054]">
+                            Итого {group.room.name || "Помещение"}:
+                          </td>
+                          <td className="px-2 py-1.5 border border-slate-300 text-right text-xs font-bold text-[#1B3054]">
+                            {roomSubtotalUsd.toLocaleString("ru-RU", { minimumFractionDigits: 2 })}
+                          </td>
+                        </tr>
+                      );
+                    }
+
+                    return elements;
+                  });
+                })()}
                 {acc.length > 0 && (
                   <tr className="bg-slate-100">
                     <td colSpan={7} className="px-2 py-1 border border-slate-300 text-xs font-semibold text-slate-600">
@@ -600,64 +628,87 @@ export default function CommercialProposal({ data }: { data: KPData }) {
             </div>
           </div>
 
-          {activeRows.map((row, idx) => {
-            const calcTitle = row.options?._calcTitle || config.title;
-            // Determine which config to use for option labels
-            const rowConfig = row.options?._calcTitle
-              ? Object.values(calculatorConfigs).find(c => c.title === row.options._calcTitle) || config
-              : config;
+          {(() => {
+            const hasRooms = data.rooms && data.rooms.length > 1;
+            const roomGroups = hasRooms
+              ? data.rooms!.map(room => ({
+                  room,
+                  rows: activeRows.filter(r => r.options?._roomId === room.id),
+                })).filter(g => g.rows.length > 0)
+              : [{ room: null, rows: activeRows }];
 
-            return (
-              <div key={row.id} className="mb-5 pb-4 border-b border-slate-200 last:border-0">
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-sm font-bold" style={{ color: "#1B3054" }}>
-                    Позиция {idx + 1}
-                  </span>
-                  <span className="text-sm font-semibold text-slate-700">
-                    {calcTitle}
-                    {row.fabric ? ` — ${row.fabric}` : ""}
-                    {row.fabricColor ? ` ${row.fabricColor}` : ""}
-                  </span>
-                </div>
+            let globalIdx = 0;
 
-                <div className="grid grid-cols-2 gap-x-8 gap-y-0.5 text-xs ml-4">
-                  {row.width && (
-                    <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
-                      <span className="text-slate-500">Ширина</span>
-                      <span className="font-medium">{Math.round(parseFloat(row.width) * 1000)} мм</span>
-                    </div>
-                  )}
-                  {row.height && (
-                    <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
-                      <span className="text-slate-500">Высота</span>
-                      <span className="font-medium">{Math.round(parseFloat(row.height) * 1000)} мм</span>
-                    </div>
-                  )}
-                  {row.category && (
-                    <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
-                      <span className="text-slate-500">Категория</span>
-                      <span className="font-medium">{row.category}</span>
-                    </div>
-                  )}
-                  <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
-                    <span className="text-slate-500">Количество</span>
-                    <span className="font-medium">{row.quantity} шт.</span>
+            return roomGroups.map((group) => (
+              <div key={group.room?.id || "all"}>
+                {group.room && hasRooms && (
+                  <div className="mb-3 mt-4 first:mt-0">
+                    <h3 className="text-sm font-bold text-[#1B3054] border-b border-[#1B3054] pb-1">
+                      {group.room.name || "Помещение"}
+                    </h3>
                   </div>
+                )}
+                {group.rows.map((row) => {
+                  const idx = globalIdx++;
+                  const calcTitle = row.options?._calcTitle || config.title;
+                  const rowConfig = row.options?._calcTitle
+                    ? Object.values(calculatorConfigs).find(c => c.title === row.options._calcTitle) || config
+                    : config;
 
-                  {rowConfig.options.filter(opt => {
-                    const val = row.options[opt.id];
-                    if (!val || val === opt.defaultValue || val === "Нет" || val === "—" || val === "0" || opt.id === "_calcTitle") return false;
-                    return true;
-                  }).map(opt => (
-                    <div key={opt.id} className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
-                      <span className="text-slate-500">{opt.label}</span>
-                      <span className="font-medium">{row.options[opt.id]}</span>
+                  return (
+                    <div key={row.id} className="mb-5 pb-4 border-b border-slate-200 last:border-0">
+                      <div className="flex items-baseline gap-2 mb-2">
+                        <span className="text-sm font-bold" style={{ color: "#1B3054" }}>
+                          Позиция {idx + 1}
+                        </span>
+                        <span className="text-sm font-semibold text-slate-700">
+                          {calcTitle}
+                          {row.fabric ? ` — ${row.fabric}` : ""}
+                          {row.fabricColor ? ` ${row.fabricColor}` : ""}
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-x-8 gap-y-0.5 text-xs ml-4">
+                        {row.width && (
+                          <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                            <span className="text-slate-500">Ширина</span>
+                            <span className="font-medium">{Math.round(parseFloat(row.width) * 1000)} мм</span>
+                          </div>
+                        )}
+                        {row.height && (
+                          <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                            <span className="text-slate-500">Высота</span>
+                            <span className="font-medium">{Math.round(parseFloat(row.height) * 1000)} мм</span>
+                          </div>
+                        )}
+                        {row.category && (
+                          <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                            <span className="text-slate-500">Категория</span>
+                            <span className="font-medium">{row.category}</span>
+                          </div>
+                        )}
+                        <div className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                          <span className="text-slate-500">Количество</span>
+                          <span className="font-medium">{row.quantity} шт.</span>
+                        </div>
+
+                        {rowConfig.options.filter(opt => {
+                          const val = row.options[opt.id];
+                          if (!val || val === opt.defaultValue || val === "Нет" || val === "—" || val === "0" || opt.id === "_calcTitle" || opt.id === "_roomId") return false;
+                          return true;
+                        }).map(opt => (
+                          <div key={opt.id} className="flex justify-between border-b border-dotted border-slate-200 py-0.5">
+                            <span className="text-slate-500">{opt.label}</span>
+                            <span className="font-medium">{row.options[opt.id]}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  ))}
-                </div>
+                  );
+                })}
               </div>
-            );
-          })}
+            ));
+          })()}
         </div>
       </div>
     </div>

@@ -13,10 +13,16 @@ import OptionSelect from "./OptionSelect";
 import AccessoriesPanel from "./AccessoriesPanel";
 import PriceSummary from "./PriceSummary";
 
+interface Room {
+  id: string;
+  name: string;
+}
+
 interface CombinedRow {
   id: number;
   calcId: string;
   row: CalcRowData;
+  roomId: string;
 }
 
 function createEmptyCalcRow(id: number, config: CalculatorConfig): CalcRowData {
@@ -31,14 +37,35 @@ interface Props {
   allPriceData: Record<string, unknown>;
 }
 
+let roomCounter = 1;
+
 export default function CombinedCalculator({ allPriceData }: Props) {
   const router = useRouter();
-  const [rows, setRows] = useState<CombinedRow[]>([{ id: 1, calcId: "", row: createEmptyCalcRow(1, { options: [], categories: [] } as unknown as CalculatorConfig) }]);
+  const [rooms, setRooms] = useState<Room[]>([{ id: "room-1", name: "" }]);
+  const [rows, setRows] = useState<CombinedRow[]>([{ id: 1, calcId: "", row: createEmptyCalcRow(1, { options: [], categories: [] } as unknown as CalculatorConfig), roomId: "room-1" }]);
   const [clientName, setClientName] = useState("");
   const [exchangeRate, setExchangeRate] = useState(90);
   const [markupType, setMarkupType] = useState<"markup" | "discount">("markup");
   const [markupPercent, setMarkupPercent] = useState(0);
   const [accessorySelections, setAccessorySelections] = useState<Record<string, number>>({});
+
+  const addRoom = () => {
+    roomCounter++;
+    const newRoom: Room = { id: `room-${Date.now()}`, name: "" };
+    setRooms(prev => [...prev, newRoom]);
+    const nextId = rows.length > 0 ? Math.max(...rows.map(r => r.id)) + 1 : 1;
+    setRows(prev => [...prev, { id: nextId, calcId: "", row: createEmptyCalcRow(nextId, { options: [], categories: [] } as unknown as CalculatorConfig), roomId: newRoom.id }]);
+  };
+
+  const removeRoom = (roomId: string) => {
+    if (rooms.length <= 1) return;
+    setRooms(prev => prev.filter(r => r.id !== roomId));
+    setRows(prev => prev.filter(r => r.roomId !== roomId));
+  };
+
+  const renameRoom = (roomId: string, name: string) => {
+    setRooms(prev => prev.map(r => r.id === roomId ? { ...r, name } : r));
+  };
 
   const accessoriesTotalUsd = useMemo(() => {
     return accessories.reduce((sum, a) => sum + a.price * (accessorySelections[a.id] || 0), 0);
@@ -127,11 +154,15 @@ export default function CombinedCalculator({ allPriceData }: Props) {
         return { ...r, row: recalcRow(r.calcId, updatedRow) };
       });
 
-      // Auto-add row if all filled
-      const filled = newRows.filter(r => r.calcId && r.row.priceUsd > 0);
-      if (filled.length === newRows.length) {
-        const nextId = Math.max(...newRows.map(r => r.id)) + 1;
-        newRows.push({ id: nextId, calcId: "", row: createEmptyCalcRow(nextId, { options: [], categories: [] } as unknown as CalculatorConfig) });
+      // Auto-add row in same room if all rows in that room are filled
+      const currentRow = newRows.find(r => r.id === rowId);
+      if (currentRow) {
+        const roomRows = newRows.filter(r => r.roomId === currentRow.roomId);
+        const allFilled = roomRows.every(r => r.calcId && r.row.priceUsd > 0);
+        if (allFilled) {
+          const nextId = Math.max(...newRows.map(r => r.id)) + 1;
+          newRows.push({ id: nextId, calcId: "", row: createEmptyCalcRow(nextId, { options: [], categories: [] } as unknown as CalculatorConfig), roomId: currentRow.roomId });
+        }
       }
       return newRows;
     });
@@ -139,8 +170,17 @@ export default function CombinedCalculator({ allPriceData }: Props) {
 
   const handleRemoveRow = (rowId: number) => {
     setRows(prev => {
+      const row = prev.find(r => r.id === rowId);
       const filtered = prev.filter(r => r.id !== rowId);
-      return filtered.length > 0 ? filtered : [{ id: 1, calcId: "", row: createEmptyCalcRow(1, { options: [], categories: [] } as unknown as CalculatorConfig) }];
+      // Keep at least one row per room
+      if (row) {
+        const roomRows = filtered.filter(r => r.roomId === row.roomId);
+        if (roomRows.length === 0) {
+          const nextId = filtered.length > 0 ? Math.max(...filtered.map(r => r.id)) + 1 : 1;
+          filtered.push({ id: nextId, calcId: "", row: createEmptyCalcRow(nextId, { options: [], categories: [] } as unknown as CalculatorConfig), roomId: row.roomId });
+        }
+      }
+      return filtered.length > 0 ? filtered : [{ id: 1, calcId: "", row: createEmptyCalcRow(1, { options: [], categories: [] } as unknown as CalculatorConfig), roomId: rooms[0]?.id || "room-1" }];
     });
   };
 
@@ -173,17 +213,23 @@ export default function CombinedCalculator({ allPriceData }: Props) {
     if (allCalcRows.length === 0) { showToast("Нет позиций для КП", "error"); return; }
     const selectedAccessories = accessories.filter(a => (accessorySelections[a.id] || 0) > 0).map(a => ({ id: a.id, name: a.name, price: a.price, quantity: accessorySelections[a.id] }));
     // Build combined config for KP
+    const activeRooms = rooms.filter(room => rows.some(r => r.roomId === room.id && r.row.priceUsd > 0));
     const kpData = {
       config: { id: "combined", title: "Сборный расчёт", group: "", categories: [], options: [], maxRows: 100 },
       rows: rows.filter(r => r.row.priceUsd > 0).map(r => {
         const config = calculatorConfigs[r.calcId];
-        return { ...r.row, options: { ...r.row.options, _calcTitle: config?.title || "" } };
+        return { ...r.row, options: { ...r.row.options, _calcTitle: config?.title || "", _roomId: r.roomId } };
       }),
+      rooms: activeRooms,
       exchangeRate, markupType, markupPercent, clientName,
       accessories: selectedAccessories,
     };
     sessionStorage.setItem("kp-data", JSON.stringify(kpData));
     router.push("/kp");
+  };
+
+  const getRoomSubtotal = (roomId: string) => {
+    return rows.filter(r => r.roomId === roomId && r.row.priceUsd > 0).reduce((s, r) => s + r.row.totalRub, 0);
   };
 
   return (
@@ -196,8 +242,38 @@ export default function CombinedCalculator({ allPriceData }: Props) {
         </div>
       </div>
 
-      <div className="space-y-3">
-        {rows.map((cr) => {
+      <div className="space-y-6">
+        {rooms.map((room, roomIdx) => {
+          const roomRows = rows.filter(r => r.roomId === room.id);
+          const subtotal = getRoomSubtotal(room.id);
+          let globalIdx = 0;
+          for (let i = 0; i < roomIdx; i++) {
+            globalIdx += rows.filter(r => r.roomId === rooms[i].id).length;
+          }
+
+          return (
+            <div key={room.id} className="border border-blue-200 rounded-xl bg-blue-50/30 p-3">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-lg">🏠</span>
+                <input
+                  type="text"
+                  value={room.name}
+                  onChange={e => renameRoom(room.id, e.target.value)}
+                  placeholder={`Помещение ${roomIdx + 1}`}
+                  className="px-3 py-1.5 border border-blue-300 rounded-lg text-sm font-semibold text-slate-800 bg-white focus:ring-2 focus:ring-blue-500 w-64"
+                />
+                {subtotal > 0 && (
+                  <span className="text-sm font-mono font-bold text-blue-700 ml-auto mr-2">
+                    Итого: {subtotal.toFixed(2)} ₽
+                  </span>
+                )}
+                {rooms.length > 1 && (
+                  <button onClick={() => removeRoom(room.id)} className="text-red-400 hover:text-red-600 text-sm" title="Удалить помещение">✕</button>
+                )}
+              </div>
+
+              <div className="space-y-3">
+                {roomRows.map((cr) => {
           const config = cr.calcId ? calculatorConfigs[cr.calcId] : null;
           const dynamicValuesFn = config ? getDynamicValuesFn(cr.calcId) : undefined;
           const priceData = allPriceData[cr.calcId];
@@ -306,8 +382,16 @@ export default function CombinedCalculator({ allPriceData }: Props) {
               )}
             </div>
           );
+                })}
+              </div>
+            </div>
+          );
         })}
       </div>
+
+      <button onClick={addRoom} className="mt-4 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 font-medium text-sm">
+        + Добавить помещение
+      </button>
 
       <PriceSummary
         rows={allCalcRows}
