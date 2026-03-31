@@ -1,6 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { getSession } from "@/lib/session";
+import { z } from "zod";
+
+const createCalcSchema = z.object({
+  type: z.string().min(1).max(100),
+  name: z.string().max(500).optional().default(""),
+  data: z.unknown(),
+  totalUsd: z.number().finite(),
+  totalRub: z.number().finite(),
+  markup: z.number().finite().optional().default(0),
+});
 
 export async function POST(req: NextRequest) {
   const session = await getSession();
@@ -9,7 +19,11 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json();
-  const { type, name, data, totalUsd, totalRub, markup } = body;
+  const parsed = createCalcSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: "Неверные данные" }, { status: 400 });
+  }
+  const { type, name, data, totalUsd, totalRub, markup } = parsed.data;
 
   const calculation = await prisma.calculation.create({
     data: {

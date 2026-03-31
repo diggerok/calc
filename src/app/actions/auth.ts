@@ -2,6 +2,7 @@
 
 import { prisma } from "@/lib/db";
 import { createSession, deleteSession } from "@/lib/session";
+import { checkRateLimit, resetRateLimit } from "@/lib/rate-limit";
 import bcrypt from "bcryptjs";
 import { redirect } from "next/navigation";
 
@@ -16,6 +17,12 @@ export async function login(
     return { error: "Введите email и пароль" };
   }
 
+  const { allowed, retryAfterSec } = checkRateLimit(email);
+  if (!allowed) {
+    const minutes = Math.ceil(retryAfterSec / 60);
+    return { error: `Слишком много попыток. Попробуйте через ${minutes} мин.` };
+  }
+
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user) {
     return { error: "Неверный email или пароль" };
@@ -25,6 +32,8 @@ export async function login(
   if (!valid) {
     return { error: "Неверный email или пароль" };
   }
+
+  resetRateLimit(email);
 
   await createSession({
     userId: user.id,

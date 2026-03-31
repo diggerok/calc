@@ -2,6 +2,18 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { getSession } from "@/lib/session";
 import bcrypt from "bcryptjs";
+import { z } from "zod";
+
+const createUserSchema = z.object({
+  name: z.string().min(1).max(255),
+  email: z.string().email().max(255),
+  password: z.string().min(6).max(128),
+  role: z.enum(["admin", "manager"]).optional().default("manager"),
+});
+
+const deleteUserSchema = z.object({
+  id: z.string().min(1),
+});
 
 export async function GET() {
   const session = await getSession();
@@ -23,12 +35,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
-  const { name, email: rawEmail, password, role } = await req.json();
-  const email = rawEmail?.trim().toLowerCase();
-
-  if (!name || !email || !password) {
-    return NextResponse.json({ error: "Заполните все поля" }, { status: 400 });
+  const body = await req.json();
+  const parsed = createUserSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: "Заполните все поля корректно (пароль мин. 6 символов)" }, { status: 400 });
   }
+  const { name, password, role } = parsed.data;
+  const email = parsed.data.email.trim().toLowerCase();
 
   const existing = await prisma.user.findUnique({ where: { email } });
   if (existing) {
@@ -52,7 +65,12 @@ export async function DELETE(req: NextRequest) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
-  const { id } = await req.json();
+  const body = await req.json();
+  const parsed = deleteUserSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: "Неверный запрос" }, { status: 400 });
+  }
+  const { id } = parsed.data;
   if (id === session.userId) {
     return NextResponse.json(
       { error: "Нельзя удалить самого себя" },
