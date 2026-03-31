@@ -328,11 +328,51 @@ export default function CombinedCalculator({ allPriceData }: Props) {
                       </select>
                     )}
 
-                    <input type="number" step="0.01" min="0" value={cr.row.width} onChange={e => handleRowUpdate(cr.id, "width", e.target.value)} className="w-16 text-xs px-2 py-1.5 border border-slate-300 rounded bg-yellow-50 text-blue-700 font-medium text-center" placeholder="Ш, м" />
-
-                    {!config.hideHeight && (
-                      <input type="number" step="0.01" min="0" value={cr.row.height} onChange={e => handleRowUpdate(cr.id, "height", e.target.value)} className="w-16 text-xs px-2 py-1.5 border border-slate-300 rounded bg-yellow-50 text-blue-700 font-medium text-center" placeholder="В, м" />
-                    )}
+                    {(() => {
+                      const getSizeLimit = (opts: Record<string, string>) => {
+                        if (!config.sizeLimits) return null;
+                        const slat = opts["slat"] || "";
+                        const material = opts["material"] || "";
+                        const box = opts["box"] || "";
+                        const tube = opts["tube"] || "";
+                        return config.sizeLimits[`${box}-${tube}`] || config.sizeLimits[`${slat}-${material}`] || config.sizeLimits[material] || config.sizeLimits[slat] || config.sizeLimits["_"] || null;
+                      };
+                      const limit = getSizeLimit(cr.row.options);
+                      const selectedFabric = config.fabrics?.find(f => f.name === cr.row.fabric);
+                      const fabricMaxWidth = selectedFabric ? selectedFabric.rollWidth / 100 : undefined;
+                      const maxWidthM = limit?.maxWidth
+                        ? (fabricMaxWidth ? Math.min(fabricMaxWidth, limit.maxWidth) : limit.maxWidth)
+                        : fabricMaxWidth;
+                      const widthNum = parseFloat(cr.row.width) || 0;
+                      const heightNum = parseFloat(cr.row.height) || 0;
+                      const widthError = widthNum > 0 && ((maxWidthM && widthNum > maxWidthM) || (limit?.minWidth && widthNum < limit.minWidth) || (limit?.maxArea && heightNum > 0 && widthNum * heightNum > limit.maxArea));
+                      const heightError = heightNum > 0 && ((limit?.maxHeight && heightNum > limit.maxHeight) || (limit?.minHeight && heightNum < limit.minHeight) || (limit?.maxArea && widthNum > 0 && widthNum * heightNum > limit.maxArea));
+                      return (<>
+                        <div className="flex flex-col items-center">
+                          <input type="number" step="0.01" min={limit?.minWidth || 0} max={maxWidthM} value={cr.row.width} onChange={e => handleRowUpdate(cr.id, "width", e.target.value)} className={`w-16 text-xs px-2 py-1.5 border rounded font-medium text-center ${widthError ? "border-red-500 bg-red-50 text-red-700" : "border-slate-300 bg-yellow-50 text-blue-700"}`} placeholder="Ш, м" />
+                          {limit && (
+                            <div className="text-[9px] text-slate-300 text-center leading-tight mt-0.5">
+                              {limit.minWidth}–{maxWidthM || limit.maxWidth}м
+                            </div>
+                          )}
+                        </div>
+                        {!config.hideHeight && (
+                          <div className="flex flex-col items-center">
+                            <input type="number" step="0.01" min={limit?.minHeight || 0} max={limit?.maxHeight} value={cr.row.height} onChange={e => handleRowUpdate(cr.id, "height", e.target.value)} className={`w-16 text-xs px-2 py-1.5 border rounded font-medium text-center ${heightError ? "border-red-500 bg-red-50 text-red-700" : "border-slate-300 bg-yellow-50 text-blue-700"}`} placeholder="В, м" />
+                            {limit && limit.maxHeight && (
+                              <div className="text-[9px] text-slate-300 text-center leading-tight mt-0.5">
+                                до {limit.maxHeight}м
+                              </div>
+                            )}
+                            {limit?.maxArea && (
+                              <div className="text-[9px] text-slate-300 text-center leading-tight">
+                                до {limit.maxArea}м²
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </>);
+                    })()}
 
                     <input type="number" min="1" value={cr.row.quantity} onChange={e => handleRowUpdate(cr.id, "quantity", parseInt(e.target.value) || 1)} className="w-12 text-xs px-1 py-1.5 border border-slate-300 rounded bg-yellow-50 text-blue-700 font-medium text-center" />
                   </>
