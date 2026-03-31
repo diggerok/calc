@@ -38,7 +38,9 @@ export default function Header({ userName, userRole }: HeaderProps) {
             </>
           )}
           {userName && (
-            <span className="text-blue-300 ml-2">{userName}</span>
+            <Link href="/profile" className="text-blue-300 hover:text-white transition-colors ml-2">
+              {userName}
+            </Link>
           )}
           <form action={logout}>
             <button

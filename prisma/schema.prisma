@@ -18,6 +18,7 @@ model User {
   email        String        @unique
   passwordHash String
   role         String        @default("user")
+  phone        String        @default("")
   calculations Calculation[]
   createdAt    DateTime      @default(now())
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { CalcRowData, CalculatorConfig } from "@/types/calculator";
 import { calculatorConfigs } from "@/lib/calculator-configs";
 import Image from "next/image";
@@ -28,17 +28,6 @@ interface KPData {
   accessories?: AccessoryData[];
 }
 
-interface ManagerInfo {
-  email: string;
-  phone: string;
-}
-
-const MANAGERS: Record<string, ManagerInfo> = {
-  "Екатерина": { email: "ekaterina@krasnodar.amigo.ru", phone: "+7 (900) 000-00-01" },
-  "Наталья": { email: "natalya@krasnodar.amigo.ru", phone: "+7 (900) 000-00-02" },
-  "Другой": { email: "", phone: "" },
-};
-
 export default function CommercialProposal({ data }: { data: KPData }) {
   const { config, rows, exchangeRate, markupType, markupPercent } = data;
   const printRef = useRef<HTMLDivElement>(null);
@@ -46,9 +35,20 @@ export default function CommercialProposal({ data }: { data: KPData }) {
   const [clientName, setClientName] = useState(data.clientName || "");
   const [clientPhone, setClientPhone] = useState("");
   const [clientAddress, setClientAddress] = useState("");
-  const [managerKey, setManagerKey] = useState("Екатерина");
-  const [managerEmail, setManagerEmail] = useState(MANAGERS["Екатерина"].email);
-  const [managerPhone, setManagerPhone] = useState(MANAGERS["Екатерина"].phone);
+  const [managerName, setManagerName] = useState("");
+  const [managerEmail, setManagerEmail] = useState("");
+  const [managerPhone, setManagerPhone] = useState("");
+
+  useEffect(() => {
+    fetch("/api/profile")
+      .then((r) => r.json())
+      .then((profile) => {
+        if (profile.name) setManagerName(profile.name);
+        if (profile.email) setManagerEmail(profile.email);
+        if (profile.phone) setManagerPhone(profile.phone);
+      })
+      .catch(() => {});
+  }, []);
 
   const [deliveryEnabled, setDeliveryEnabled] = useState(false);
   const [deliveryAmount, setDeliveryAmount] = useState(0);
@@ -102,19 +102,12 @@ export default function CommercialProposal({ data }: { data: KPData }) {
     document.title = prevTitle;
   };
 
-  const handleManagerChange = (key: string) => {
-    setManagerKey(key);
-    const info = MANAGERS[key];
-    setManagerEmail(info?.email || "");
-    setManagerPhone(info?.phone || "");
-  };
-
   return (
     <div>
       {/* Панель редактирования — скрыта при печати */}
       <div className="print:hidden mb-6 bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
         <h2 className="text-lg font-bold text-slate-800 mb-4">Данные клиента</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm font-medium text-slate-600 mb-1">
               Организация / ФИО
@@ -148,43 +141,6 @@ export default function CommercialProposal({ data }: { data: KPData }) {
               value={clientAddress}
               onChange={(e) => setClientAddress(e.target.value)}
               placeholder="Адрес доставки / объекта"
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-slate-600 mb-1">
-              Менеджер
-            </label>
-            <div className="flex gap-2">
-              <select
-                value={managerKey}
-                onChange={(e) => handleManagerChange(e.target.value)}
-                className="px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                {Object.keys(MANAGERS).map((name) => (
-                  <option key={name} value={name}>
-                    {name}
-                  </option>
-                ))}
-              </select>
-              <input
-                type="email"
-                value={managerEmail}
-                onChange={(e) => setManagerEmail(e.target.value)}
-                placeholder="email менеджера"
-                className="flex-1 px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-slate-600 mb-1">
-              Телефон менеджера
-            </label>
-            <input
-              type="tel"
-              value={managerPhone}
-              onChange={(e) => setManagerPhone(e.target.value)}
-              placeholder="+7 (___) ___-__-__"
               className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -355,17 +311,13 @@ export default function CommercialProposal({ data }: { data: KPData }) {
               </div>
               <div>г. Краснодар, Первый проезд Стасова 1а</div>
               <div>krasnodar.amigo.ru</div>
-              {managerKey !== "Другой" && (
+              {(managerName || managerPhone || managerEmail) && (
                 <div className="mt-2 pt-2 border-t border-slate-200">
-                  <div className="font-semibold text-slate-800">
-                    Менеджер: {managerKey}
-                  </div>
-                  {managerPhone && <div>{managerPhone}</div>}
-                  {managerEmail && <div>{managerEmail}</div>}
-                </div>
-              )}
-              {managerKey === "Другой" && (managerPhone || managerEmail) && (
-                <div className="mt-2 pt-2 border-t border-slate-200">
+                  {managerName && (
+                    <div className="font-semibold text-slate-800">
+                      Менеджер: {managerName}
+                    </div>
+                  )}
                   {managerPhone && <div>{managerPhone}</div>}
                   {managerEmail && <div>{managerEmail}</div>}
                 </div>
