@@ -6,6 +6,7 @@ import { z } from "zod";
 const updateProfileSchema = z.object({
   name: z.string().min(1).max(255).optional(),
   phone: z.string().max(30).optional(),
+  kpEmail: z.string().max(255).optional(),
 });
 
 export async function GET() {
@@ -16,7 +17,7 @@ export async function GET() {
 
   const user = await prisma.user.findUnique({
     where: { id: session.userId },
-    select: { name: true, email: true, phone: true },
+    select: { name: true, email: true, phone: true, kpEmail: true },
   });
 
   return NextResponse.json(user);
@@ -34,12 +35,13 @@ export async function PUT(req: NextRequest) {
     return NextResponse.json({ error: "Неверные данные" }, { status: 400 });
   }
 
-  const { name, phone } = parsed.data;
+  const { name, phone, kpEmail } = parsed.data;
   await prisma.user.update({
     where: { id: session.userId },
     data: {
       ...(name !== undefined && { name }),
       ...(phone !== undefined && { phone }),
+      ...(kpEmail !== undefined && { kpEmail }),
     },
   });
 

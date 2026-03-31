@@ -44,7 +44,7 @@ export default function CommercialProposal({ data }: { data: KPData }) {
       .then((r) => r.json())
       .then((profile) => {
         if (profile.name) setManagerName(profile.name);
-        if (profile.email) setManagerEmail(profile.email);
+        if (profile.kpEmail) setManagerEmail(profile.kpEmail);
         if (profile.phone) setManagerPhone(profile.phone);
       })
       .catch(() => {});

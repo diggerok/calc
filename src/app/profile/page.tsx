@@ -6,6 +6,7 @@ import { showToast } from "@/components/Toast";
 export default function ProfilePage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [kpEmail, setKpEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(true);
 
@@ -15,6 +16,7 @@ export default function ProfilePage() {
       .then((data) => {
         setName(data.name || "");
         setEmail(data.email || "");
+        setKpEmail(data.kpEmail || "");
         setPhone(data.phone || "");
         setLoading(false);
       });
@@ -24,7 +26,7 @@ export default function ProfilePage() {
     const res = await fetch("/api/profile", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, phone }),
+      body: JSON.stringify({ name, phone, kpEmail }),
     });
     if (res.ok) {
       showToast("Профиль сохранён!");
@@ -63,13 +65,14 @@ export default function ProfilePage() {
         </div>
         <div>
           <label className="block text-sm font-medium text-slate-600 mb-1">
-            Email
+            Email для КП
           </label>
           <input
             type="email"
-            value={email}
-            disabled
-            className="w-full px-3 py-2 border border-slate-200 rounded-lg bg-slate-50 text-slate-500"
+            value={kpEmail}
+            onChange={(e) => setKpEmail(e.target.value)}
+            className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            placeholder="email для коммерческих предложений"
           />
         </div>
         <div>
