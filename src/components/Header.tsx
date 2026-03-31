@@ -12,9 +12,9 @@ interface HeaderProps {
 export default function Header({ userName, userRole }: HeaderProps) {
   return (
     <header style={{ backgroundColor: "#1B3054" }} className="text-white shadow-lg">
-      <div className="max-w-[1600px] mx-auto px-4 flex items-center justify-between" style={{ paddingTop: "5px", paddingBottom: "5px" }}>
+      <div className="max-w-[1600px] mx-auto px-4 flex items-center justify-between" style={{ paddingTop: "5mm", paddingBottom: "5mm" }}>
         <Link href="/calc" className="flex items-center gap-3">
-          <Image src="/logo-amigo.svg" alt="AMIGO" width={420} height={144} style={{ height: "36px", width: "auto" }} />
+          <Image src="/logo-amigo.svg" alt="AMIGO" width={420} height={144} />
           <span className="text-sm font-light text-blue-200 hidden sm:block">Калькулятор</span>
         </Link>
         <nav className="flex items-center gap-4 text-sm">
