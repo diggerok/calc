@@ -258,11 +258,15 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
             value={clientName}
             onChange={(e) => setClientName(e.target.value)}
             placeholder="ООО «Компания» или ФИО"
-            className="px-3 py-1.5 border border-slate-300 rounded-lg text-sm w-64 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className={`px-3 py-1.5 border rounded-lg text-sm w-64 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${!clientName.trim() ? "border-red-400 bg-red-50" : "border-slate-300"}`}
           />
+          {!clientName.trim() && (
+            <span className="text-xs text-red-500">Введите клиента</span>
+          )}
         </div>
       </div>
 
+      <div className={!clientName.trim() ? "opacity-40 pointer-events-none select-none" : ""}>
       {rooms.map((room, roomIdx) => {
         const roomRows = rows.filter(r => getRowRoom(r.id) === room.id);
         const roomSubtotal = roomRows.filter(r => r.priceUsd > 0).reduce((s, r) => s + r.totalRub, 0);
@@ -344,6 +348,7 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       <button onClick={addRoom} className="mb-4 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 font-medium text-sm">
         + Добавить помещение
       </button>
+      </div>
 
       <PriceSummary
         rows={rows}

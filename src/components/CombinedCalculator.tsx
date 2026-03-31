@@ -238,10 +238,14 @@ export default function CombinedCalculator({ allPriceData }: Props) {
         <h1 className="text-2xl font-bold text-slate-800">Сборный расчёт</h1>
         <div className="flex items-center gap-2">
           <label className="text-sm font-medium text-slate-600">Клиент:</label>
-          <input type="text" value={clientName} onChange={e => setClientName(e.target.value)} placeholder="ООО «Компания» или ФИО" className="px-3 py-1.5 border border-slate-300 rounded-lg text-sm w-64 focus:ring-2 focus:ring-blue-500" />
+          <input type="text" value={clientName} onChange={e => setClientName(e.target.value)} placeholder="ООО «Компания» или ФИО" className={`px-3 py-1.5 border rounded-lg text-sm w-64 focus:ring-2 focus:ring-blue-500 ${!clientName.trim() ? "border-red-400 bg-red-50" : "border-slate-300"}`} />
+          {!clientName.trim() && (
+            <span className="text-xs text-red-500">Введите клиента</span>
+          )}
         </div>
       </div>
 
+      <div className={!clientName.trim() ? "opacity-40 pointer-events-none select-none" : ""}>
       <div className="space-y-6">
         {rooms.map((room, roomIdx) => {
           const roomRows = rows.filter(r => r.roomId === room.id);
@@ -432,6 +436,7 @@ export default function CombinedCalculator({ allPriceData }: Props) {
       <button onClick={addRoom} className="mt-4 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 font-medium text-sm">
         + Добавить помещение
       </button>
+      </div>
 
       <PriceSummary
         rows={allCalcRows}
