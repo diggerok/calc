@@ -105,29 +105,32 @@ export default function CommercialProposal({ data }: { data: KPData }) {
   };
 
   const [exporting, setExporting] = useState(false);
+  const [showJpegMenu, setShowJpegMenu] = useState(false);
 
-  const handleExportJpeg = useCallback(async () => {
-    if (!printRef.current) return;
+  const renderToJpeg = async (el: HTMLElement, name: string) => {
+    const canvas = await html2canvas(el, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: "#ffffff",
+    });
+    const link = document.createElement("a");
+    link.download = `${name}.jpg`;
+    link.href = canvas.toDataURL("image/jpeg", 0.92);
+    link.click();
+  };
+
+  const handleExportJpeg = useCallback(async (pages: "kp" | "spec" | "all") => {
     setExporting(true);
+    setShowJpegMenu(false);
     try {
       const datePart = today.toLocaleDateString("ru-RU", { day: "2-digit", month: "2-digit", year: "numeric" });
       const fileName = `КП ${clientName || "клиент"} ${datePart}`;
 
-      const renderToJpeg = async (el: HTMLElement, name: string) => {
-        const canvas = await html2canvas(el, {
-          scale: 2,
-          useCORS: true,
-          backgroundColor: "#ffffff",
-        });
-        const link = document.createElement("a");
-        link.download = `${name}.jpg`;
-        link.href = canvas.toDataURL("image/jpeg", 0.92);
-        link.click();
-      };
-
-      await renderToJpeg(printRef.current, fileName);
-      if (specRef.current) {
-        await new Promise(r => setTimeout(r, 500));
+      if ((pages === "kp" || pages === "all") && printRef.current) {
+        await renderToJpeg(printRef.current, fileName);
+      }
+      if ((pages === "spec" || pages === "all") && specRef.current) {
+        if (pages === "all") await new Promise(r => setTimeout(r, 500));
         await renderToJpeg(specRef.current, `${fileName} — спецификация`);
       }
     } finally {
@@ -272,13 +275,37 @@ export default function CommercialProposal({ data }: { data: KPData }) {
           >
             Печать / PDF
           </button>
-          <button
-            onClick={handleExportJpeg}
-            disabled={exporting}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium disabled:opacity-50"
-          >
-            {exporting ? "Экспорт..." : "Сохранить JPEG"}
-          </button>
+          <div className="relative">
+            <button
+              onClick={() => setShowJpegMenu(!showJpegMenu)}
+              disabled={exporting}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium disabled:opacity-50"
+            >
+              {exporting ? "Экспорт..." : "Сохранить JPEG"}
+            </button>
+            {showJpegMenu && (
+              <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-50 min-w-[200px]">
+                <button
+                  onClick={() => handleExportJpeg("kp")}
+                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-blue-50 text-slate-700 rounded-t-lg"
+                >
+                  Только КП
+                </button>
+                <button
+                  onClick={() => handleExportJpeg("spec")}
+                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-blue-50 text-slate-700"
+                >
+                  Только спецификация
+                </button>
+                <button
+                  onClick={() => handleExportJpeg("all")}
+                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-blue-50 text-slate-700 font-medium rounded-b-lg"
+                >
+                  КП + спецификация
+                </button>
+              </div>
+            )}
+          </div>
           <button
             onClick={() => window.history.back()}
             className="px-6 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 font-medium"
