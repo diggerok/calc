@@ -182,6 +182,19 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
     []
   );
 
+  const saveCalcState = () => {
+    sessionStorage.setItem(`calc-state-${config.id}`, JSON.stringify({
+      name: clientName,
+      data: rows.filter((r) => r.priceUsd > 0),
+      markup: markupPercent,
+      mType: markupType,
+      rate: exchangeRate,
+      accessories: accessorySelections,
+      rooms,
+      rowRoomMap,
+    }));
+  };
+
   const handleSave = async () => {
     const activeRows = rows.filter((r) => r.priceUsd > 0);
     if (activeRows.length === 0) return;
@@ -204,6 +217,7 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
     });
 
     if (res.ok) {
+      saveCalcState();
       showToast("Расчёт сохранён!");
     }
   };
@@ -233,17 +247,7 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
       accessories: selectedAccessories,
     };
     sessionStorage.setItem("kp-data", JSON.stringify(kpData));
-    // Сохраняем состояние калькулятора для возврата
-    sessionStorage.setItem(`calc-state-${config.id}`, JSON.stringify({
-      name: clientName,
-      data: rows.filter((r) => r.priceUsd > 0),
-      markup: markupPercent,
-      mType: markupType,
-      rate: exchangeRate,
-      accessories: accessorySelections,
-      rooms,
-      rowRoomMap,
-    }));
+    saveCalcState();
     router.push("/kp");
   };
 
@@ -375,6 +379,22 @@ export default function Calculator({ config, priceData }: CalculatorProps) {
           style={{ backgroundColor: "#1B3054" }}
         >
           Создать КП
+        </button>
+        <button
+          onClick={() => {
+            const activeRows = rows.filter((r) => r.priceUsd > 0);
+            if (activeRows.length === 0) { showToast("Нет позиций", "error"); return; }
+            sessionStorage.setItem("order-data", JSON.stringify({
+              type: config.id,
+              clientName,
+              rows: activeRows,
+            }));
+            saveCalcState();
+            router.push("/order");
+          }}
+          className="px-6 py-2 text-white rounded-lg hover:opacity-90 font-medium transition-all bg-amber-600 hover:bg-amber-700"
+        >
+          Бланк заказа
         </button>
       </div>
 

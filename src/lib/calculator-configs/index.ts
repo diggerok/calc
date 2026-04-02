@@ -62,7 +62,7 @@ for (const cfg of [uni1Config, uni2Config, uni2SpringConfig, miniConfig, mgConfi
 }
 
 // Привязываем ткани к рулонным калькуляторам (не зебра, не плиссе)
-for (const cfg of [miniConfig, mgConfig, uni1Config, uni2Config, uni2SpringConfig, bntMConfig, bntLConfig, kassetaBntMConfig, kassetaBntLConfig, amgConfig, amgLConfig, amgXlConfig]) {
+for (const cfg of [miniConfig, mgConfig, uni1Config, uni2Config, uni2SpringConfig, bntMConfig, bntLConfig, kassetaBntMConfig, kassetaBntLConfig, amgConfig, amgLConfig, amgXlConfig, roofConfig]) {
   cfg.fabrics = rollerFabrics.filter((f) => cfg.categories.includes(f.category));
 }
 
