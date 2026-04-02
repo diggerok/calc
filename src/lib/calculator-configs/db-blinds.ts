@@ -18,9 +18,9 @@ export const dbBlindsConfig: CalculatorConfig = {
   ],
   sizeLimits: {
     // 25мм
-    "25-Дерево":     { minWidth: 0.33, maxWidth: 2.10, maxHeight: 1.80, maxArea: 3.30 },
+    "25-Дерево":     { minWidth: 0.33, maxWidth: 2.10, maxHeight: 3.00, maxArea: 3.30 },
     "25-Павловния":  { minWidth: 0.33, maxWidth: 2.30, maxHeight: 3.00, maxArea: 4.20 },
-    "25-Бамбук":     { minWidth: 0.33, maxWidth: 1.80, maxArea: 3.60 },
+    "25-Бамбук":     { minWidth: 0.33, maxWidth: 1.80, maxHeight: 3.00, maxArea: 3.60 },
     // 50мм
     "50-Дерево":     { minWidth: 0.42, maxWidth: 2.10, maxHeight: 4.30, maxArea: 3.50 },
     "50-Бамбук":     { minWidth: 0.42, maxWidth: 1.80, maxHeight: 4.30, maxArea: 3.80 },
