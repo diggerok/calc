@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import html2canvas from "html2canvas-pro";
 import type { CalcRowData, CalculatorConfig } from "@/types/calculator";
 import { calculatorConfigs } from "@/lib/calculator-configs";
 import Image from "next/image";
@@ -31,6 +32,7 @@ interface KPData {
 export default function CommercialProposal({ data }: { data: KPData }) {
   const { config, rows, exchangeRate, markupType, markupPercent } = data;
   const printRef = useRef<HTMLDivElement>(null);
+  const specRef = useRef<HTMLDivElement>(null);
 
   const [clientName, setClientName] = useState(data.clientName || "");
   const [clientPhone, setClientPhone] = useState("");
@@ -101,6 +103,37 @@ export default function CommercialProposal({ data }: { data: KPData }) {
     window.print();
     document.title = prevTitle;
   };
+
+  const [exporting, setExporting] = useState(false);
+
+  const handleExportJpeg = useCallback(async () => {
+    if (!printRef.current) return;
+    setExporting(true);
+    try {
+      const datePart = today.toLocaleDateString("ru-RU", { day: "2-digit", month: "2-digit", year: "numeric" });
+      const fileName = `КП ${clientName || "клиент"} ${datePart}`;
+
+      const renderToJpeg = async (el: HTMLElement, name: string) => {
+        const canvas = await html2canvas(el, {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: "#ffffff",
+        });
+        const link = document.createElement("a");
+        link.download = `${name}.jpg`;
+        link.href = canvas.toDataURL("image/jpeg", 0.92);
+        link.click();
+      };
+
+      await renderToJpeg(printRef.current, fileName);
+      if (specRef.current) {
+        await new Promise(r => setTimeout(r, 500));
+        await renderToJpeg(specRef.current, `${fileName} — спецификация`);
+      }
+    } finally {
+      setExporting(false);
+    }
+  }, [clientName, today]);
 
   return (
     <div>
@@ -238,6 +271,13 @@ export default function CommercialProposal({ data }: { data: KPData }) {
             className="px-6 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-900 font-medium"
           >
             Печать / PDF
+          </button>
+          <button
+            onClick={handleExportJpeg}
+            disabled={exporting}
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium disabled:opacity-50"
+          >
+            {exporting ? "Экспорт..." : "Сохранить JPEG"}
           </button>
           <button
             onClick={() => window.history.back()}
@@ -568,6 +608,7 @@ export default function CommercialProposal({ data }: { data: KPData }) {
       </div>
       {/* === Спецификация === */}
       <div
+        ref={specRef}
         className="bg-white print:shadow-none shadow-lg rounded-xl print:rounded-none overflow-hidden max-w-[210mm] mx-auto mt-8 print:mt-0 print:break-before-page"
         style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
       >
