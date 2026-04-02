@@ -172,7 +172,7 @@ const verticalBlindsPriceFn: CustomPriceFn = (priceData, _cat, w, h, options) =>
 // === Плиссе ===
 // Base price from matrix by cat, + model/color/bracket surcharges, + extras
 const plissePriceFn: CustomPriceFn = (priceData, _cat, w, h, options) => {
-  const cat = options.cat ?? "Е";
+  const cat = options.cat ?? "E";
   const base = lookupBasePrice(priceData, cat, w, h);
   if (base === 0) return 0;
 

@@ -10,7 +10,7 @@ export const plisseRusConfig: CalculatorConfig = {
   electricKitKey: "model",
   options: [
     { id: "model", label: "Модель", values: ["—"], dynamic: true, defaultValue: "—" },
-    { id: "cat", label: "Кат. ткани", values: ["0", "Е", "1", "2", "3", "4", "5"], defaultValue: "1" },
+    { id: "cat", label: "Кат. ткани", values: ["0", "E", "1", "2", "3", "4", "5"], defaultValue: "1" },
     { id: "color", label: "Цвет фурн.", values: ["—"], dynamic: true, defaultValue: "—" },
     { id: "bracket", label: "Кронштейн", values: ["—"], dynamic: true, defaultValue: "—" },
     { id: "electric", label: "Электрика", values: ["Нет"], defaultValue: "Нет" },
