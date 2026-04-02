@@ -121,6 +121,15 @@ export default function CalcRow({
         }
       }
     }
+    // Автоподстановка размеров из модели "MODEL (W×H)"
+    const dimMatch = value.match(/\((\d+)×(\d+)\)$/);
+    if (dimMatch) {
+      const autoW = (parseInt(dimMatch[1]) / 1000).toFixed(3);
+      const autoH = (parseInt(dimMatch[2]) / 1000).toFixed(3);
+      onChange(recalc({ ...row, width: autoW, height: autoH }, newOptions));
+      return;
+    }
+
     onChange(recalc(row, newOptions));
   };
 

@@ -86,6 +86,18 @@ const romanBlindsDynamic: DynamicValuesFn = (optionId, _priceData, options) => {
   return [];
 };
 
+// Roof: model list depends on manufacturer
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const roofDynamic: DynamicValuesFn = (optionId, priceData, options) => {
+  if (optionId === "model") {
+    const manufacturer = options.manufacturer ?? "Velux";
+    return (priceData.models ?? [])
+      .filter((m: { manufacturer: string }) => m.manufacturer === manufacturer)
+      .map((m: { model: string; width: number; height: number }) => `${m.model} (${m.width}×${m.height})`);
+  }
+  return [];
+};
+
 const dynamicMap: Record<string, DynamicValuesFn> = {
   "db-blinds": dbBlindsDynamic,
   "venus16": venus16Dynamic,
@@ -97,6 +109,7 @@ const dynamicMap: Record<string, DynamicValuesFn> = {
   "plisse-rus": plisseDynamic,
   "roman-rails": romanRailsDynamic,
   "roman-blinds": romanBlindsDynamic,
+  "roof": roofDynamic,
 };
 
 export function getDynamicValuesFn(calcId: string): DynamicValuesFn | undefined {

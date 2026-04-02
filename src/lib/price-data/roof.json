@@ -1,0 +1,6402 @@
+{
+  "models": [
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "B04",
+      "width": 305,
+      "height": 739,
+      "prices": {
+        "1": 176.14,
+        "2": 183.31,
+        "3": 183.85,
+        "4": 189.78,
+        "5": 194.66
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "C27",
+      "width": 383,
+      "height": 386,
+      "prices": {
+        "1": 153.2,
+        "2": 156.99,
+        "3": 157.27,
+        "4": 160.41,
+        "5": 162.99
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL",
+      "model": "C01",
+      "width": 383,
+      "height": 460,
+      "prices": {
+        "1": 158.83,
+        "2": 163.33,
+        "3": 163.67,
+        "4": 167.39,
+        "5": 170.45
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL",
+      "model": "CK01",
+      "width": 383,
+      "height": 515,
+      "prices": {
+        "1": 165.08,
+        "2": 170.11,
+        "3": 170.48,
+        "4": 174.64,
+        "5": 178.06
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGGU-GLU-GXU\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "C02",
+      "width": 383,
+      "height": 540,
+      "prices": {
+        "1": 166.98,
+        "2": 172.24,
+        "3": 172.64,
+        "4": 176.99,
+        "5": 180.58
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "CK02",
+      "width": 383,
+      "height": 595,
+      "prices": {
+        "1": 171.19,
+        "2": 176.98,
+        "3": 177.41,
+        "4": 182.2,
+        "5": 186.15
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "C04",
+      "width": 383,
+      "height": 739,
+      "prices": {
+        "1": 184.25,
+        "2": 191.42,
+        "3": 191.96,
+        "4": 197.89,
+        "5": 202.77
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "C04",
+      "width": 383,
+      "height": 740,
+      "prices": {
+        "1": 184.31,
+        "2": 191.49,
+        "3": 192.03,
+        "4": 197.97,
+        "5": 202.86
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "CK04",
+      "width": 383,
+      "height": 795,
+      "prices": {
+        "1": 188.52,
+        "2": 196.23,
+        "3": 196.8,
+        "4": 203.18,
+        "5": 208.43
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "C06",
+      "width": 383,
+      "height": 940,
+      "prices": {
+        "1": 201.7,
+        "2": 210.79,
+        "3": 211.48,
+        "4": 219.0,
+        "5": 225.19
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "CK06",
+      "width": 383,
+      "height": 995,
+      "prices": {
+        "1": 205.86,
+        "2": 215.47,
+        "3": 216.2,
+        "4": 224.15,
+        "5": 230.71
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "9",
+      "width": 384,
+      "height": 462,
+      "prices": {
+        "1": 159.06,
+        "2": 163.58,
+        "3": 163.92,
+        "4": 167.66,
+        "5": 170.73
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y21",
+      "width": 384,
+      "height": 601,
+      "prices": {
+        "1": 171.77,
+        "2": 177.62,
+        "3": 178.06,
+        "4": 182.89,
+        "5": 186.88
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "6",
+      "width": 384,
+      "height": 742,
+      "prices": {
+        "1": 184.6,
+        "2": 191.8,
+        "3": 192.34,
+        "4": 198.29,
+        "5": 203.2
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y23",
+      "width": 384,
+      "height": 801,
+      "prices": {
+        "1": 189.1,
+        "2": 196.87,
+        "3": 197.45,
+        "4": 203.87,
+        "5": 209.16
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)\nVL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "021",
+      "width": 390,
+      "height": 609,
+      "prices": {
+        "1": 172.97,
+        "2": 178.9,
+        "3": 179.34,
+        "4": 184.24,
+        "5": 188.28
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "021",
+      "width": 390,
+      "height": 656,
+      "prices": {
+        "1": 176.59,
+        "2": 182.96,
+        "3": 183.44,
+        "4": 188.71,
+        "5": 193.06
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)\nVL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "023",
+      "width": 390,
+      "height": 809,
+      "prices": {
+        "1": 190.31,
+        "2": 198.14,
+        "3": 198.73,
+        "4": 205.22,
+        "5": 210.56
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "023",
+      "width": 390,
+      "height": 856,
+      "prices": {
+        "1": 193.92,
+        "2": 202.21,
+        "3": 202.83,
+        "4": 209.69,
+        "5": 215.33
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "102",
+      "width": 397,
+      "height": 574,
+      "prices": {
+        "1": 171.08,
+        "2": 176.66,
+        "3": 177.09,
+        "4": 181.71,
+        "5": 185.52
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GZX",
+      "model": "102",
+      "width": 397,
+      "height": 614,
+      "prices": {
+        "1": 174.1,
+        "2": 180.07,
+        "3": 180.52,
+        "4": 185.46,
+        "5": 189.53
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "104",
+      "width": 397,
+      "height": 774,
+      "prices": {
+        "1": 188.41,
+        "2": 195.91,
+        "3": 196.48,
+        "4": 202.68,
+        "5": 207.8
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX\nVF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "021",
+      "width": 400,
+      "height": 618,
+      "prices": {
+        "1": 174.73,
+        "2": 180.74,
+        "3": 181.19,
+        "4": 186.16,
+        "5": 190.26
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "021",
+      "width": 400,
+      "height": 670,
+      "prices": {
+        "1": 178.7,
+        "2": 185.21,
+        "3": 185.7,
+        "4": 191.08,
+        "5": 195.52
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX\nVF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "023",
+      "width": 400,
+      "height": 818,
+      "prices": {
+        "1": 192.06,
+        "2": 199.99,
+        "3": 200.58,
+        "4": 207.14,
+        "5": 212.54
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "023",
+      "width": 400,
+      "height": 870,
+      "prices": {
+        "1": 196.04,
+        "2": 204.46,
+        "3": 205.09,
+        "4": 212.06,
+        "5": 217.8
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU",
+      "model": "102",
+      "width": 410,
+      "height": 584,
+      "prices": {
+        "1": 166.99,
+        "2": 172.68,
+        "3": 173.1,
+        "4": 177.81,
+        "5": 181.68
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "104",
+      "width": 410,
+      "height": 783,
+      "prices": {
+        "1": 184.27,
+        "2": 191.85,
+        "3": 192.42,
+        "4": 198.7,
+        "5": 203.87
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "011",
+      "width": 436,
+      "height": 537,
+      "prices": {
+        "1": 173.2,
+        "2": 178.43,
+        "3": 178.83,
+        "4": 183.15,
+        "5": 186.72
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "011",
+      "width": 446,
+      "height": 548,
+      "prices": {
+        "1": 175.08,
+        "2": 180.42,
+        "3": 180.82,
+        "4": 185.23,
+        "5": 188.87
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y33",
+      "width": 484,
+      "height": 801,
+      "prices": {
+        "1": 200.41,
+        "2": 208.18,
+        "3": 208.76,
+        "4": 215.18,
+        "5": 220.47
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y35",
+      "width": 484,
+      "height": 1001,
+      "prices": {
+        "1": 217.75,
+        "2": 227.42,
+        "3": 228.15,
+        "4": 236.15,
+        "5": 242.75
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "033",
+      "width": 490,
+      "height": 809,
+      "prices": {
+        "1": 201.67,
+        "2": 209.51,
+        "3": 210.1,
+        "4": 216.58,
+        "5": 221.92
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "033",
+      "width": 490,
+      "height": 856,
+      "prices": {
+        "1": 205.23,
+        "2": 213.52,
+        "3": 214.14,
+        "4": 220.99,
+        "5": 226.64
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "035",
+      "width": 490,
+      "height": 1009,
+      "prices": {
+        "1": 219.0,
+        "2": 228.76,
+        "3": 229.49,
+        "4": 237.55,
+        "5": 244.2
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "035",
+      "width": 490,
+      "height": 1056,
+      "prices": {
+        "1": 222.56,
+        "2": 232.76,
+        "3": 233.53,
+        "4": 241.97,
+        "5": 248.92
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "F04",
+      "width": 493,
+      "height": 739,
+      "prices": {
+        "1": 196.61,
+        "2": 203.78,
+        "3": 204.32,
+        "4": 210.25,
+        "5": 215.13
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "F04",
+      "width": 493,
+      "height": 740,
+      "prices": {
+        "1": 196.67,
+        "2": 203.85,
+        "3": 204.39,
+        "4": 210.32,
+        "5": 215.22
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "FK04",
+      "width": 493,
+      "height": 795,
+      "prices": {
+        "1": 200.88,
+        "2": 208.58,
+        "3": 209.16,
+        "4": 215.53,
+        "5": 220.79
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGGU-GLU-GXU\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "F06",
+      "width": 493,
+      "height": 940,
+      "prices": {
+        "1": 214.0,
+        "2": 223.1,
+        "3": 223.78,
+        "4": 231.3,
+        "5": 237.5
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "FK06",
+      "width": 493,
+      "height": 995,
+      "prices": {
+        "1": 218.21,
+        "2": 227.83,
+        "3": 228.55,
+        "4": 236.51,
+        "5": 243.06
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGGU-GLU-GXU\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "F08",
+      "width": 493,
+      "height": 1160,
+      "prices": {
+        "1": 232.88,
+        "2": 244.08,
+        "3": 244.92,
+        "4": 254.18,
+        "5": 261.81
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "FK08",
+      "width": 493,
+      "height": 1215,
+      "prices": {
+        "1": 237.09,
+        "2": 248.81,
+        "3": 249.69,
+        "4": 259.39,
+        "5": 267.38
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX",
+      "model": "033",
+      "width": 500,
+      "height": 818,
+      "prices": {
+        "1": 202.55,
+        "2": 210.47,
+        "3": 211.06,
+        "4": 217.62,
+        "5": 223.02
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "033",
+      "width": 500,
+      "height": 870,
+      "prices": {
+        "1": 207.34,
+        "2": 215.77,
+        "3": 216.4,
+        "4": 223.36,
+        "5": 229.11
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX",
+      "model": "035",
+      "width": 500,
+      "height": 1018,
+      "prices": {
+        "1": 219.88,
+        "2": 229.72,
+        "3": 230.46,
+        "4": 238.59,
+        "5": 245.3
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "035",
+      "width": 500,
+      "height": 1070,
+      "prices": {
+        "1": 224.68,
+        "2": 235.01,
+        "3": 235.79,
+        "4": 244.34,
+        "5": 251.39
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "204",
+      "width": 507,
+      "height": 774,
+      "prices": {
+        "1": 200.77,
+        "2": 208.27,
+        "3": 208.83,
+        "4": 215.04,
+        "5": 220.15
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GZX",
+      "model": "204",
+      "width": 507,
+      "height": 814,
+      "prices": {
+        "1": 203.79,
+        "2": 211.68,
+        "3": 212.27,
+        "4": 218.79,
+        "5": 224.17
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "206",
+      "width": 507,
+      "height": 974,
+      "prices": {
+        "1": 218.1,
+        "2": 227.52,
+        "3": 228.23,
+        "4": 236.01,
+        "5": 242.43
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "206",
+      "width": 520,
+      "height": 983,
+      "prices": {
+        "1": 213.07,
+        "2": 222.58,
+        "3": 223.29,
+        "4": 231.15,
+        "5": 237.63
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "5",
+      "width": 536,
+      "height": 942,
+      "prices": {
+        "1": 218.65,
+        "2": 227.76,
+        "3": 228.44,
+        "4": 235.98,
+        "5": 242.19
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "N2",
+      "width": 545,
+      "height": 1093,
+      "prices": {
+        "1": 231.14,
+        "2": 241.7,
+        "3": 242.49,
+        "4": 251.22,
+        "5": 258.42
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y43",
+      "width": 584,
+      "height": 801,
+      "prices": {
+        "1": 213.49,
+        "2": 221.25,
+        "3": 221.83,
+        "4": 228.25,
+        "5": 233.54
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y45",
+      "width": 584,
+      "height": 1001,
+      "prices": {
+        "1": 230.82,
+        "2": 240.5,
+        "3": 241.23,
+        "4": 249.23,
+        "5": 255.82
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y47",
+      "width": 584,
+      "height": 1201,
+      "prices": {
+        "1": 248.16,
+        "2": 259.75,
+        "3": 260.62,
+        "4": 270.2,
+        "5": 278.1
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VZ-WAND",
+      "model": "041",
+      "width": 590,
+      "height": 289,
+      "prices": {
+        "1": 170.89,
+        "2": 173.75,
+        "3": 173.97,
+        "4": 176.33,
+        "5": 178.28
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)\nVL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "043",
+      "width": 590,
+      "height": 809,
+      "prices": {
+        "1": 214.74,
+        "2": 222.58,
+        "3": 223.17,
+        "4": 229.65,
+        "5": 235.0
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "043",
+      "width": 590,
+      "height": 856,
+      "prices": {
+        "1": 218.3,
+        "2": 226.59,
+        "3": 227.21,
+        "4": 234.07,
+        "5": 239.72
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)\nVL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "045",
+      "width": 590,
+      "height": 1009,
+      "prices": {
+        "1": 232.08,
+        "2": 241.83,
+        "3": 242.56,
+        "4": 250.63,
+        "5": 257.28
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "045",
+      "width": 590,
+      "height": 1056,
+      "prices": {
+        "1": 235.64,
+        "2": 245.84,
+        "3": 246.61,
+        "4": 255.04,
+        "5": 262.0
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)\nVL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "047",
+      "width": 590,
+      "height": 1209,
+      "prices": {
+        "1": 249.41,
+        "2": 261.08,
+        "3": 261.96,
+        "4": 271.6,
+        "5": 279.56
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "047",
+      "width": 590,
+      "height": 1256,
+      "prices": {
+        "1": 252.97,
+        "2": 265.09,
+        "3": 266.0,
+        "4": 276.02,
+        "5": 284.28
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX\nVF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "043",
+      "width": 600,
+      "height": 818,
+      "prices": {
+        "1": 216.45,
+        "2": 224.37,
+        "3": 224.97,
+        "4": 231.52,
+        "5": 236.92
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "043",
+      "width": 600,
+      "height": 870,
+      "prices": {
+        "1": 220.42,
+        "2": 228.84,
+        "3": 229.47,
+        "4": 236.44,
+        "5": 242.18
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX\nVF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "045",
+      "width": 600,
+      "height": 1018,
+      "prices": {
+        "1": 233.78,
+        "2": 243.62,
+        "3": 244.36,
+        "4": 252.5,
+        "5": 259.2
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "045",
+      "width": 600,
+      "height": 1070,
+      "prices": {
+        "1": 237.75,
+        "2": 248.09,
+        "3": 248.87,
+        "4": 257.41,
+        "5": 264.46
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX\nVF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "047",
+      "width": 600,
+      "height": 1218,
+      "prices": {
+        "1": 251.12,
+        "2": 262.87,
+        "3": 263.75,
+        "4": 273.47,
+        "5": 281.48
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "047",
+      "width": 600,
+      "height": 1270,
+      "prices": {
+        "1": 255.09,
+        "2": 267.34,
+        "3": 268.26,
+        "4": 278.39,
+        "5": 286.74
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "MK31",
+      "width": 612,
+      "height": 387,
+      "prices": {
+        "1": 181.38,
+        "2": 187.45,
+        "3": 188.57,
+        "4": 190.95,
+        "5": 196.45
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGIU\nGPU-GTU-GHU",
+      "model": "MK34",
+      "width": 612,
+      "height": 740,
+      "prices": {
+        "1": 213.06,
+        "2": 224.52,
+        "3": 226.64,
+        "4": 231.14,
+        "5": 241.54
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "MK35, MK36",
+      "width": 612,
+      "height": 741,
+      "prices": {
+        "1": 213.18,
+        "2": 224.65,
+        "3": 226.78,
+        "4": 231.28,
+        "5": 241.69
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "MK38",
+      "width": 612,
+      "height": 1161,
+      "prices": {
+        "1": 250.13,
+        "2": 268.02,
+        "3": 271.34,
+        "4": 278.36,
+        "5": 294.59
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "M31",
+      "width": 613,
+      "height": 386,
+      "prices": {
+        "1": 181.37,
+        "2": 187.42,
+        "3": 188.55,
+        "4": 190.92,
+        "5": 196.41
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "331",
+      "width": 613,
+      "height": 387,
+      "prices": {
+        "1": 181.49,
+        "2": 187.56,
+        "3": 188.68,
+        "4": 191.06,
+        "5": 196.56
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL",
+      "model": "MK27",
+      "width": 613,
+      "height": 441,
+      "prices": {
+        "1": 185.68,
+        "2": 192.57,
+        "3": 193.85,
+        "4": 196.55,
+        "5": 202.8
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "M02",
+      "width": 613,
+      "height": 540,
+      "prices": {
+        "1": 195.48,
+        "2": 203.89,
+        "3": 205.44,
+        "4": 208.74,
+        "5": 216.37
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "M04, M34",
+      "width": 613,
+      "height": 739,
+      "prices": {
+        "1": 213.11,
+        "2": 224.55,
+        "3": 226.67,
+        "4": 231.16,
+        "5": 241.55
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGIU",
+      "model": "304, 334, 335, M04, M34",
+      "width": 613,
+      "height": 740,
+      "prices": {
+        "1": 213.17,
+        "2": 224.63,
+        "3": 226.75,
+        "4": 231.25,
+        "5": 241.65
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GZX",
+      "model": "304",
+      "width": 613,
+      "height": 791,
+      "prices": {
+        "1": 217.17,
+        "2": 229.41,
+        "3": 231.68,
+        "4": 236.48,
+        "5": 247.59
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "MK04",
+      "width": 613,
+      "height": 795,
+      "prices": {
+        "1": 217.48,
+        "2": 229.78,
+        "3": 232.06,
+        "4": 236.88,
+        "5": 248.04
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "306, 336, M06                 \nM35, M36",
+      "width": 613,
+      "height": 940,
+      "prices": {
+        "1": 230.86,
+        "2": 245.38,
+        "3": 248.06,
+        "4": 253.76,
+        "5": 266.93
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GZX",
+      "model": "306",
+      "width": 613,
+      "height": 991,
+      "prices": {
+        "1": 234.86,
+        "2": 250.16,
+        "3": 252.99,
+        "4": 258.99,
+        "5": 272.87
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "MK06",
+      "width": 613,
+      "height": 995,
+      "prices": {
+        "1": 235.17,
+        "2": 250.52,
+        "3": 253.37,
+        "4": 259.39,
+        "5": 273.33
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "308                 \n338                 \nM08                 \nM38",
+      "width": 613,
+      "height": 1160,
+      "prices": {
+        "1": 250.13,
+        "2": 268.0,
+        "3": 271.31,
+        "4": 278.33,
+        "5": 294.55
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GZX",
+      "model": "308",
+      "width": 613,
+      "height": 1211,
+      "prices": {
+        "1": 254.13,
+        "2": 272.78,
+        "3": 276.24,
+        "4": 283.56,
+        "5": 300.49
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "MK08",
+      "width": 613,
+      "height": 1215,
+      "prices": {
+        "1": 254.43,
+        "2": 273.15,
+        "3": 276.62,
+        "4": 283.96,
+        "5": 300.94
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "310                 \nM10",
+      "width": 613,
+      "height": 1362,
+      "prices": {
+        "1": 265.9,
+        "2": 286.86,
+        "3": 290.74,
+        "4": 298.97,
+        "5": 317.99
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "MK10",
+      "width": 613,
+      "height": 1417,
+      "prices": {
+        "1": 270.2,
+        "2": 292.01,
+        "3": 296.05,
+        "4": 304.6,
+        "5": 324.39
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL",
+      "model": "MK12",
+      "width": 613,
+      "height": 1617,
+      "prices": {
+        "1": 285.8,
+        "2": 310.66,
+        "3": 315.26,
+        "4": 325.02,
+        "5": 347.57
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "1",
+      "width": 614,
+      "height": 742,
+      "prices": {
+        "1": 213.46,
+        "2": 224.95,
+        "3": 227.08,
+        "4": 231.59,
+        "5": 242.01
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "2",
+      "width": 614,
+      "height": 1162,
+      "prices": {
+        "1": 250.42,
+        "2": 268.32,
+        "3": 271.64,
+        "4": 278.67,
+        "5": 294.92
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "11",
+      "width": 614,
+      "height": 1562,
+      "prices": {
+        "1": 281.6,
+        "2": 305.62,
+        "3": 310.07,
+        "4": 319.49,
+        "5": 341.29
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "022",
+      "width": 616,
+      "height": 809,
+      "prices": {
+        "1": 218.9,
+        "2": 231.41,
+        "3": 233.73,
+        "4": 238.64,
+        "5": 250.0
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "024",
+      "width": 616,
+      "height": 1009,
+      "prices": {
+        "1": 236.59,
+        "2": 252.16,
+        "3": 255.04,
+        "4": 261.15,
+        "5": 275.28
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "025",
+      "width": 616,
+      "height": 1209,
+      "prices": {
+        "1": 254.28,
+        "2": 272.9,
+        "3": 276.35,
+        "4": 283.66,
+        "5": 300.56
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "304",
+      "width": 626,
+      "height": 749,
+      "prices": {
+        "1": 208.22,
+        "2": 219.81,
+        "3": 221.96,
+        "4": 226.51,
+        "5": 237.03
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIU\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "334",
+      "width": 626,
+      "height": 758,
+      "prices": {
+        "1": 215.95,
+        "2": 227.68,
+        "3": 229.85,
+        "4": 234.46,
+        "5": 245.11
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "022",
+      "width": 626,
+      "height": 818,
+      "prices": {
+        "1": 220.62,
+        "2": 233.27,
+        "3": 235.61,
+        "4": 240.58,
+        "5": 252.06
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "306",
+      "width": 626,
+      "height": 949,
+      "prices": {
+        "1": 225.9,
+        "2": 240.56,
+        "3": 243.27,
+        "4": 249.02,
+        "5": 262.32
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "024",
+      "width": 626,
+      "height": 1018,
+      "prices": {
+        "1": 238.31,
+        "2": 254.02,
+        "3": 256.92,
+        "4": 263.09,
+        "5": 277.34
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "308",
+      "width": 626,
+      "height": 1169,
+      "prices": {
+        "1": 245.17,
+        "2": 263.18,
+        "3": 266.52,
+        "4": 273.59,
+        "5": 289.93
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "025",
+      "width": 626,
+      "height": 1218,
+      "prices": {
+        "1": 256.0,
+        "2": 274.76,
+        "3": 278.24,
+        "4": 285.6,
+        "5": 302.62
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y65",
+      "width": 764,
+      "height": 1001,
+      "prices": {
+        "1": 251.92,
+        "2": 267.37,
+        "3": 270.23,
+        "4": 276.29,
+        "5": 290.31
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y67",
+      "width": 764,
+      "height": 1201,
+      "prices": {
+        "1": 269.61,
+        "2": 288.12,
+        "3": 291.54,
+        "4": 298.81,
+        "5": 315.59
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VZ-WAND",
+      "model": "061",
+      "width": 770,
+      "height": 289,
+      "prices": {
+        "1": 190.73,
+        "2": 195.3,
+        "3": 196.14,
+        "4": 197.94,
+        "5": 202.08
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "065",
+      "width": 770,
+      "height": 1009,
+      "prices": {
+        "1": 253.19,
+        "2": 268.76,
+        "3": 271.65,
+        "4": 277.76,
+        "5": 291.88
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "065",
+      "width": 770,
+      "height": 1056,
+      "prices": {
+        "1": 256.84,
+        "2": 273.12,
+        "3": 276.14,
+        "4": 282.53,
+        "5": 297.31
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "067",
+      "width": 770,
+      "height": 1209,
+      "prices": {
+        "1": 270.88,
+        "2": 289.51,
+        "3": 292.96,
+        "4": 300.27,
+        "5": 317.17
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "067",
+      "width": 770,
+      "height": 1256,
+      "prices": {
+        "1": 274.53,
+        "2": 293.87,
+        "3": 297.45,
+        "4": 305.04,
+        "5": 322.59
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "PK31",
+      "width": 774,
+      "height": 387,
+      "prices": {
+        "1": 198.81,
+        "2": 204.88,
+        "3": 206.0,
+        "4": 208.38,
+        "5": 213.89
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGGU-GLU-GXU\nGIU\nGPU-GTU-GHU",
+      "model": "PK34",
+      "width": 774,
+      "height": 740,
+      "prices": {
+        "1": 230.55,
+        "2": 242.01,
+        "3": 244.13,
+        "4": 248.63,
+        "5": 259.03
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "PK35",
+      "width": 774,
+      "height": 741,
+      "prices": {
+        "1": 230.61,
+        "2": 242.09,
+        "3": 244.21,
+        "4": 248.71,
+        "5": 259.13
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "PK36",
+      "width": 774,
+      "height": 941,
+      "prices": {
+        "1": 248.3,
+        "2": 262.83,
+        "3": 265.52,
+        "4": 271.22,
+        "5": 284.41
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "PK38",
+      "width": 774,
+      "height": 1161,
+      "prices": {
+        "1": 267.57,
+        "2": 285.46,
+        "3": 288.77,
+        "4": 295.79,
+        "5": 312.03
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL",
+      "model": "PK25",
+      "width": 775,
+      "height": 367,
+      "prices": {
+        "1": 197.35,
+        "2": 203.11,
+        "3": 204.18,
+        "4": 206.44,
+        "5": 211.66
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "P31",
+      "width": 775,
+      "height": 386,
+      "prices": {
+        "1": 198.86,
+        "2": 204.91,
+        "3": 206.03,
+        "4": 208.41,
+        "5": 213.9
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "431",
+      "width": 775,
+      "height": 387,
+      "prices": {
+        "1": 198.92,
+        "2": 204.99,
+        "3": 206.11,
+        "4": 208.49,
+        "5": 214.0
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "P34",
+      "width": 775,
+      "height": 739,
+      "prices": {
+        "1": 230.54,
+        "2": 241.99,
+        "3": 244.11,
+        "4": 248.6,
+        "5": 258.98
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGIU\nGDL Cabrio (oben) + (unten)",
+      "model": "434                 \nP04                 \nP34                 \nPK19 (unten)",
+      "width": 775,
+      "height": 740,
+      "prices": {
+        "1": 230.6,
+        "2": 242.06,
+        "3": 244.19,
+        "4": 248.68,
+        "5": 259.08
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGDL Twin (1) + (2)\nGDL Twin (1) + (2)",
+      "model": "404                 \n419 (2)             \nP19 (2)",
+      "width": 775,
+      "height": 741,
+      "prices": {
+        "1": 230.72,
+        "2": 242.2,
+        "3": 244.32,
+        "4": 248.82,
+        "5": 259.24
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL",
+      "model": "PK04",
+      "width": 775,
+      "height": 795,
+      "prices": {
+        "1": 234.91,
+        "2": 247.21,
+        "3": 249.49,
+        "4": 254.31,
+        "5": 265.48
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU\nGIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGGU-GLU-GXU",
+      "model": "406                 \n436                 \nP06                 \nP36",
+      "width": 775,
+      "height": 940,
+      "prices": {
+        "1": 248.35,
+        "2": 262.86,
+        "3": 265.55,
+        "4": 271.25,
+        "5": 284.42
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "PK06",
+      "width": 775,
+      "height": 995,
+      "prices": {
+        "1": 252.6,
+        "2": 267.95,
+        "3": 270.8,
+        "4": 276.83,
+        "5": 290.76
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGGU-GLU-GXU\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU\nGIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "P08                 \nP38",
+      "width": 775,
+      "height": 1160,
+      "prices": {
+        "1": 267.56,
+        "2": 285.43,
+        "3": 288.75,
+        "4": 295.76,
+        "5": 311.98
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "408",
+      "width": 775,
+      "height": 1160,
+      "prices": {
+        "1": 267.56,
+        "2": 285.43,
+        "3": 288.75,
+        "4": 295.76,
+        "5": 311.98
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "438",
+      "width": 775,
+      "height": 1160,
+      "prices": {
+        "1": 267.56,
+        "2": 285.43,
+        "3": 288.75,
+        "4": 295.76,
+        "5": 311.98
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "PK08",
+      "width": 775,
+      "height": 1215,
+      "prices": {
+        "1": 271.86,
+        "2": 290.58,
+        "3": 294.05,
+        "4": 301.39,
+        "5": 318.38
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGDL Twin (1) + (2)\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "410                 \n419 (1)             \nP10                 \nP19 (1)",
+      "width": 775,
+      "height": 1362,
+      "prices": {
+        "1": 283.33,
+        "2": 304.29,
+        "3": 308.18,
+        "4": 316.4,
+        "5": 335.42
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU\nGDL Cabrio (oben) + (unten)",
+      "model": "PK10\nPK19 (oben)",
+      "width": 775,
+      "height": 1417,
+      "prices": {
+        "1": 287.64,
+        "2": 309.44,
+        "3": 313.48,
+        "4": 322.03,
+        "5": 341.82
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "3",
+      "width": 776,
+      "height": 1364,
+      "prices": {
+        "1": 283.62,
+        "2": 304.61,
+        "3": 308.5,
+        "4": 316.74,
+        "5": 335.79
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX",
+      "model": "065",
+      "width": 780,
+      "height": 1018,
+      "prices": {
+        "1": 254.14,
+        "2": 269.85,
+        "3": 272.76,
+        "4": 278.92,
+        "5": 293.17
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "065",
+      "width": 780,
+      "height": 1070,
+      "prices": {
+        "1": 258.98,
+        "2": 275.48,
+        "3": 278.54,
+        "4": 285.01,
+        "5": 299.98
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX",
+      "model": "067",
+      "width": 780,
+      "height": 1218,
+      "prices": {
+        "1": 271.83,
+        "2": 290.59,
+        "3": 294.07,
+        "4": 301.43,
+        "5": 318.46
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "067",
+      "width": 780,
+      "height": 1270,
+      "prices": {
+        "1": 276.67,
+        "2": 296.22,
+        "3": 299.85,
+        "4": 307.52,
+        "5": 325.27
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIU\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "434",
+      "width": 788,
+      "height": 758,
+      "prices": {
+        "1": 233.38,
+        "2": 245.11,
+        "3": 247.29,
+        "4": 251.89,
+        "5": 262.54
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "406",
+      "width": 788,
+      "height": 949,
+      "prices": {
+        "1": 243.34,
+        "2": 257.99,
+        "3": 260.7,
+        "4": 266.45,
+        "5": 279.75
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "408",
+      "width": 788,
+      "height": 1169,
+      "prices": {
+        "1": 262.6,
+        "2": 280.62,
+        "3": 283.95,
+        "4": 291.02,
+        "5": 307.37
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VH",
+      "model": "087",
+      "width": 922,
+      "height": 1127,
+      "prices": {
+        "1": 280.68,
+        "2": 298.05,
+        "3": 301.26,
+        "4": 308.08,
+        "5": 323.85
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y85",
+      "width": 964,
+      "height": 1001,
+      "prices": {
+        "1": 272.78,
+        "2": 288.22,
+        "3": 291.09,
+        "4": 297.15,
+        "5": 311.16
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y87",
+      "width": 964,
+      "height": 1201,
+      "prices": {
+        "1": 290.47,
+        "2": 308.97,
+        "3": 312.4,
+        "4": 319.66,
+        "5": 336.45
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y89",
+      "width": 964,
+      "height": 1401,
+      "prices": {
+        "1": 306.06,
+        "2": 327.62,
+        "3": 331.61,
+        "4": 340.07,
+        "5": 359.63
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "034",
+      "width": 966,
+      "height": 1009,
+      "prices": {
+        "1": 273.61,
+        "2": 289.18,
+        "3": 292.06,
+        "4": 298.17,
+        "5": 312.3
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "035",
+      "width": 966,
+      "height": 1209,
+      "prices": {
+        "1": 291.3,
+        "2": 309.92,
+        "3": 313.37,
+        "4": 320.68,
+        "5": 337.58
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)\nVL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "085",
+      "width": 970,
+      "height": 1009,
+      "prices": {
+        "1": 274.05,
+        "2": 289.62,
+        "3": 292.5,
+        "4": 298.61,
+        "5": 312.74
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "085",
+      "width": 970,
+      "height": 1056,
+      "prices": {
+        "1": 277.69,
+        "2": 293.98,
+        "3": 296.99,
+        "4": 303.39,
+        "5": 318.16
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)\nVL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "087",
+      "width": 970,
+      "height": 1209,
+      "prices": {
+        "1": 291.74,
+        "2": 310.36,
+        "3": 313.81,
+        "4": 321.12,
+        "5": 338.02
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "087",
+      "width": 970,
+      "height": 1256,
+      "prices": {
+        "1": 295.38,
+        "2": 314.72,
+        "3": 318.31,
+        "4": 325.9,
+        "5": 343.45
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "089",
+      "width": 970,
+      "height": 1409,
+      "prices": {
+        "1": 307.33,
+        "2": 329.01,
+        "3": 333.03,
+        "4": 341.53,
+        "5": 361.21
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "SK31",
+      "width": 972,
+      "height": 387,
+      "prices": {
+        "1": 219.45,
+        "2": 225.51,
+        "3": 226.63,
+        "4": 229.02,
+        "5": 234.52
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGGU-GLU-GXU\nGIU\nGPU-GTU-GHU",
+      "model": "SK34",
+      "width": 972,
+      "height": 740,
+      "prices": {
+        "1": 251.18,
+        "2": 262.64,
+        "3": 264.76,
+        "4": 269.26,
+        "5": 279.66
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "SK35\nSK36",
+      "width": 972,
+      "height": 741,
+      "prices": {
+        "1": 251.24,
+        "2": 262.72,
+        "3": 264.84,
+        "4": 269.35,
+        "5": 279.76
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "SK38",
+      "width": 972,
+      "height": 1161,
+      "prices": {
+        "1": 288.2,
+        "2": 306.09,
+        "3": 309.4,
+        "4": 316.42,
+        "5": 332.66
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "S31",
+      "width": 973,
+      "height": 386,
+      "prices": {
+        "1": 218.17,
+        "2": 224.22,
+        "3": 225.34,
+        "4": 227.72,
+        "5": 233.21
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "631",
+      "width": 973,
+      "height": 387,
+      "prices": {
+        "1": 219.56,
+        "2": 225.62,
+        "3": 226.75,
+        "4": 229.13,
+        "5": 234.63
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL",
+      "model": "SK01",
+      "width": 973,
+      "height": 515,
+      "prices": {
+        "1": 231.61,
+        "2": 239.63,
+        "3": 241.11,
+        "4": 244.26,
+        "5": 251.54
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "S34",
+      "width": 973,
+      "height": 739,
+      "prices": {
+        "1": 251.17,
+        "2": 262.62,
+        "3": 264.74,
+        "4": 269.23,
+        "5": 279.61
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGIU\nGDL Cabrio (oben) + (unten)",
+      "model": "634                 \nS34\nSK19 (unten)",
+      "width": 973,
+      "height": 740,
+      "prices": {
+        "1": 251.24,
+        "2": 262.7,
+        "3": 264.82,
+        "4": 269.32,
+        "5": 279.71
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "606                 \n636                 \nS06                 \nS36",
+      "width": 973,
+      "height": 940,
+      "prices": {
+        "1": 268.98,
+        "2": 283.5,
+        "3": 286.18,
+        "4": 291.88,
+        "5": 305.05
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GZX",
+      "model": "606",
+      "width": 973,
+      "height": 991,
+      "prices": {
+        "1": 272.93,
+        "2": 288.22,
+        "3": 291.05,
+        "4": 297.06,
+        "5": 310.93
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "SK06",
+      "width": 973,
+      "height": 995,
+      "prices": {
+        "1": 273.23,
+        "2": 288.59,
+        "3": 291.43,
+        "4": 297.46,
+        "5": 311.39
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "608                 \n638                 \nS08                 \nS38",
+      "width": 973,
+      "height": 1160,
+      "prices": {
+        "1": 288.19,
+        "2": 306.07,
+        "3": 309.38,
+        "4": 316.39,
+        "5": 332.61
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GZX",
+      "model": "608",
+      "width": 973,
+      "height": 1211,
+      "prices": {
+        "1": 292.19,
+        "2": 310.85,
+        "3": 314.3,
+        "4": 321.62,
+        "5": 338.55
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "SK08",
+      "width": 973,
+      "height": 1215,
+      "prices": {
+        "1": 292.5,
+        "2": 311.21,
+        "3": 314.68,
+        "4": 322.03,
+        "5": 339.01
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "610                 \nS10",
+      "width": 973,
+      "height": 1362,
+      "prices": {
+        "1": 303.96,
+        "2": 324.93,
+        "3": 328.81,
+        "4": 337.04,
+        "5": 356.06
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU\nGDL Cabrio (oben) + (unten)",
+      "model": "SK10\nSK19 (oben)",
+      "width": 973,
+      "height": 1417,
+      "prices": {
+        "1": 308.27,
+        "2": 330.07,
+        "3": 334.11,
+        "4": 342.67,
+        "5": 362.45
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "4",
+      "width": 974,
+      "height": 942,
+      "prices": {
+        "1": 269.22,
+        "2": 283.76,
+        "3": 286.46,
+        "4": 292.16,
+        "5": 305.36
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "034",
+      "width": 976,
+      "height": 1018,
+      "prices": {
+        "1": 275.38,
+        "2": 291.09,
+        "3": 294.0,
+        "4": 300.16,
+        "5": 314.41
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "035",
+      "width": 976,
+      "height": 1218,
+      "prices": {
+        "1": 293.07,
+        "2": 311.83,
+        "3": 315.31,
+        "4": 322.67,
+        "5": 339.69
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX\nVF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "085",
+      "width": 980,
+      "height": 1018,
+      "prices": {
+        "1": 275.77,
+        "2": 291.47,
+        "3": 294.38,
+        "4": 300.55,
+        "5": 314.8
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "085",
+      "width": 980,
+      "height": 1070,
+      "prices": {
+        "1": 279.83,
+        "2": 296.33,
+        "3": 299.39,
+        "4": 305.86,
+        "5": 320.84
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX\nVF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "087",
+      "width": 980,
+      "height": 1218,
+      "prices": {
+        "1": 293.46,
+        "2": 312.22,
+        "3": 315.69,
+        "4": 323.06,
+        "5": 340.08
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "087",
+      "width": 980,
+      "height": 1270,
+      "prices": {
+        "1": 297.52,
+        "2": 317.08,
+        "3": 320.7,
+        "4": 328.37,
+        "5": 346.12
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX",
+      "model": "089",
+      "width": 980,
+      "height": 1418,
+      "prices": {
+        "1": 308.28,
+        "2": 330.09,
+        "3": 334.14,
+        "4": 342.7,
+        "5": 362.49
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIU\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "634",
+      "width": 986,
+      "height": 758,
+      "prices": {
+        "1": 254.01,
+        "2": 265.75,
+        "3": 267.92,
+        "4": 272.52,
+        "5": 283.17
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "606",
+      "width": 986,
+      "height": 949,
+      "prices": {
+        "1": 263.97,
+        "2": 278.62,
+        "3": 281.34,
+        "4": 287.09,
+        "5": 300.38
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "608",
+      "width": 986,
+      "height": 1169,
+      "prices": {
+        "1": 283.23,
+        "2": 301.25,
+        "3": 304.58,
+        "4": 311.65,
+        "5": 328.0
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VH",
+      "model": "107",
+      "width": 1122,
+      "height": 1127,
+      "prices": {
+        "1": 305.54,
+        "2": 322.12,
+        "3": 328.94,
+        "4": 346.66,
+        "5": 350.75
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y97",
+      "width": 1164,
+      "height": 1201,
+      "prices": {
+        "1": 315.59,
+        "2": 333.25,
+        "3": 340.51,
+        "4": 359.39,
+        "5": 363.75
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "Y99",
+      "width": 1164,
+      "height": 1401,
+      "prices": {
+        "1": 331.89,
+        "2": 352.46,
+        "3": 360.92,
+        "4": 382.92,
+        "5": 388.0
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VZ-WAND",
+      "model": "101",
+      "width": 1170,
+      "height": 289,
+      "prices": {
+        "1": 233.49,
+        "2": 237.85,
+        "3": 239.64,
+        "4": 244.3,
+        "5": 245.38
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "107",
+      "width": 1170,
+      "height": 1209,
+      "prices": {
+        "1": 316.83,
+        "2": 334.61,
+        "3": 341.92,
+        "4": 360.92,
+        "5": 365.31
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-A (bis G02 = bis 02/1984)\nVS-A / VE-A (ab G03 = ab 03/1984)\nVK-A  (bis G02 = bis 02/1984)\nVK-A  (ab G03 = ab 03/1984)",
+      "model": "107",
+      "width": 1170,
+      "height": 1256,
+      "prices": {
+        "1": 320.7,
+        "2": 339.16,
+        "3": 346.75,
+        "4": 366.49,
+        "5": 371.04
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-A (ab F04 = ab 04/1983) / VU / VL-PU\nVKU",
+      "model": "109",
+      "width": 1170,
+      "height": 1409,
+      "prices": {
+        "1": 333.19,
+        "2": 353.88,
+        "3": 362.39,
+        "4": 384.51,
+        "5": 389.62
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "UK31",
+      "width": 1172,
+      "height": 387,
+      "prices": {
+        "1": 241.7,
+        "2": 247.49,
+        "3": 249.87,
+        "4": 256.06,
+        "5": 257.49
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGIU",
+      "model": "UK34",
+      "width": 1172,
+      "height": 740,
+      "prices": {
+        "1": 274.62,
+        "2": 285.56,
+        "3": 290.06,
+        "4": 301.75,
+        "5": 304.45
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "UK35",
+      "width": 1172,
+      "height": 741,
+      "prices": {
+        "1": 274.74,
+        "2": 285.7,
+        "3": 290.2,
+        "4": 301.91,
+        "5": 304.61
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "UK36",
+      "width": 1172,
+      "height": 941,
+      "prices": {
+        "1": 293.14,
+        "2": 307.01,
+        "3": 312.71,
+        "4": 327.54,
+        "5": 330.96
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "UK38",
+      "width": 1172,
+      "height": 1161,
+      "prices": {
+        "1": 313.12,
+        "2": 330.2,
+        "3": 337.22,
+        "4": 355.48,
+        "5": 359.69
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "U31",
+      "width": 1173,
+      "height": 386,
+      "prices": {
+        "1": 241.69,
+        "2": 247.46,
+        "3": 249.84,
+        "4": 256.01,
+        "5": 257.44
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE",
+      "model": "831",
+      "width": 1173,
+      "height": 387,
+      "prices": {
+        "1": 241.81,
+        "2": 247.6,
+        "3": 249.98,
+        "4": 256.17,
+        "5": 257.6
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GIL-VIU-VEA-VEB-VEC-VFA-VFB-VFE\nGGU-GLU-GXU\nGPU-GTU-GHU",
+      "model": "834                 \nU34                 \nUK34",
+      "width": 1173,
+      "height": 740,
+      "prices": {
+        "1": 274.73,
+        "2": 285.67,
+        "3": 290.17,
+        "4": 301.86,
+        "5": 304.56
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "UK04",
+      "width": 1173,
+      "height": 795,
+      "prices": {
+        "1": 279.23,
+        "2": 290.97,
+        "3": 295.8,
+        "4": 308.35,
+        "5": 311.25
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "808",
+      "width": 1173,
+      "height": 1160,
+      "prices": {
+        "1": 313.17,
+        "2": 330.23,
+        "3": 337.25,
+        "4": 355.49,
+        "5": 359.7
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGU-GLU-GXU\nGGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "UK08",
+      "width": 1173,
+      "height": 1215,
+      "prices": {
+        "1": 317.67,
+        "2": 335.53,
+        "3": 342.88,
+        "4": 361.98,
+        "5": 366.38
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "810",
+      "width": 1173,
+      "height": 1362,
+      "prices": {
+        "1": 329.65,
+        "2": 349.66,
+        "3": 357.89,
+        "4": 379.28,
+        "5": 384.21
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGGU-GLU-GXU\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "UK10",
+      "width": 1173,
+      "height": 1417,
+      "prices": {
+        "1": 334.15,
+        "2": 354.96,
+        "3": 363.52,
+        "4": 385.77,
+        "5": 390.9
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "7",
+      "width": 1174,
+      "height": 742,
+      "prices": {
+        "1": 275.03,
+        "2": 286.0,
+        "3": 290.51,
+        "4": 302.23,
+        "5": 304.94
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "74",
+      "width": 1174,
+      "height": 942,
+      "prices": {
+        "1": 293.42,
+        "2": 307.31,
+        "3": 313.02,
+        "4": 327.86,
+        "5": 331.28
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGGU-GLU-GXU\nGPL-GHL-GEL-GTL-GDL\nGPU-GTU-GHU",
+      "model": "U08",
+      "width": 1174,
+      "height": 1160,
+      "prices": {
+        "1": 313.28,
+        "2": 330.34,
+        "3": 337.36,
+        "4": 355.6,
+        "5": 359.81
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "8",
+      "width": 1174,
+      "height": 1162,
+      "prices": {
+        "1": 313.47,
+        "2": 330.56,
+        "3": 337.58,
+        "4": 355.86,
+        "5": 360.07
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "GGL-GXL-VTL-GLL\nGPL-GHL-GEL-GTL-GDL",
+      "model": "U10",
+      "width": 1174,
+      "height": 1362,
+      "prices": {
+        "1": 329.76,
+        "2": 349.77,
+        "3": 358.0,
+        "4": 379.39,
+        "5": 384.32
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX",
+      "model": "107",
+      "width": 1180,
+      "height": 1218,
+      "prices": {
+        "1": 317.81,
+        "2": 335.72,
+        "3": 343.08,
+        "4": 362.23,
+        "5": 366.64
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VS-B (bis G02 = bis 02/1984)\nVS-B / VE-B (ab G03 = ab 03/1984)\nVK-B (bis G02 = bis 02/1984)\nVK-B (ab G03 = ab 03/1984)",
+      "model": "107",
+      "width": 1180,
+      "height": 1270,
+      "prices": {
+        "1": 322.89,
+        "2": 341.55,
+        "3": 349.23,
+        "4": 369.18,
+        "5": 373.79
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX",
+      "model": "109",
+      "width": 1180,
+      "height": 1418,
+      "prices": {
+        "1": 334.16,
+        "2": 354.99,
+        "3": 363.55,
+        "4": 385.81,
+        "5": 390.95
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "125",
+      "width": 1374,
+      "height": 1009,
+      "prices": {
+        "1": 319.73,
+        "2": 334.59,
+        "3": 340.7,
+        "4": 356.59,
+        "5": 360.26
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "127",
+      "width": 1374,
+      "height": 1209,
+      "prices": {
+        "1": 338.13,
+        "2": 355.9,
+        "3": 363.21,
+        "4": 382.22,
+        "5": 386.6
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "125",
+      "width": 1384,
+      "height": 1018,
+      "prices": {
+        "1": 321.48,
+        "2": 336.47,
+        "3": 342.64,
+        "4": 358.66,
+        "5": 362.36
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "127",
+      "width": 1384,
+      "height": 1218,
+      "prices": {
+        "1": 339.88,
+        "2": 357.78,
+        "3": 365.15,
+        "4": 384.29,
+        "5": 388.71
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "052",
+      "width": 1410,
+      "height": 809,
+      "prices": {
+        "1": 305.09,
+        "2": 317.03,
+        "3": 321.94,
+        "4": 334.71,
+        "5": 337.66
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "054",
+      "width": 1410,
+      "height": 1009,
+      "prices": {
+        "1": 323.48,
+        "2": 338.34,
+        "3": 344.45,
+        "4": 360.34,
+        "5": 364.01
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-A (ab F04 = ab 04/1983)\nVF-A (bis F03 = bis 03/1983)",
+      "model": "055",
+      "width": 1410,
+      "height": 1209,
+      "prices": {
+        "1": 341.88,
+        "2": 359.65,
+        "3": 366.96,
+        "4": 385.97,
+        "5": 390.35
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "052",
+      "width": 1420,
+      "height": 818,
+      "prices": {
+        "1": 306.84,
+        "2": 318.91,
+        "3": 323.88,
+        "4": 336.79,
+        "5": 339.77
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "054",
+      "width": 1420,
+      "height": 1018,
+      "prices": {
+        "1": 325.23,
+        "2": 340.23,
+        "3": 346.39,
+        "4": 362.42,
+        "5": 366.11
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VF-B (ab F04 = ab 04/1983)\nVF-B (bis F03 = bis 03/1983)",
+      "model": "055",
+      "width": 1420,
+      "height": 1218,
+      "prices": {
+        "1": 343.63,
+        "2": 361.54,
+        "3": 368.9,
+        "4": 388.04,
+        "5": 392.46
+      }
+    },
+    {
+      "manufacturer": "Velux",
+      "series": "VL-B (bis F03 = bis 03/1983) / VG / VX",
+      "model": "147",
+      "width": 1580,
+      "height": 1218,
+      "prices": {
+        "1": 359.52,
+        "2": 377.42,
+        "3": 384.79,
+        "4": 403.93,
+        "5": 408.35
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "5/7",
+      "width": 346,
+      "height": 586,
+      "prices": {
+        "1": 165.84,
+        "2": 171.56,
+        "3": 171.98,
+        "4": 176.69,
+        "5": 180.58
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "5/9",
+      "width": 346,
+      "height": 786,
+      "prices": {
+        "1": 183.18,
+        "2": 190.81,
+        "3": 191.37,
+        "4": 197.67,
+        "5": 202.86
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "5/11",
+      "width": 346,
+      "height": 986,
+      "prices": {
+        "1": 200.51,
+        "2": 210.07,
+        "3": 210.76,
+        "4": 218.64,
+        "5": 225.14
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "5/7",
+      "width": 370,
+      "height": 598,
+      "prices": {
+        "1": 169.27,
+        "2": 175.11,
+        "3": 175.53,
+        "4": 180.34,
+        "5": 184.31
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "5/9",
+      "width": 370,
+      "height": 798,
+      "prices": {
+        "1": 186.61,
+        "2": 194.36,
+        "3": 194.92,
+        "4": 201.32,
+        "5": 206.59
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "5/11",
+      "width": 370,
+      "height": 998,
+      "prices": {
+        "1": 203.94,
+        "2": 213.61,
+        "3": 214.31,
+        "4": 222.29,
+        "5": 228.87
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "5/8",
+      "width": 372,
+      "height": 658,
+      "prices": {
+        "1": 174.06,
+        "2": 180.47,
+        "3": 180.93,
+        "4": 186.22,
+        "5": 190.58
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "5/10",
+      "width": 372,
+      "height": 858,
+      "prices": {
+        "1": 191.39,
+        "2": 199.72,
+        "3": 200.32,
+        "4": 207.19,
+        "5": 212.86
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "5/8",
+      "width": 384,
+      "height": 688,
+      "prices": {
+        "1": 178.74,
+        "2": 185.44,
+        "3": 185.92,
+        "4": 191.45,
+        "5": 196.0
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "5/8",
+      "width": 384,
+      "height": 694,
+      "prices": {
+        "1": 179.21,
+        "2": 185.97,
+        "3": 186.46,
+        "4": 192.03,
+        "5": 196.62
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "5/10",
+      "width": 384,
+      "height": 874,
+      "prices": {
+        "1": 195.01,
+        "2": 203.49,
+        "3": 204.1,
+        "4": 211.1,
+        "5": 216.87
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "5/11",
+      "width": 384,
+      "height": 958,
+      "prices": {
+        "1": 203.51,
+        "2": 212.79,
+        "3": 213.47,
+        "4": 221.13,
+        "5": 227.45
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "55/78",
+      "width": 393,
+      "height": 583,
+      "prices": {
+        "1": 170.52,
+        "2": 176.21,
+        "3": 176.62,
+        "4": 181.31,
+        "5": 185.18
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "55/98",
+      "width": 393,
+      "height": 783,
+      "prices": {
+        "1": 187.85,
+        "2": 195.46,
+        "3": 196.01,
+        "4": 202.29,
+        "5": 207.46
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "55/118",
+      "width": 393,
+      "height": 983,
+      "prices": {
+        "1": 205.18,
+        "2": 214.71,
+        "3": 215.4,
+        "4": 223.26,
+        "5": 229.74
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "5/7",
+      "width": 400,
+      "height": 638,
+      "prices": {
+        "1": 175.44,
+        "2": 181.66,
+        "3": 182.11,
+        "4": 187.24,
+        "5": 191.47
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H3",
+      "model": "5/8",
+      "width": 400,
+      "height": 710,
+      "prices": {
+        "1": 184.21,
+        "2": 191.12,
+        "3": 191.62,
+        "4": 197.32,
+        "5": 202.01
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "5/9",
+      "width": 400,
+      "height": 838,
+      "prices": {
+        "1": 192.78,
+        "2": 200.91,
+        "3": 201.5,
+        "4": 208.21,
+        "5": 213.75
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "5/11",
+      "width": 400,
+      "height": 1038,
+      "prices": {
+        "1": 210.11,
+        "2": 220.17,
+        "3": 220.89,
+        "4": 229.19,
+        "5": 236.03
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H1",
+      "model": "5/8",
+      "width": 420,
+      "height": 720,
+      "prices": {
+        "1": 187.9,
+        "2": 194.91,
+        "3": 195.41,
+        "4": 201.19,
+        "5": 205.96
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "6/9",
+      "width": 456,
+      "height": 786,
+      "prices": {
+        "1": 195.53,
+        "2": 203.17,
+        "3": 203.73,
+        "4": 210.03,
+        "5": 215.22
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "6/11",
+      "width": 456,
+      "height": 986,
+      "prices": {
+        "1": 212.87,
+        "2": 222.42,
+        "3": 223.12,
+        "4": 231.0,
+        "5": 237.5
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "6/14",
+      "width": 456,
+      "height": 1206,
+      "prices": {
+        "1": 231.74,
+        "2": 243.41,
+        "3": 244.26,
+        "4": 253.88,
+        "5": 261.81
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "6/18",
+      "width": 456,
+      "height": 1606,
+      "prices": {
+        "1": 262.27,
+        "2": 277.78,
+        "3": 278.9,
+        "4": 291.69,
+        "5": 302.24
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "6/10",
+      "width": 472,
+      "height": 858,
+      "prices": {
+        "1": 202.7,
+        "2": 211.03,
+        "3": 211.63,
+        "4": 218.5,
+        "5": 224.17
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "6/12",
+      "width": 472,
+      "height": 1058,
+      "prices": {
+        "1": 220.04,
+        "2": 230.28,
+        "3": 231.03,
+        "4": 239.48,
+        "5": 246.45
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "6/9",
+      "width": 480,
+      "height": 798,
+      "prices": {
+        "1": 198.96,
+        "2": 206.72,
+        "3": 207.28,
+        "4": 213.67,
+        "5": 218.94
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "6/11",
+      "width": 480,
+      "height": 998,
+      "prices": {
+        "1": 216.3,
+        "2": 225.97,
+        "3": 226.67,
+        "4": 234.65,
+        "5": 241.22
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "6/14",
+      "width": 480,
+      "height": 1218,
+      "prices": {
+        "1": 235.17,
+        "2": 246.95,
+        "3": 247.81,
+        "4": 257.53,
+        "5": 265.54
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "6/16",
+      "width": 480,
+      "height": 1418,
+      "prices": {
+        "1": 250.41,
+        "2": 264.11,
+        "3": 265.1,
+        "4": 276.41,
+        "5": 285.72
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "6/18",
+      "width": 480,
+      "height": 1618,
+      "prices": {
+        "1": 265.65,
+        "2": 281.27,
+        "3": 282.4,
+        "4": 295.29,
+        "5": 305.91
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "6/8",
+      "width": 494,
+      "height": 688,
+      "prices": {
+        "1": 191.1,
+        "2": 197.8,
+        "3": 198.28,
+        "4": 203.81,
+        "5": 208.36
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "6/10",
+      "width": 494,
+      "height": 874,
+      "prices": {
+        "1": 207.37,
+        "2": 215.85,
+        "3": 216.46,
+        "4": 223.46,
+        "5": 229.23
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "6/11",
+      "width": 494,
+      "height": 958,
+      "prices": {
+        "1": 215.86,
+        "2": 225.15,
+        "3": 225.83,
+        "4": 233.49,
+        "5": 239.8
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "66/98",
+      "width": 503,
+      "height": 783,
+      "prices": {
+        "1": 200.21,
+        "2": 207.82,
+        "3": 208.37,
+        "4": 214.64,
+        "5": 219.82
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "66/118",
+      "width": 503,
+      "height": 983,
+      "prices": {
+        "1": 217.54,
+        "2": 227.07,
+        "3": 227.76,
+        "4": 235.62,
+        "5": 242.1
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "66/140",
+      "width": 503,
+      "height": 1203,
+      "prices": {
+        "1": 236.42,
+        "2": 248.05,
+        "3": 248.9,
+        "4": 258.5,
+        "5": 266.41
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H3",
+      "model": "6/8",
+      "width": 510,
+      "height": 710,
+      "prices": {
+        "1": 196.51,
+        "2": 203.42,
+        "3": 203.92,
+        "4": 209.62,
+        "5": 214.32
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "6/9",
+      "width": 510,
+      "height": 838,
+      "prices": {
+        "1": 205.13,
+        "2": 213.27,
+        "3": 213.86,
+        "4": 220.57,
+        "5": 226.1
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H3",
+      "model": "6/11",
+      "width": 510,
+      "height": 980,
+      "prices": {
+        "1": 219.24,
+        "2": 228.73,
+        "3": 229.42,
+        "4": 237.26,
+        "5": 243.72
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "6/11",
+      "width": 510,
+      "height": 1038,
+      "prices": {
+        "1": 222.47,
+        "2": 232.52,
+        "3": 233.25,
+        "4": 241.55,
+        "5": 248.38
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "6/14",
+      "width": 510,
+      "height": 1258,
+      "prices": {
+        "1": 241.34,
+        "2": 253.51,
+        "3": 254.39,
+        "4": 264.43,
+        "5": 272.7
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H1",
+      "model": "6/8",
+      "width": 530,
+      "height": 720,
+      "prices": {
+        "1": 199.38,
+        "2": 206.38,
+        "3": 206.89,
+        "4": 212.67,
+        "5": 217.43
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H1",
+      "model": "6/11",
+      "width": 530,
+      "height": 990,
+      "prices": {
+        "1": 222.05,
+        "2": 231.64,
+        "3": 232.34,
+        "4": 240.25,
+        "5": 246.78
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "7/7",
+      "width": 546,
+      "height": 586,
+      "prices": {
+        "1": 187.58,
+        "2": 193.3,
+        "3": 193.71,
+        "4": 198.43,
+        "5": 202.32
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "7/9",
+      "width": 546,
+      "height": 786,
+      "prices": {
+        "1": 204.91,
+        "2": 212.55,
+        "3": 213.1,
+        "4": 219.4,
+        "5": 224.6
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "7/11",
+      "width": 546,
+      "height": 986,
+      "prices": {
+        "1": 222.25,
+        "2": 231.8,
+        "3": 232.5,
+        "4": 240.38,
+        "5": 246.88
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "7/14",
+      "width": 546,
+      "height": 1206,
+      "prices": {
+        "1": 241.12,
+        "2": 252.79,
+        "3": 253.63,
+        "4": 263.26,
+        "5": 271.19
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "7/16",
+      "width": 546,
+      "height": 1406,
+      "prices": {
+        "1": 256.36,
+        "2": 269.94,
+        "3": 270.93,
+        "4": 282.14,
+        "5": 291.38
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "7/18",
+      "width": 546,
+      "height": 1606,
+      "prices": {
+        "1": 271.65,
+        "2": 287.16,
+        "3": 288.28,
+        "4": 301.07,
+        "5": 311.61
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "7/7",
+      "width": 570,
+      "height": 598,
+      "prices": {
+        "1": 193.66,
+        "2": 199.49,
+        "3": 199.91,
+        "4": 204.72,
+        "5": 208.69
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "7/9",
+      "width": 570,
+      "height": 798,
+      "prices": {
+        "1": 210.99,
+        "2": 218.74,
+        "3": 219.3,
+        "4": 225.7,
+        "5": 230.97
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "7/11",
+      "width": 570,
+      "height": 998,
+      "prices": {
+        "1": 228.32,
+        "2": 237.99,
+        "3": 238.7,
+        "4": 246.67,
+        "5": 253.25
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "7/14",
+      "width": 570,
+      "height": 1218,
+      "prices": {
+        "1": 247.2,
+        "2": 258.98,
+        "3": 259.83,
+        "4": 269.55,
+        "5": 277.57
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "7/16",
+      "width": 570,
+      "height": 1418,
+      "prices": {
+        "1": 262.44,
+        "2": 276.14,
+        "3": 277.13,
+        "4": 288.43,
+        "5": 297.75
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "7/18",
+      "width": 570,
+      "height": 1618,
+      "prices": {
+        "1": 277.73,
+        "2": 293.35,
+        "3": 294.48,
+        "4": 307.37,
+        "5": 317.99
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "7/10",
+      "width": 572,
+      "height": 858,
+      "prices": {
+        "1": 215.78,
+        "2": 224.1,
+        "3": 224.71,
+        "4": 231.58,
+        "5": 237.24
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "7/12",
+      "width": 572,
+      "height": 1058,
+      "prices": {
+        "1": 233.11,
+        "2": 243.36,
+        "3": 244.1,
+        "4": 252.55,
+        "5": 259.52
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "7/14",
+      "width": 572,
+      "height": 1258,
+      "prices": {
+        "1": 250.44,
+        "2": 262.61,
+        "3": 263.49,
+        "4": 273.53,
+        "5": 281.8
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "7/10",
+      "width": 584,
+      "height": 874,
+      "prices": {
+        "1": 219.45,
+        "2": 227.93,
+        "3": 228.54,
+        "4": 235.54,
+        "5": 241.31
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "7/11",
+      "width": 584,
+      "height": 958,
+      "prices": {
+        "1": 227.89,
+        "2": 237.18,
+        "3": 237.85,
+        "4": 245.51,
+        "5": 251.83
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "7/12",
+      "width": 584,
+      "height": 1074,
+      "prices": {
+        "1": 236.78,
+        "2": 247.18,
+        "3": 247.93,
+        "4": 256.51,
+        "5": 263.59
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "7/14",
+      "width": 584,
+      "height": 1288,
+      "prices": {
+        "1": 255.18,
+        "2": 267.64,
+        "3": 268.54,
+        "4": 278.81,
+        "5": 287.28
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "7/14",
+      "width": 584,
+      "height": 1294,
+      "prices": {
+        "1": 255.6,
+        "2": 268.11,
+        "3": 269.02,
+        "4": 279.34,
+        "5": 287.85
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "7/9",
+      "width": 600,
+      "height": 838,
+      "prices": {
+        "1": 217.16,
+        "2": 225.3,
+        "3": 225.89,
+        "4": 232.6,
+        "5": 238.13
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H3",
+      "model": "7/11",
+      "width": 600,
+      "height": 980,
+      "prices": {
+        "1": 231.26,
+        "2": 240.76,
+        "3": 241.45,
+        "4": 249.29,
+        "5": 255.74
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "7/11",
+      "width": 600,
+      "height": 1038,
+      "prices": {
+        "1": 234.49,
+        "2": 244.55,
+        "3": 245.28,
+        "4": 253.57,
+        "5": 260.41
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "7/14",
+      "width": 600,
+      "height": 1258,
+      "prices": {
+        "1": 253.37,
+        "2": 265.53,
+        "3": 266.42,
+        "4": 276.45,
+        "5": 284.72
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H3",
+      "model": "7/14",
+      "width": 600,
+      "height": 1310,
+      "prices": {
+        "1": 258.5,
+        "2": 271.16,
+        "3": 272.08,
+        "4": 282.53,
+        "5": 291.14
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K",
+      "model": "7/16",
+      "width": 600,
+      "height": 1458,
+      "prices": {
+        "1": 268.61,
+        "2": 282.69,
+        "3": 283.71,
+        "4": 295.33,
+        "5": 304.91
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "7/9",
+      "width": 604,
+      "height": 795,
+      "prices": {
+        "1": 215.71,
+        "2": 228.01,
+        "3": 230.29,
+        "4": 235.12,
+        "5": 246.28
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "7/11",
+      "width": 604,
+      "height": 995,
+      "prices": {
+        "1": 233.4,
+        "2": 248.76,
+        "3": 251.6,
+        "4": 257.63,
+        "5": 271.56
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "7/13",
+      "width": 604,
+      "height": 1215,
+      "prices": {
+        "1": 252.67,
+        "2": 271.38,
+        "3": 274.85,
+        "4": 282.2,
+        "5": 299.18
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H1",
+      "model": "7/11",
+      "width": 620,
+      "height": 990,
+      "prices": {
+        "1": 235.9,
+        "2": 251.18,
+        "3": 254.01,
+        "4": 260.01,
+        "5": 273.87
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H1",
+      "model": "7/14",
+      "width": 620,
+      "height": 1320,
+      "prices": {
+        "1": 263.73,
+        "2": 284.05,
+        "3": 287.81,
+        "4": 295.79,
+        "5": 314.22
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "78/78",
+      "width": 623,
+      "height": 583,
+      "prices": {
+        "1": 199.1,
+        "2": 208.16,
+        "3": 209.84,
+        "4": 213.39,
+        "5": 221.61
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "78/98",
+      "width": 623,
+      "height": 783,
+      "prices": {
+        "1": 216.79,
+        "2": 228.9,
+        "3": 231.15,
+        "4": 235.9,
+        "5": 246.9
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "78/118",
+      "width": 623,
+      "height": 983,
+      "prices": {
+        "1": 234.48,
+        "2": 249.65,
+        "3": 252.46,
+        "4": 258.41,
+        "5": 272.18
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "78/140",
+      "width": 623,
+      "height": 1203,
+      "prices": {
+        "1": 253.74,
+        "2": 272.27,
+        "3": 275.71,
+        "4": 282.98,
+        "5": 299.8
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "78/160",
+      "width": 623,
+      "height": 1405,
+      "prices": {
+        "1": 269.51,
+        "2": 291.13,
+        "3": 295.14,
+        "4": 303.62,
+        "5": 323.24
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "8/11",
+      "width": 656,
+      "height": 926,
+      "prices": {
+        "1": 233.47,
+        "2": 247.77,
+        "3": 250.41,
+        "4": 256.03,
+        "5": 269.0
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "8/13",
+      "width": 656,
+      "height": 1106,
+      "prices": {
+        "1": 249.58,
+        "2": 266.63,
+        "3": 269.79,
+        "4": 276.48,
+        "5": 291.95
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "8/11",
+      "width": 680,
+      "height": 998,
+      "prices": {
+        "1": 241.59,
+        "2": 256.99,
+        "3": 259.84,
+        "4": 265.89,
+        "5": 279.86
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "8/13",
+      "width": 680,
+      "height": 1118,
+      "prices": {
+        "1": 253.03,
+        "2": 270.26,
+        "3": 273.46,
+        "4": 280.22,
+        "5": 295.86
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "8/11",
+      "width": 694,
+      "height": 958,
+      "prices": {
+        "1": 241.08,
+        "2": 255.87,
+        "3": 258.61,
+        "4": 264.42,
+        "5": 277.84
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H3",
+      "model": "8/11",
+      "width": 710,
+      "height": 980,
+      "prices": {
+        "1": 244.49,
+        "2": 259.62,
+        "3": 262.42,
+        "4": 268.36,
+        "5": 282.08
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H1",
+      "model": "8/11",
+      "width": 730,
+      "height": 990,
+      "prices": {
+        "1": 247.87,
+        "2": 263.15,
+        "3": 265.98,
+        "4": 271.98,
+        "5": 285.84
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "9/7",
+      "width": 746,
+      "height": 586,
+      "prices": {
+        "1": 212.69,
+        "2": 221.8,
+        "3": 223.48,
+        "4": 227.06,
+        "5": 235.32
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "9/9",
+      "width": 746,
+      "height": 786,
+      "prices": {
+        "1": 230.38,
+        "2": 242.54,
+        "3": 244.79,
+        "4": 249.57,
+        "5": 260.6
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "9/11",
+      "width": 746,
+      "height": 986,
+      "prices": {
+        "1": 248.07,
+        "2": 263.28,
+        "3": 266.1,
+        "4": 272.08,
+        "5": 285.88
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "9/14",
+      "width": 746,
+      "height": 1206,
+      "prices": {
+        "1": 267.33,
+        "2": 285.91,
+        "3": 289.35,
+        "4": 296.64,
+        "5": 313.5
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "9/16",
+      "width": 746,
+      "height": 1406,
+      "prices": {
+        "1": 282.92,
+        "2": 304.56,
+        "3": 308.57,
+        "4": 317.06,
+        "5": 336.69
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "9/18",
+      "width": 746,
+      "height": 1606,
+      "prices": {
+        "1": 298.57,
+        "2": 323.26,
+        "3": 327.84,
+        "4": 337.53,
+        "5": 359.93
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "8/12",
+      "width": 752,
+      "height": 1058,
+      "prices": {
+        "1": 254.31,
+        "2": 270.63,
+        "3": 273.65,
+        "4": 280.06,
+        "5": 294.86
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "8/14",
+      "width": 752,
+      "height": 1258,
+      "prices": {
+        "1": 272.0,
+        "2": 291.38,
+        "3": 294.97,
+        "4": 302.57,
+        "5": 320.15
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "9/7",
+      "width": 770,
+      "height": 598,
+      "prices": {
+        "1": 216.14,
+        "2": 225.43,
+        "3": 227.15,
+        "4": 230.8,
+        "5": 239.22
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "9/9",
+      "width": 770,
+      "height": 798,
+      "prices": {
+        "1": 233.83,
+        "2": 246.17,
+        "3": 248.46,
+        "4": 253.31,
+        "5": 264.51
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "9/11",
+      "width": 770,
+      "height": 998,
+      "prices": {
+        "1": 251.52,
+        "2": 266.92,
+        "3": 269.77,
+        "4": 275.82,
+        "5": 289.79
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "9/14",
+      "width": 770,
+      "height": 1218,
+      "prices": {
+        "1": 270.78,
+        "2": 289.54,
+        "3": 293.02,
+        "4": 300.38,
+        "5": 317.41
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "9/16",
+      "width": 770,
+      "height": 1418,
+      "prices": {
+        "1": 286.37,
+        "2": 308.19,
+        "3": 312.23,
+        "4": 320.8,
+        "5": 340.59
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "9/18",
+      "width": 770,
+      "height": 1618,
+      "prices": {
+        "1": 301.97,
+        "2": 326.84,
+        "3": 331.45,
+        "4": 341.21,
+        "5": 363.78
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "9/12",
+      "width": 784,
+      "height": 1068,
+      "prices": {
+        "1": 259.63,
+        "2": 276.1,
+        "3": 279.15,
+        "4": 285.61,
+        "5": 300.56
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "9/12",
+      "width": 784,
+      "height": 1074,
+      "prices": {
+        "1": 260.11,
+        "2": 276.67,
+        "3": 279.74,
+        "4": 286.24,
+        "5": 301.27
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "9/14",
+      "width": 784,
+      "height": 1288,
+      "prices": {
+        "1": 278.89,
+        "2": 298.72,
+        "3": 302.4,
+        "4": 310.18,
+        "5": 328.17
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "9/14",
+      "width": 784,
+      "height": 1294,
+      "prices": {
+        "1": 279.32,
+        "2": 299.24,
+        "3": 302.93,
+        "4": 310.75,
+        "5": 328.83
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "94/78",
+      "width": 785,
+      "height": 583,
+      "prices": {
+        "1": 216.53,
+        "2": 225.59,
+        "3": 227.27,
+        "4": 230.82,
+        "5": 239.04
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "94/98",
+      "width": 785,
+      "height": 783,
+      "prices": {
+        "1": 234.22,
+        "2": 246.33,
+        "3": 248.58,
+        "4": 253.33,
+        "5": 264.33
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "94/118",
+      "width": 785,
+      "height": 983,
+      "prices": {
+        "1": 251.91,
+        "2": 267.08,
+        "3": 269.89,
+        "4": 275.84,
+        "5": 289.61
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "94/140",
+      "width": 785,
+      "height": 1203,
+      "prices": {
+        "1": 271.17,
+        "2": 289.71,
+        "3": 293.14,
+        "4": 300.41,
+        "5": 317.23
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "94/160",
+      "width": 785,
+      "height": 1405,
+      "prices": {
+        "1": 286.94,
+        "2": 308.56,
+        "3": 312.57,
+        "4": 321.05,
+        "5": 340.67
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "94/180",
+      "width": 785,
+      "height": 1605,
+      "prices": {
+        "1": 302.54,
+        "2": 327.21,
+        "3": 331.78,
+        "4": 341.47,
+        "5": 363.86
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "9/9",
+      "width": 800,
+      "height": 838,
+      "prices": {
+        "1": 240.07,
+        "2": 253.03,
+        "3": 255.43,
+        "4": 260.51,
+        "5": 272.27
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "9/11",
+      "width": 800,
+      "height": 1038,
+      "prices": {
+        "1": 257.76,
+        "2": 273.77,
+        "3": 276.74,
+        "4": 283.02,
+        "5": 297.55
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "9/14",
+      "width": 800,
+      "height": 1258,
+      "prices": {
+        "1": 277.02,
+        "2": 296.4,
+        "3": 299.99,
+        "4": 307.59,
+        "5": 325.17
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K",
+      "model": "9/16",
+      "width": 800,
+      "height": 1458,
+      "prices": {
+        "1": 292.62,
+        "2": 315.04,
+        "3": 319.2,
+        "4": 328.0,
+        "5": 348.35
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "10/11",
+      "width": 856,
+      "height": 926,
+      "prices": {
+        "1": 254.87,
+        "2": 269.17,
+        "3": 271.82,
+        "4": 277.43,
+        "5": 290.41
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "10/14",
+      "width": 856,
+      "height": 1256,
+      "prices": {
+        "1": 282.69,
+        "2": 302.03,
+        "3": 305.62,
+        "4": 313.21,
+        "5": 330.76
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "10/11",
+      "width": 880,
+      "height": 998,
+      "prices": {
+        "1": 262.99,
+        "2": 278.39,
+        "3": 281.25,
+        "4": 287.29,
+        "5": 301.26
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "10/14",
+      "width": 880,
+      "height": 1218,
+      "prices": {
+        "1": 282.2,
+        "2": 300.96,
+        "3": 304.44,
+        "4": 311.8,
+        "5": 328.83
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "10/11",
+      "width": 894,
+      "height": 958,
+      "prices": {
+        "1": 262.49,
+        "2": 277.28,
+        "3": 280.02,
+        "4": 285.82,
+        "5": 299.24
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "10/12",
+      "width": 894,
+      "height": 1068,
+      "prices": {
+        "1": 271.1,
+        "2": 287.57,
+        "3": 290.62,
+        "4": 297.09,
+        "5": 312.03
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "10/14",
+      "width": 894,
+      "height": 1288,
+      "prices": {
+        "1": 290.31,
+        "2": 310.14,
+        "3": 313.81,
+        "4": 321.6,
+        "5": 339.59
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H3",
+      "model": "10/11",
+      "width": 910,
+      "height": 980,
+      "prices": {
+        "1": 265.9,
+        "2": 281.02,
+        "3": 283.83,
+        "4": 289.76,
+        "5": 303.49
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H3",
+      "model": "10/14",
+      "width": 910,
+      "height": 1310,
+      "prices": {
+        "1": 293.72,
+        "2": 313.89,
+        "3": 317.62,
+        "4": 325.54,
+        "5": 343.84
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H1",
+      "model": "10/11",
+      "width": 930,
+      "height": 990,
+      "prices": {
+        "1": 268.73,
+        "2": 284.01,
+        "3": 286.84,
+        "4": 292.83,
+        "5": 306.7
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H1",
+      "model": "10/14",
+      "width": 930,
+      "height": 1320,
+      "prices": {
+        "1": 296.6,
+        "2": 316.92,
+        "3": 320.69,
+        "4": 328.66,
+        "5": 347.1
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "11/7",
+      "width": 946,
+      "height": 586,
+      "prices": {
+        "1": 233.54,
+        "2": 242.65,
+        "3": 244.33,
+        "4": 247.91,
+        "5": 256.17
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "11/9",
+      "width": 946,
+      "height": 786,
+      "prices": {
+        "1": 251.23,
+        "2": 263.39,
+        "3": 265.65,
+        "4": 270.42,
+        "5": 281.45
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "11/11",
+      "width": 946,
+      "height": 986,
+      "prices": {
+        "1": 268.92,
+        "2": 284.14,
+        "3": 286.96,
+        "4": 292.93,
+        "5": 306.74
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "11/14",
+      "width": 946,
+      "height": 1206,
+      "prices": {
+        "1": 288.18,
+        "2": 306.76,
+        "3": 310.21,
+        "4": 317.5,
+        "5": 334.35
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "11/16",
+      "width": 946,
+      "height": 1406,
+      "prices": {
+        "1": 303.78,
+        "2": 325.41,
+        "3": 329.42,
+        "4": 337.91,
+        "5": 357.54
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "10/12",
+      "width": 952,
+      "height": 1058,
+      "prices": {
+        "1": 275.17,
+        "2": 291.48,
+        "3": 294.51,
+        "4": 300.91,
+        "5": 315.72
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "10/14",
+      "width": 952,
+      "height": 1258,
+      "prices": {
+        "1": 292.86,
+        "2": 312.23,
+        "3": 315.82,
+        "4": 323.42,
+        "5": 341.0
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "11/11",
+      "width": 964,
+      "height": 995,
+      "prices": {
+        "1": 271.47,
+        "2": 286.82,
+        "3": 289.67,
+        "4": 295.69,
+        "5": 309.62
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "7..K SR; R7..K SR; DA 3",
+      "model": "11/13",
+      "width": 964,
+      "height": 1215,
+      "prices": {
+        "1": 290.73,
+        "2": 309.45,
+        "3": 312.91,
+        "4": 320.26,
+        "5": 337.24
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "11/7",
+      "width": 970,
+      "height": 598,
+      "prices": {
+        "1": 236.99,
+        "2": 246.28,
+        "3": 248.0,
+        "4": 251.65,
+        "5": 260.08
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "11/9",
+      "width": 970,
+      "height": 798,
+      "prices": {
+        "1": 254.68,
+        "2": 267.03,
+        "3": 269.31,
+        "4": 274.16,
+        "5": 285.36
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "11/11",
+      "width": 970,
+      "height": 998,
+      "prices": {
+        "1": 272.37,
+        "2": 287.77,
+        "3": 290.62,
+        "4": 296.67,
+        "5": 310.64
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "11/14",
+      "width": 970,
+      "height": 1218,
+      "prices": {
+        "1": 291.58,
+        "2": 310.34,
+        "3": 313.82,
+        "4": 321.18,
+        "5": 338.21
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "11/16",
+      "width": 970,
+      "height": 1418,
+      "prices": {
+        "1": 307.23,
+        "2": 329.05,
+        "3": 333.09,
+        "4": 341.65,
+        "5": 361.45
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "114/78",
+      "width": 983,
+      "height": 583,
+      "prices": {
+        "1": 237.16,
+        "2": 246.22,
+        "3": 247.9,
+        "4": 251.46,
+        "5": 259.68
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "114/98",
+      "width": 983,
+      "height": 783,
+      "prices": {
+        "1": 254.85,
+        "2": 266.97,
+        "3": 269.21,
+        "4": 273.97,
+        "5": 284.96
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "114/118",
+      "width": 983,
+      "height": 983,
+      "prices": {
+        "1": 272.54,
+        "2": 287.71,
+        "3": 290.52,
+        "4": 296.48,
+        "5": 310.24
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "114/140",
+      "width": 983,
+      "height": 1203,
+      "prices": {
+        "1": 291.8,
+        "2": 310.34,
+        "3": 313.77,
+        "4": 321.04,
+        "5": 337.86
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "114/160",
+      "width": 983,
+      "height": 1405,
+      "prices": {
+        "1": 307.58,
+        "2": 329.2,
+        "3": 333.2,
+        "4": 341.69,
+        "5": 361.3
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "114/180",
+      "width": 983,
+      "height": 1605,
+      "prices": {
+        "1": 323.17,
+        "2": 347.84,
+        "3": 352.42,
+        "4": 362.1,
+        "5": 384.49
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "11/12",
+      "width": 984,
+      "height": 1074,
+      "prices": {
+        "1": 280.91,
+        "2": 297.47,
+        "3": 300.54,
+        "4": 307.04,
+        "5": 322.06
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "11/14",
+      "width": 984,
+      "height": 1294,
+      "prices": {
+        "1": 300.17,
+        "2": 320.09,
+        "3": 323.79,
+        "4": 331.6,
+        "5": 349.68
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "11/9",
+      "width": 1000,
+      "height": 838,
+      "prices": {
+        "1": 260.92,
+        "2": 273.88,
+        "3": 276.28,
+        "4": 281.36,
+        "5": 293.12
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "11/11",
+      "width": 1000,
+      "height": 1038,
+      "prices": {
+        "1": 278.61,
+        "2": 294.62,
+        "3": 297.59,
+        "4": 303.87,
+        "5": 318.4
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K\nR7H",
+      "model": "11/14",
+      "width": 1000,
+      "height": 1258,
+      "prices": {
+        "1": 297.88,
+        "2": 317.25,
+        "3": 320.84,
+        "4": 328.44,
+        "5": 346.02
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "13/7",
+      "width": 1146,
+      "height": 586,
+      "prices": {
+        "1": 256.5,
+        "2": 265.19,
+        "3": 268.76,
+        "4": 278.05,
+        "5": 280.2
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "13/9",
+      "width": 1146,
+      "height": 786,
+      "prices": {
+        "1": 274.89,
+        "2": 286.5,
+        "3": 291.27,
+        "4": 303.68,
+        "5": 306.55
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K\nR8H",
+      "model": "13/14",
+      "width": 1146,
+      "height": 1206,
+      "prices": {
+        "1": 313.27,
+        "2": 331.0,
+        "3": 338.29,
+        "4": 357.25,
+        "5": 361.63
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "644K - 648K  / 844K - 848K / R6H/K / R8K",
+      "model": "13/16",
+      "width": 1146,
+      "height": 1406,
+      "prices": {
+        "1": 329.62,
+        "2": 350.27,
+        "3": 358.76,
+        "4": 380.84,
+        "5": 385.93
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "13/7",
+      "width": 1170,
+      "height": 598,
+      "prices": {
+        "1": 259.93,
+        "2": 268.8,
+        "3": 272.45,
+        "4": 281.92,
+        "5": 284.11
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "13/9",
+      "width": 1170,
+      "height": 798,
+      "prices": {
+        "1": 278.33,
+        "2": 290.11,
+        "3": 294.96,
+        "4": 307.55,
+        "5": 310.46
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "13/14",
+      "width": 1170,
+      "height": 1218,
+      "prices": {
+        "1": 316.76,
+        "2": 334.67,
+        "3": 342.03,
+        "4": 361.18,
+        "5": 365.6
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "61H / 62H / 84H",
+      "model": "13/16",
+      "width": 1170,
+      "height": 1418,
+      "prices": {
+        "1": 333.12,
+        "2": 353.94,
+        "3": 362.5,
+        "4": 384.77,
+        "5": 389.9
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "134/78",
+      "width": 1183,
+      "height": 583,
+      "prices": {
+        "1": 260.11,
+        "2": 268.75,
+        "3": 272.31,
+        "4": 281.55,
+        "5": 283.69
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "134/98",
+      "width": 1183,
+      "height": 783,
+      "prices": {
+        "1": 278.5,
+        "2": 290.06,
+        "3": 294.82,
+        "4": 307.18,
+        "5": 310.03
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "134/118",
+      "width": 1183,
+      "height": 983,
+      "prices": {
+        "1": 296.89,
+        "2": 311.37,
+        "3": 317.33,
+        "4": 332.81,
+        "5": 336.38
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "0.9571428571428572",
+      "width": 1183,
+      "height": 1203,
+      "prices": {
+        "1": 316.88,
+        "2": 334.57,
+        "3": 341.84,
+        "4": 360.75,
+        "5": 365.12
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "WDF Q4",
+      "model": "134/160",
+      "width": 1183,
+      "height": 1405,
+      "prices": {
+        "1": 333.36,
+        "2": 354.0,
+        "3": 362.48,
+        "4": 384.54,
+        "5": 389.63
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "410 - 419",
+      "model": "13/14",
+      "width": 1184,
+      "height": 1288,
+      "prices": {
+        "1": 325.12,
+        "2": 344.05,
+        "3": 351.83,
+        "4": 372.07,
+        "5": 376.74
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "310 - 319 / 320 - 329 plus",
+      "model": "13/14",
+      "width": 1184,
+      "height": 1294,
+      "prices": {
+        "1": 325.62,
+        "2": 344.64,
+        "3": 352.46,
+        "4": 372.79,
+        "5": 377.48
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K",
+      "model": "13/9",
+      "width": 1200,
+      "height": 838,
+      "prices": {
+        "1": 284.76,
+        "2": 297.13,
+        "3": 302.22,
+        "4": 315.44,
+        "5": 318.49
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "734 -738 K -H / R7K",
+      "model": "13/14",
+      "width": 1200,
+      "height": 1258,
+      "prices": {
+        "1": 323.14,
+        "2": 341.64,
+        "3": 349.24,
+        "4": 369.01,
+        "5": 373.57
+      }
+    },
+    {
+      "manufacturer": "ROTO",
+      "series": "H3",
+      "model": "13/14",
+      "width": 1200,
+      "height": 1310,
+      "prices": {
+        "1": 328.61,
+        "2": 347.85,
+        "3": 355.77,
+        "4": 376.35,
+        "5": 381.1
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "46 ( 46X78 )",
+      "width": 301,
+      "height": 613,
+      "prices": {
+        "1": 166.32,
+        "2": 172.29,
+        "3": 172.73,
+        "4": 177.66,
+        "5": 181.72
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "48 ( 46X98 )",
+      "width": 301,
+      "height": 813,
+      "prices": {
+        "1": 183.65,
+        "2": 191.55,
+        "3": 192.12,
+        "4": 198.63,
+        "5": 204.0
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "47 ( 48X78 )",
+      "width": 321,
+      "height": 613,
+      "prices": {
+        "1": 168.41,
+        "2": 174.39,
+        "3": 174.82,
+        "4": 179.76,
+        "5": 183.82
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "49 ( 48X98 )",
+      "width": 321,
+      "height": 813,
+      "prices": {
+        "1": 185.75,
+        "2": 193.64,
+        "3": 194.22,
+        "4": 200.73,
+        "5": 206.1
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "01 ( 55X78 )",
+      "width": 367,
+      "height": 601,
+      "prices": {
+        "1": 172.27,
+        "2": 178.13,
+        "3": 178.55,
+        "4": 183.39,
+        "5": 187.38
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "02 ( 55X98 )",
+      "width": 367,
+      "height": 801,
+      "prices": {
+        "1": 189.6,
+        "2": 197.38,
+        "3": 197.95,
+        "4": 204.37,
+        "5": 209.66
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "16 ( 55X118 )",
+      "width": 367,
+      "height": 1001,
+      "prices": {
+        "1": 206.94,
+        "2": 216.63,
+        "3": 217.34,
+        "4": 225.34,
+        "5": 231.94
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "31 ( 55X60 )",
+      "width": 391,
+      "height": 433,
+      "prices": {
+        "1": 159.9,
+        "2": 164.15,
+        "3": 164.46,
+        "4": 167.97,
+        "5": 170.86
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nPTP / PTL / PTP-V / PTL-V\nFPP-V / FPU-V / FPW-V",
+      "model": "01 ( 55X78 )",
+      "width": 391,
+      "height": 613,
+      "prices": {
+        "1": 175.7,
+        "2": 181.67,
+        "3": 182.11,
+        "4": 187.04,
+        "5": 191.1
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL",
+      "model": "02 ( 55X98 )",
+      "width": 391,
+      "height": 813,
+      "prices": {
+        "1": 193.03,
+        "2": 200.93,
+        "3": 201.5,
+        "4": 208.01,
+        "5": 213.38
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "PTP / PTL / PTP-V / PTL-V\nFPP-V / FPU-V / FPW-V",
+      "model": "02 ( 55X98 )",
+      "width": 391,
+      "height": 813,
+      "prices": {
+        "1": 193.03,
+        "2": 200.93,
+        "3": 201.5,
+        "4": 208.01,
+        "5": 213.38
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "16 ( 55X118 )",
+      "width": 391,
+      "height": 1013,
+      "prices": {
+        "1": 210.36,
+        "2": 220.18,
+        "3": 220.89,
+        "4": 228.99,
+        "5": 235.66
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "03 ( 66X98 )",
+      "width": 477,
+      "height": 801,
+      "prices": {
+        "1": 201.96,
+        "2": 209.74,
+        "3": 210.3,
+        "4": 216.72,
+        "5": 222.01
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "04 ( 66X118 )",
+      "width": 477,
+      "height": 1001,
+      "prices": {
+        "1": 219.29,
+        "2": 228.99,
+        "3": 229.7,
+        "4": 237.7,
+        "5": 244.29
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "14 ( 66X140 )",
+      "width": 477,
+      "height": 1221,
+      "prices": {
+        "1": 238.17,
+        "2": 249.98,
+        "3": 250.83,
+        "4": 260.58,
+        "5": 268.61
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 66X60 )",
+      "width": 501,
+      "height": 428,
+      "prices": {
+        "1": 171.85,
+        "2": 176.05,
+        "3": 176.35,
+        "4": 179.82,
+        "5": 182.68
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "32 ( 66X60 )",
+      "width": 501,
+      "height": 433,
+      "prices": {
+        "1": 172.26,
+        "2": 176.51,
+        "3": 176.82,
+        "4": 180.32,
+        "5": 183.21
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 66X75 )",
+      "width": 501,
+      "height": 578,
+      "prices": {
+        "1": 185.39,
+        "2": 191.03,
+        "3": 191.44,
+        "4": 196.09,
+        "5": 199.93
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFWP-L / FWP-R / FWL-L / FWL-R\nFPP-V / FPU-V / FPW-V",
+      "model": "22 ( 66X78 )",
+      "width": 501,
+      "height": 613,
+      "prices": {
+        "1": 188.05,
+        "2": 194.03,
+        "3": 194.46,
+        "4": 199.39,
+        "5": 203.46
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 66X95 )",
+      "width": 501,
+      "height": 778,
+      "prices": {
+        "1": 202.72,
+        "2": 210.28,
+        "3": 210.83,
+        "4": 217.06,
+        "5": 222.21
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nPTP / PTL / PTP-V / PTL-V\nFWP-L / FWP-R / FWL-L / FWL-R\nFPP-V / FPU-V / FPW-V",
+      "model": "03 ( 66X98 )",
+      "width": 501,
+      "height": 813,
+      "prices": {
+        "1": 205.39,
+        "2": 213.28,
+        "3": 213.86,
+        "4": 220.37,
+        "5": 225.74
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 66X115 )",
+      "width": 501,
+      "height": 978,
+      "prices": {
+        "1": 220.05,
+        "2": 229.53,
+        "3": 230.22,
+        "4": 238.04,
+        "5": 244.49
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nPTP / PTL / PTP-V / PTL-V\nFWP-L / FWP-R / FWL-L / FWL-R\nFPP-V / FPU-V / FPW-V",
+      "model": "04 ( 66X118 )",
+      "width": 501,
+      "height": 1013,
+      "prices": {
+        "1": 222.72,
+        "2": 232.54,
+        "3": 233.25,
+        "4": 241.34,
+        "5": 248.02
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 66X137 )",
+      "width": 501,
+      "height": 1198,
+      "prices": {
+        "1": 238.93,
+        "2": 250.52,
+        "3": 251.36,
+        "4": 260.92,
+        "5": 268.8
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "14 ( 66X140 )",
+      "width": 501,
+      "height": 1233,
+      "prices": {
+        "1": 241.6,
+        "2": 253.52,
+        "3": 254.39,
+        "4": 264.22,
+        "5": 272.33
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "05 ( 78X98 )",
+      "width": 597,
+      "height": 801,
+      "prices": {
+        "1": 217.13,
+        "2": 224.91,
+        "3": 225.47,
+        "4": 231.89,
+        "5": 237.18
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "06 ( 78X118 )",
+      "width": 597,
+      "height": 1001,
+      "prices": {
+        "1": 234.46,
+        "2": 244.16,
+        "3": 244.87,
+        "4": 252.87,
+        "5": 259.46
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "07 ( 78X140 )",
+      "width": 597,
+      "height": 1221,
+      "prices": {
+        "1": 253.34,
+        "2": 265.15,
+        "3": 266.0,
+        "4": 275.75,
+        "5": 283.78
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "13 ( 78X160 )",
+      "width": 597,
+      "height": 1421,
+      "prices": {
+        "1": 268.58,
+        "2": 282.3,
+        "3": 283.3,
+        "4": 294.63,
+        "5": 303.96
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 78X60 )",
+      "width": 621,
+      "height": 428,
+      "prices": {
+        "1": 187.79,
+        "2": 194.49,
+        "3": 195.73,
+        "4": 198.35,
+        "5": 204.42
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "33 ( 78X60 )",
+      "width": 621,
+      "height": 433,
+      "prices": {
+        "1": 188.22,
+        "2": 194.98,
+        "3": 196.24,
+        "4": 198.89,
+        "5": 205.04
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 78X75 )",
+      "width": 621,
+      "height": 578,
+      "prices": {
+        "1": 201.6,
+        "2": 210.58,
+        "3": 212.25,
+        "4": 215.77,
+        "5": 223.92
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "23 ( 78X78 )",
+      "width": 621,
+      "height": 613,
+      "prices": {
+        "1": 204.33,
+        "2": 213.85,
+        "3": 215.61,
+        "4": 219.35,
+        "5": 227.98
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 78X95 )",
+      "width": 621,
+      "height": 778,
+      "prices": {
+        "1": 219.29,
+        "2": 231.33,
+        "3": 233.56,
+        "4": 238.28,
+        "5": 249.21
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nPTP / PTL / PTP-V / PTL-V\nFWP-L / FWP-R / FWL-L / FWL-R\nFPP-V / FPU-V / FPW-V",
+      "model": "05 ( 78X98 )",
+      "width": 621,
+      "height": 813,
+      "prices": {
+        "1": 222.02,
+        "2": 234.59,
+        "3": 236.92,
+        "4": 241.86,
+        "5": 253.27
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 78X115 )",
+      "width": 621,
+      "height": 978,
+      "prices": {
+        "1": 236.98,
+        "2": 252.07,
+        "3": 254.87,
+        "4": 260.79,
+        "5": 274.49
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nPTP / PTL / PTP-V / PTL-V\nFWP-L / FWP-R / FWL-L / FWL-R\nFPP-V / FPU-V / FPW-V",
+      "model": "06 ( 78X118 )",
+      "width": 621,
+      "height": 1013,
+      "prices": {
+        "1": 239.71,
+        "2": 255.34,
+        "3": 258.23,
+        "4": 264.37,
+        "5": 278.55
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 78X137 )",
+      "width": 621,
+      "height": 1198,
+      "prices": {
+        "1": 256.24,
+        "2": 274.7,
+        "3": 278.12,
+        "4": 285.36,
+        "5": 302.11
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nPTP / PTL / PTP-V / PTL-V\nFPP-V / FPU-V / FPW-V",
+      "model": "07 ( 78X140 )",
+      "width": 621,
+      "height": 1233,
+      "prices": {
+        "1": 258.97,
+        "2": 277.96,
+        "3": 281.48,
+        "4": 288.94,
+        "5": 306.17
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FPP / FKP / FEL\nFTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "13 ( 78X160 )",
+      "width": 621,
+      "height": 1432,
+      "prices": {
+        "1": 274.5,
+        "2": 296.53,
+        "3": 300.62,
+        "4": 309.26,
+        "5": 329.25
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "15 ( 94X98 )",
+      "width": 757,
+      "height": 801,
+      "prices": {
+        "1": 235.78,
+        "2": 248.17,
+        "3": 250.47,
+        "4": 255.33,
+        "5": 266.57
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "08 ( 94X118 )",
+      "width": 757,
+      "height": 1001,
+      "prices": {
+        "1": 253.52,
+        "2": 268.97,
+        "3": 271.83,
+        "4": 277.89,
+        "5": 291.91
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "09 ( 94X140 )",
+      "width": 757,
+      "height": 1221,
+      "prices": {
+        "1": 272.73,
+        "2": 291.54,
+        "3": 295.03,
+        "4": 302.41,
+        "5": 319.47
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "80 ( 94X160 )",
+      "width": 757,
+      "height": 1421,
+      "prices": {
+        "1": 288.38,
+        "2": 310.25,
+        "3": 314.3,
+        "4": 322.88,
+        "5": 342.72
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "34 ( 94X60 )",
+      "width": 781,
+      "height": 433,
+      "prices": {
+        "1": 205.43,
+        "2": 212.2,
+        "3": 213.45,
+        "4": 216.11,
+        "5": 222.25
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 94X75 )",
+      "width": 781,
+      "height": 578,
+      "prices": {
+        "1": 218.81,
+        "2": 227.79,
+        "3": 229.46,
+        "4": 232.98,
+        "5": 241.14
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "24 ( 94X78 )",
+      "width": 781,
+      "height": 613,
+      "prices": {
+        "1": 221.54,
+        "2": 231.06,
+        "3": 232.82,
+        "4": 236.56,
+        "5": 245.2
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 94X95 )",
+      "width": 781,
+      "height": 778,
+      "prices": {
+        "1": 236.5,
+        "2": 248.54,
+        "3": 250.77,
+        "4": 255.5,
+        "5": 266.42
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFWP-L / FWP-R / FWL-L / FWL-R\nFPP-V / FPU-V / FPW-V",
+      "model": "15 ( 94X98 )",
+      "width": 781,
+      "height": 813,
+      "prices": {
+        "1": 239.23,
+        "2": 251.8,
+        "3": 254.13,
+        "4": 259.07,
+        "5": 270.48
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 94X115 )",
+      "width": 781,
+      "height": 978,
+      "prices": {
+        "1": 254.19,
+        "2": 269.28,
+        "3": 272.08,
+        "4": 278.01,
+        "5": 291.7
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nPTP / PTL / PTP-V / PTL-V\nFWP-L / FWP-R / FWL-L / FWL-R\nFPP-V / FPU-V / FPW-V",
+      "model": "08 ( 94X118 )",
+      "width": 781,
+      "height": 1013,
+      "prices": {
+        "1": 256.92,
+        "2": 272.55,
+        "3": 275.44,
+        "4": 281.58,
+        "5": 295.76
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 94X137 )",
+      "width": 781,
+      "height": 1198,
+      "prices": {
+        "1": 273.45,
+        "2": 291.91,
+        "3": 295.33,
+        "4": 302.57,
+        "5": 319.32
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nPTP / PTL / PTP-V / PTL-V\nFPP-V / FPU-V / FPW-V",
+      "model": "09 ( 94X140 )",
+      "width": 781,
+      "height": 1233,
+      "prices": {
+        "1": 276.18,
+        "2": 295.18,
+        "3": 298.69,
+        "4": 306.15,
+        "5": 323.38
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "80 ( 94X160 )",
+      "width": 781,
+      "height": 1433,
+      "prices": {
+        "1": 291.78,
+        "2": 313.82,
+        "3": 317.91,
+        "4": 326.56,
+        "5": 346.57
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "10 ( 114X118 )",
+      "width": 957,
+      "height": 1001,
+      "prices": {
+        "1": 274.32,
+        "2": 289.77,
+        "3": 292.63,
+        "4": 298.69,
+        "5": 312.71
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "11 ( 114X140 )",
+      "width": 957,
+      "height": 1221,
+      "prices": {
+        "1": 293.59,
+        "2": 312.39,
+        "3": 315.88,
+        "4": 323.26,
+        "5": 340.33
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "35 ( 114X60 )",
+      "width": 981,
+      "height": 433,
+      "prices": {
+        "1": 226.28,
+        "2": 233.05,
+        "3": 234.3,
+        "4": 236.96,
+        "5": 243.1
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "25 ( 114X78 )",
+      "width": 981,
+      "height": 613,
+      "prices": {
+        "1": 242.39,
+        "2": 251.91,
+        "3": 253.68,
+        "4": 257.41,
+        "5": 266.05
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 114X115 )",
+      "width": 981,
+      "height": 978,
+      "prices": {
+        "1": 275.04,
+        "2": 290.14,
+        "3": 292.93,
+        "4": 298.86,
+        "5": 312.55
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nPTP / PTL / PTP-V / PTL-V\nFPP-V / FPU-V / FPW-V",
+      "model": "10 ( 114X118 )",
+      "width": 981,
+      "height": 1013,
+      "prices": {
+        "1": 277.77,
+        "2": 293.4,
+        "3": 296.3,
+        "4": 302.43,
+        "5": 316.61
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 114X137 )",
+      "width": 981,
+      "height": 1198,
+      "prices": {
+        "1": 294.31,
+        "2": 312.76,
+        "3": 316.18,
+        "4": 323.43,
+        "5": 340.17
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP / FKP / FEL\nFPP-V / FPU-V / FPW-V",
+      "model": "11 ( 114X140 )",
+      "width": 981,
+      "height": 1233,
+      "prices": {
+        "1": 297.04,
+        "2": 316.03,
+        "3": 319.55,
+        "4": 327.0,
+        "5": 344.23
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "12 ( 134X98 )",
+      "width": 1157,
+      "height": 801,
+      "prices": {
+        "1": 280.35,
+        "2": 292.17,
+        "3": 297.03,
+        "4": 309.68,
+        "5": 312.6
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "18 ( 134X118 )",
+      "width": 1157,
+      "height": 1001,
+      "prices": {
+        "1": 298.74,
+        "2": 313.48,
+        "3": 319.55,
+        "4": 335.31,
+        "5": 338.94
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTT",
+      "model": "17 ( 134X140 )",
+      "width": 1157,
+      "height": 1221,
+      "prices": {
+        "1": 318.78,
+        "2": 336.73,
+        "3": 344.11,
+        "4": 363.3,
+        "5": 367.73
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FPP / FKP / FEL\nFTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "12 ( 134X98 )",
+      "width": 1180,
+      "height": 813,
+      "prices": {
+        "1": 283.73,
+        "2": 295.73,
+        "3": 300.66,
+        "4": 313.49,
+        "5": 316.46
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "36 ( 134X60 )",
+      "width": 1181,
+      "height": 433,
+      "prices": {
+        "1": 248.64,
+        "2": 255.1,
+        "3": 257.76,
+        "4": 264.66,
+        "5": 266.26
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "26 ( 134X78 )",
+      "width": 1181,
+      "height": 613,
+      "prices": {
+        "1": 265.44,
+        "2": 274.53,
+        "3": 278.26,
+        "4": 287.98,
+        "5": 290.22
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 134X115 )",
+      "width": 1181,
+      "height": 978,
+      "prices": {
+        "1": 299.38,
+        "2": 313.79,
+        "3": 319.71,
+        "4": 335.11,
+        "5": 338.67
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "18 ( 134X118 )",
+      "width": 1181,
+      "height": 1013,
+      "prices": {
+        "1": 302.23,
+        "2": 317.15,
+        "3": 323.28,
+        "4": 339.23,
+        "5": 342.91
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "BDL-R / BDL-L / BVL / BXL",
+      "model": "( 134X137 )",
+      "width": 1181,
+      "height": 1198,
+      "prices": {
+        "1": 319.42,
+        "2": 337.04,
+        "3": 344.28,
+        "4": 363.11,
+        "5": 367.46
+      }
+    },
+    {
+      "manufacturer": "Fakro",
+      "series": "FTP-V;FTP-W;FTL-V;FTL-W;FTS;FTS-V;FTU-V;FTW-V;FW (Incl. Z-Wave)\nFPP-V / FPU-V / FPW-V",
+      "model": "17 ( 134X140 )",
+      "width": 1181,
+      "height": 1233,
+      "prices": {
+        "1": 322.27,
+        "2": 340.4,
+        "3": 347.85,
+        "4": 367.23,
+        "5": 371.7
+      }
+    }
+  ]
+}

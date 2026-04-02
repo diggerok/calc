@@ -496,6 +496,23 @@ const curtainRailsPriceFn: CustomPriceFn = (priceData, _cat, w, _h, options) => 
   return price;
 };
 
+// === Roof (мансардные) ===
+// Lookup by manufacturer + model + category
+const roofPriceFn: CustomPriceFn = (priceData, cat, _w, _h, options) => {
+  const manufacturer = options.manufacturer ?? "Velux";
+  const modelRaw = options.model ?? "—";
+  if (modelRaw === "—" || !modelRaw || !cat) return 0;
+
+  // Model comes as "B04 (305×739)" — extract model name before " ("
+  const modelName = modelRaw.includes(" (") ? modelRaw.slice(0, modelRaw.indexOf(" (")).trim() : modelRaw.trim();
+
+  const entry = priceData.models?.find(
+    (m: { manufacturer: string; model: string }) => m.manufacturer === manufacturer && m.model === modelName
+  );
+  if (!entry) return 0;
+  return entry.prices?.[cat] ?? 0;
+};
+
 // Register all custom pricing functions
 export function initCustomPricing() {
   registerCustomPriceFn("db-blinds", dbBlindsPriceFn);
@@ -510,4 +527,5 @@ export function initCustomPricing() {
   registerCustomPriceFn("lift", liftPriceFn);
   registerCustomPriceFn("curtains", curtainsPriceFn);
   registerCustomPriceFn("curtain-rails", curtainRailsPriceFn);
+  registerCustomPriceFn("roof", roofPriceFn);
 }

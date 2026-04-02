@@ -25,6 +25,7 @@ import { curtainRailsConfig } from "./curtain-rails";
 import { mirageConfig } from "./mirage";
 import { mgsZebraConfig } from "./mgs-zebra";
 import { amgConfig, amgLConfig, amgXlConfig } from "./amg";
+import { roofConfig } from "./roof";
 import type { CalculatorConfig, FabricItem } from "@/types/calculator";
 import fabricsRoller from "@/lib/price-data/fabrics-roller.json";
 import fabricsZebra from "@/lib/price-data/fabrics-zebra.json";
@@ -124,6 +125,7 @@ export const calculatorConfigs: Record<string, CalculatorConfig> = {
   "amg-xl": amgXlConfig,
   "curtain-rails": curtainRailsConfig,
   "mgs-zebra": mgsZebraConfig,
+  "roof": roofConfig,
 };
 
 export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
@@ -133,7 +135,7 @@ export const calculatorList = Object.values(calculatorConfigs).map((c) => ({
 }));
 
 // Define group order explicitly
-const groupOrder = ["Рулонка", "BNT", "AMG", "ZIP", "Шторы плиссе", "Шторы", "Жалюзи"];
+const groupOrder = ["Рулонка", "Рулонные шторы", "BNT", "AMG", "ZIP", "Шторы плиссе", "Шторы", "Жалюзи"];
 
 export const calculatorGroups = calculatorList.reduce<
   Record<string, { id: string; title: string }[]>
