@@ -5,6 +5,11 @@
     "rollWidth": 225
   },
   {
+    "name": "Алегро",
+    "category": "2",
+    "rollWidth": 240
+  },
+  {
     "name": "Аллегро",
     "category": "2",
     "rollWidth": 238
@@ -56,6 +61,11 @@
   },
   {
     "name": "Вита",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
+    "name": "Гладкий (св.желт)",
     "category": "E",
     "rollWidth": 240
   },
@@ -190,14 +200,9 @@
     "rollWidth": 240
   },
   {
-    "name": "Краш металл",
-    "category": "5",
-    "rollWidth": 225
-  },
-  {
-    "name": "Краш перла",
-    "category": "3",
-    "rollWidth": 225
+    "name": "Краш 1 Перламутр (синий)",
+    "category": "E",
+    "rollWidth": 240
   },
   {
     "name": "Краш Перла 15 мм",
@@ -210,6 +215,16 @@
     "rollWidth": 230
   },
   {
+    "name": "Краш металл",
+    "category": "5",
+    "rollWidth": 225
+  },
+  {
+    "name": "Краш перла",
+    "category": "3",
+    "rollWidth": 225
+  },
+  {
     "name": "Креп",
     "category": "1",
     "rollWidth": 235
@@ -218,6 +233,11 @@
     "name": "Креп 15 мм",
     "category": "E",
     "rollWidth": 230
+  },
+  {
+    "name": "Креп Перла 32 мм",
+    "category": "1",
+    "rollWidth": 225
   },
   {
     "name": "Креп перла",
@@ -230,9 +250,24 @@
     "rollWidth": 235
   },
   {
-    "name": "Креп Перла 32 мм",
-    "category": "1",
-    "rollWidth": 225
+    "name": "Крисп Перла",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
+    "name": "Лайн Перла",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
+    "name": "Лен Каре св.беж",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
+    "name": "Лен Флер св.беж",
+    "category": "E",
+    "rollWidth": 240
   },
   {
     "name": "Лима",
@@ -243,6 +278,21 @@
     "name": "Лунд ВО 15 мм",
     "category": "5",
     "rollWidth": 230
+  },
+  {
+    "name": "Мережка",
+    "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "Металлик",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
+    "name": "Металлик БО",
+    "category": "1",
+    "rollWidth": 240
   },
   {
     "name": "Метис Перла",
@@ -305,6 +355,16 @@
     "rollWidth": 238
   },
   {
+    "name": "Пальма",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
+    "name": "Париж",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
     "name": "Прато",
     "category": "3",
     "rollWidth": 240
@@ -323,6 +383,11 @@
     "name": "Примавера",
     "category": "3",
     "rollWidth": 235
+  },
+  {
+    "name": "Принт 1 синий",
+    "category": "E",
+    "rollWidth": 240
   },
   {
     "name": "Рефлекс Перла",
@@ -395,6 +460,11 @@
     "rollWidth": 225
   },
   {
+    "name": "Техно",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
     "name": "Тигрис Перла",
     "category": "3",
     "rollWidth": 230
@@ -405,6 +475,11 @@
     "rollWidth": 230
   },
   {
+    "name": "Тревила Силк",
+    "category": "E",
+    "rollWidth": 240
+  },
+  {
     "name": "Тревира Силк",
     "category": "4",
     "rollWidth": 230
@@ -413,6 +488,11 @@
     "name": "Тревира Силк (фисташкоый)",
     "category": "4",
     "rollWidth": 230
+  },
+  {
+    "name": "Фарос",
+    "category": "E",
+    "rollWidth": 240
   },
   {
     "name": "Челси",
