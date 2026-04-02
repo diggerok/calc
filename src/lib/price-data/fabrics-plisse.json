@@ -90,6 +90,11 @@
     "rollWidth": 220
   },
   {
+    "name": "Гофре Папирус Б/О",
+    "category": "5",
+    "rollWidth": 240
+  },
+  {
     "name": "Гофре Папирус ВО",
     "category": "5",
     "rollWidth": 450
@@ -98,6 +103,11 @@
     "name": "Гофре Перфект",
     "category": "3",
     "rollWidth": 300
+  },
+  {
+    "name": "Гофре Перфект Б/О",
+    "category": "4",
+    "rollWidth": 240
   },
   {
     "name": "Гофре Перфект ВО",
@@ -115,6 +125,11 @@
     "rollWidth": 365
   },
   {
+    "name": "Гофре Сатин В-О",
+    "category": "5",
+    "rollWidth": 240
+  },
+  {
     "name": "Гофре Сатин ВО",
     "category": "5",
     "rollWidth": 365
@@ -127,6 +142,11 @@
   {
     "name": "Девон",
     "category": "3",
+    "rollWidth": 240
+  },
+  {
+    "name": "Дикий Шелк",
+    "category": "5",
     "rollWidth": 240
   },
   {
@@ -202,6 +222,11 @@
   {
     "name": "Краш 1 Перламутр (синий)",
     "category": "E",
+    "rollWidth": 240
+  },
+  {
+    "name": "Краш Металлик",
+    "category": "5",
     "rollWidth": 240
   },
   {
@@ -350,6 +375,11 @@
     "rollWidth": 230
   },
   {
+    "name": "Ноктюрн БО",
+    "category": "5",
+    "rollWidth": 240
+  },
+  {
     "name": "Оксфорд",
     "category": "4",
     "rollWidth": 205
@@ -405,6 +435,11 @@
     "rollWidth": 240
   },
   {
+    "name": "Радиант ВО",
+    "category": "5",
+    "rollWidth": 240
+  },
+  {
     "name": "Рефлекс Перла",
     "category": "1",
     "rollWidth": 230
@@ -445,6 +480,11 @@
     "rollWidth": 240
   },
   {
+    "name": "Силкскрин Алюм",
+    "category": "5",
+    "rollWidth": 240
+  },
+  {
     "name": "Силкскрин алю",
     "category": "5",
     "rollWidth": 240
@@ -468,6 +508,11 @@
     "name": "Соло BO",
     "category": "4",
     "rollWidth": 230
+  },
+  {
+    "name": "Соло Б/О",
+    "category": "4",
+    "rollWidth": 240
   },
   {
     "name": "Тенденс",
