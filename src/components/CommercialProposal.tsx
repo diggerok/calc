@@ -364,7 +364,8 @@ export default function CommercialProposal({ data }: { data: KPData }) {
                 height: "200px",
               }}
             >
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/logo-amigo.svg"
                 alt="AMIGO Design Boutique"
                 width={560}
@@ -483,7 +484,7 @@ export default function CommercialProposal({ data }: { data: KPData }) {
                             {row.options?._calcTitle
                               ? <>{row.options._calcTitle}{row.fabric ? ` ${row.fabric}` : ""}{row.fabricColor ? ` ${row.fabricColor}` : ""}{row.category ? ` (кат. ${row.category})` : ""}</>
                               : hasMaterial && row.options["material"] && row.options["material"] !== "—"
-                              ? `${["Бамбук", "Дерево", "Павловния"].includes(row.options["material"]) ? "Деревянные жалюзи" : "Горизонтальные жалюзи"} ${row.options["material"]} ${row.options["color"] && row.options["color"] !== "—" ? row.options["color"] : ""} ${row.options["slat"] ? row.options["slat"] + "мм" : ""}`.trim()
+                              ? `${["Бамбук", "Дерево", "Павловния"].includes(row.options["material"]) ? "Деревянные жалюзи" : config.id === "vertical-blinds" ? "Вертикальные жалюзи" : "Горизонтальные жалюзи"} ${row.options["material"]} ${row.options["color"] && row.options["color"] !== "—" ? row.options["color"] : ""} ${row.options["slat"] ? row.options["slat"] + "мм" : ""}`.trim()
                               : <>
                                   {row.fabric
                                     ? `${config.group === "Шторы плиссе" ? "Шторы плиссе" : (config.id.startsWith("uni") || config.id.startsWith("kasseta")) ? "Кассетные рулонные шторы " + config.title : "Рулонные шторы " + config.title} ${row.fabric}${row.fabricColor ? " " + row.fabricColor : ""} ${row.category || row.options?.cat ? (row.category || row.options?.cat) + " кат" : ""}`
