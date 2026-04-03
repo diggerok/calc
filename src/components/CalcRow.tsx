@@ -71,14 +71,7 @@ export default function CalcRow({
     if (maxH === 0) {
       return { ...upd, options: opts, priceUsd: 0, priceRub: 0, totalRub: 0 };
     }
-    // Проверка ограничений размеров (дерево/бамбук) — жёсткие ограничения (ширина/высота)
-    const limit = getSizeLimit(opts);
-    if (limit && w > 0) {
-      if (w < limit.minWidth || w > limit.maxWidth) {
-        return { ...upd, options: opts, priceUsd: 0, priceRub: 0, totalRub: 0 };
-      }
-      // Высота и площадь — цена считается, но подсвечивается красным в UI
-    }
+    // Проверка ограничений размеров — цена считается, но подсвечивается красным в UI
     let priceUsd = calculateRowPrice(priceData, config, surchargeFn, upd.category, w, h, opts);
     // Доплата за электрику
     if (opts.electric && opts.electric !== "Нет") {
@@ -159,11 +152,12 @@ export default function CalcRow({
   const fabricMaxH = getFabricMaxHeight(row.fabric, row.options);
   const wNum = parseFloat(row.width) || 0;
   const hNum = parseFloat(row.height) || 0;
+  const widthExceeded = !!(currentLimit && wNum > 0 && (wNum > currentLimit.maxWidth || (currentLimit.minWidth && wNum < currentLimit.minWidth)));
   const areaExceeded = !!(currentLimit?.maxArea && wNum > 0 && hNum > 0 && wNum * hNum > currentLimit.maxArea);
   const heightExceeded = !!(currentLimit?.maxHeight && hNum > 0 && hNum > currentLimit.maxHeight);
   const fabricHeightExceeded = fabricMaxH !== undefined && fabricMaxH > 0 && hNum > 0 && hNum > fabricMaxH;
   const fabricUnavailable = fabricMaxH === 0;
-  const sizeWarning = areaExceeded || heightExceeded || fabricHeightExceeded || fabricUnavailable;
+  const sizeWarning = widthExceeded || areaExceeded || heightExceeded || fabricHeightExceeded || fabricUnavailable;
 
   return (
     <tr className="hover:bg-slate-50">
