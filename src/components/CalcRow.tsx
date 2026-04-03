@@ -46,6 +46,15 @@ export default function CalcRow({
   };
 
   const recalc = (upd: CalcRowData, opts: Record<string, string>) => {
+    // Автоподстановка первого значения для dynamic-опций со значением "—"
+    if (dynamicValuesFn) {
+      for (const opt of config.options) {
+        if (opt.dynamic && (opts[opt.id] === "—" || opts[opt.id] === "")) {
+          const available = dynamicValuesFn(opt.id, priceData, opts);
+          if (available.length > 0) opts[opt.id] = available[0];
+        }
+      }
+    }
     const w = parseFloat(String(upd.width)) || 0;
     const h = parseFloat(String(upd.height)) || 0;
     // Проверка: ширина не должна превышать ширину рулона ткани
@@ -122,6 +131,18 @@ export default function CalcRow({
         }
       }
     }
+    // При смене slat/material — сбросить зависимые dynamic-опции на первое значение
+    if (dynamicValuesFn && (optionId === "slat" || optionId === "material" || optionId === "manufacturer")) {
+      for (const opt of config.options) {
+        if (opt.dynamic && opt.id !== optionId) {
+          const available = dynamicValuesFn(opt.id, priceData, newOptions);
+          if (available.length > 0 && !available.includes(newOptions[opt.id])) {
+            newOptions[opt.id] = available[0];
+          }
+        }
+      }
+    }
+
     // Автоподстановка размеров из модели "MODEL (W×H)"
     const dimMatch = value.match(/\((\d+)×(\d+)\)$/);
     if (dimMatch) {
