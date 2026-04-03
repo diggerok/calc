@@ -9,9 +9,12 @@ export const gzhBlindsConfig: CalculatorConfig = {
   maxRows: 10,
   electricKitKey: "slat",
   sizeLimits: {
+    // Ручное управление
     "16": { minWidth: 0.25, maxWidth: 2.10, minHeight: 0.30, maxHeight: 3.00, maxArea: 7.0 },
     "25": { minWidth: 0.25, maxWidth: 2.85, minHeight: 0.30, maxHeight: 3.00, maxArea: 7.0 },
     "50": { minWidth: 0.42, maxWidth: 2.70, minHeight: 0.30, maxHeight: 3.30, maxArea: 7.0 },
+    // Электрика
+    "50-Э": { minWidth: 0.59, maxWidth: 3.00, maxHeight: 4.30, maxArea: 12.9 },
   },
   options: [
     { id: "slat", label: "Ширина ламели", values: ["16", "25", "50"], defaultValue: "25" },

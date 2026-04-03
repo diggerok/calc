@@ -31,7 +31,8 @@ export default function CalcRow({
     const material = opts["material"] || "";
     const box = opts["box"] || "";
     const tube = opts["tube"] || "";
-    return config.sizeLimits[`${box}-${tube}`] || config.sizeLimits[`${slat}-${material}`] || config.sizeLimits[material] || config.sizeLimits[slat] || config.sizeLimits["_"] || null;
+    const elSuffix = opts["electric"] && opts["electric"] !== "Нет" ? "-Э" : "";
+    return config.sizeLimits[`${box}-${tube}`] || config.sizeLimits[`${slat}-${material}${elSuffix}`] || config.sizeLimits[`${slat}-${material}`] || (elSuffix && config.sizeLimits[`${slat}${elSuffix}`]) || config.sizeLimits[material] || config.sizeLimits[slat] || config.sizeLimits["_"] || null;
   };
 
   const getFabricMaxHeight = (fabricName: string, opts?: Record<string, string>): number | undefined => {
